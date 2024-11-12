@@ -1,0 +1,21 @@
+@import "./normalize.css";
+@font-face {
+  font-family: "Noah";
+  src: url("../fonts/Noahbold.woff2") format("woff2"), url("../fonts/Noahbold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noah";
+  font-family: "Noah";
+  src: url("../fonts/Noahregular.woff2") format("woff2"), url("../fonts/Noahregular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Marck Script";
+  src: url("../fonts/marckscript.woff2") format("woff2"), url("../fonts/marckscript.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}

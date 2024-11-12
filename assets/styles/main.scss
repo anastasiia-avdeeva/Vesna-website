@@ -1,0 +1,9 @@
+// import files with mixins and variables
+@import "./vars";
+@import "./mixins";
+
+// import fonts
+@import "../fonts/fonts";
+
+// link normalize
+@import "./normalize.css";
