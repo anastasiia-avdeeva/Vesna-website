@@ -2,9 +2,11 @@
 @import "./vars";
 @import "./mixins";
 @import "./base";
+@import "./media";
 
 // import fonts
 @import "../fonts/fonts";
 
 // link normalize
 @import "./normalize.css";
+
