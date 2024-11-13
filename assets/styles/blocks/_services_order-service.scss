@@ -1,7 +1,7 @@
 input:focus,
 textarea:focus {
-  outline: none; /* Убирает стандартное выделение */
-  border: 1px solid $olive-dark; /* Цвет рамки при фокусе */
+  outline: none; // Убирает стандартное выделение
+  border: 1px solid $olive-dark; // Цвет рамки при фокусе
 }
 
 .order-service {
@@ -9,7 +9,6 @@ textarea:focus {
   padding: 7.4% 5.5% 3.3%;
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
-  // minmax(300px, 660px);
   grid-template-rows: min-content 1fr;
   grid-template-areas:
     "title form"
@@ -78,7 +77,7 @@ textarea:focus {
     left: 22.5px;
     color: $brown;
     pointer-events: none;
-    transition: all 0.2s ease;
+    transition: all 0.05s ease;
   }
 
   // перемещаю лэйбл наверх и уменьшаю шрифт когда юзер вводит информацию в поля имя и email
@@ -104,9 +103,17 @@ textarea:focus {
     border: 0.7px solid $olive-light;
     background: $white;
   }
-  // у полей для комментария и телефона 2 лэйбла
-  // когда курсор не в поле, default виден, а focus спрятан
-  &__input-label--default {
+
+  // скрываем настоящий плейсхолдер
+  &__input-field--tel::placeholder,
+  &__comments-field::placeholder {
+    color: transparent;
+  }
+
+  // у полей для комментария и телефона 2 лэйбла которые выполняют роль плейсходера
+  // label--default виден только тогда, когда настоящий плейсхолдер должен быть на месте (т.е в поле нет курсора и ничего не введено) (состояние по умолчанию)
+  &__input-field--tel:placeholder-shown ~ &__input-label--default,
+  &__comments-field:placeholder-shown ~ &__input-label--default {
     position: absolute;
     top: 10px;
     left: 22.5px;
@@ -114,11 +121,11 @@ textarea:focus {
     pointer-events: none;
     color: $brown;
     opacity: 1;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.3s ease;
   }
 
+  // label--focus не виден когда поле нет курсора и ничего не введено (состояние по умолчанию)
   &__input-label--focus {
-    // display: none;
     position: absolute;
     color: $brown;
     top: 2px;
@@ -128,19 +135,24 @@ textarea:focus {
     transition: opacity 0.4s ease;
   }
 
-  // когда курсор в поле, default прячется, а focus появляется
-  &__comments-field:focus ~ &__input-label--default,
-  &__input-field--tel:focus ~ &__input-label--default {
-    // display: none;
+  // когда курсор в поле или юзер что то написал, default прячется
+  &__input-field--tel:not(:placeholder-shown) ~ &__input-label--default,
+  &__input-field--tel:focus ~ &__input-label--default,
+  &__comments-field:not(:placeholder-shown) ~ &__input-label--default,
+  &__comments-field:focus ~ &__input-label--default {
     opacity: 0;
+    transition: opacity 0.3s ease;
   }
 
-  &__comments-field:focus ~ &__input-label--focus,
-  &__input-field--tel:focus ~ &__input-label--focus {
-    // display: block;
+  // когда курсор в поле или юзер что то написал, focus появляется
+  &__input-field--tel:not(:placeholder-shown) ~ &__input-label--focus,
+  &__input-field--tel:focus ~ &__input-label--focus,
+  &__comments-field:not(:placeholder-shown) ~ &__input-label--focus,
+  &__comments-field:focus ~ &__input-label--focus {
     opacity: 1;
   }
 
+  // изменяем чекбокс input
   // стилизую чекбокс создавая custom checkbox и скрываю оригинальный
   &__consent-label {
     padding-left: 44px;
