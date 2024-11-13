@@ -8,17 +8,13 @@
     "title form"
     "contacts form";
   gap: 40px 57px;
-  font-family: "Noah";
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
+  @include h5;
   line-height: normal;
-  color: #1a1a18;
+  color: $black;
 
   &__title {
     grid-area: title;
-    font-size: 48px;
-    font-weight: 400;
+    @include h3;
   }
 
   &__contacts {
@@ -46,12 +42,12 @@
     padding: 16px 10px 16px 22.5px;
     height: 100%;
     width: 100%;
-    border: 0.7px solid #99a18e;
-    background: #fff;
+    border: 0.7px solid $olive-light;
+    background: $white;
   }
 
   &__input::placeholder {
-    color: #63533e;
+    color: $brown;
   }
 
   &__comments-container {
@@ -64,5 +60,12 @@
 
   &__input--comments {
     padding: 10px 10px 10px 22.6px;
+  }
+
+  &__consent-text {
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    color: $olive-light;
   }
 }
