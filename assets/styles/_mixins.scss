@@ -1,33 +1,34 @@
 
-// миксины для боковых марджинов
-@mixin margin-lateral-1920 {
-  // margin-left: 16%;
-  // margin-right: 16%;
-}
+// миксины для общих боковых марджинов
+// @mixin margin-lateral-1920 {
+//   margin-left: 16%;
+//   margin-right: 16%;
+// }
 
-@mixin margin-lateral-768 {
-  // margin-left: 20px;
-  // margin-right: 20px;
-}
+// @mixin margin-lateral-768 {
+//   margin-left: 20px;
+//   margin-right: 20px;
+// }
 
-@mixin margin-lateral-440 {
-  // margin-left: 10px;
-  // margin-right: 10px;
-}
+// @mixin margin-lateral-440 {
+//   margin-left: 10px;
+//   margin-right: 10px;
+// }
 
+// миксины для отступов у хедера и футера
 @mixin margin-header-footer-1920 {
-  // margin-left: 10px;
-  // margin-right: 10px;
+  padding-left: 5.2%;
+  padding-right: 5.2%;
 }
 
 @mixin margin-header-footer-768 {
-  // margin-left: 10px;
-  // margin-right: 10px;
+  padding-left: 4%; //32px примерно
+  padding-right: 4%;
 }
 
 @mixin margin-header-footer-440 {
-  // margin-left: 10px;
-  // margin-right: 10px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 // общие миксины для шрифтов h1-h6
