@@ -1,0 +1,77 @@
+
+// миксины для боковых марджинов
+@mixin margin-lateral-1920 {
+  // margin-left: 16%;
+  // margin-right: 16%;
+}
+
+@mixin margin-lateral-768 {
+  // margin-left: 20px;
+  // margin-right: 20px;
+}
+
+@mixin margin-lateral-440 {
+  // margin-left: 10px;
+  // margin-right: 10px;
+}
+
+@mixin margin-header-footer-1920 {
+  // margin-left: 10px;
+  // margin-right: 10px;
+}
+
+@mixin margin-header-footer-768 {
+  // margin-left: 10px;
+  // margin-right: 10px;
+}
+
+@mixin margin-header-footer-440 {
+  // margin-left: 10px;
+  // margin-right: 10px;
+}
+
+// общие миксины для шрифтов h1-h6
+@mixin h1 {
+  font-family: $font-family-noah;
+  font-weight: $font-weight-700;
+  font-size: $font-size-h1;
+  line-height: $line-height;
+  font-style: normal;
+}
+
+@mixin h2 {
+  font-family: $font-family-noah;
+  font-weight: $font-weight-400;
+  font-size: $font-size-h2;
+  line-height: $line-height;
+  font-style: normal;
+}
+
+@mixin h3 {
+  @include h2;
+  font-size: $font-size-h3;
+}
+
+@mixin h4 {
+  @include h2;
+  font-size: $font-size-h4;
+}
+
+@mixin h5 {
+  @include h2;
+  font-size: $font-size-h5;
+}
+
+@mixin h6 {
+  @include h2;
+  font-size: $font-size-h6;
+}
+
+// миксин для шрифта в шапке и футере
+@mixin header-nav-font {
+  font-family: $font-family-geometria;
+  font-weight: $font-weight-500;
+  font-size: $font-size-h5;
+  line-height: $line-height-100;
+  font-style: normal;
+}
