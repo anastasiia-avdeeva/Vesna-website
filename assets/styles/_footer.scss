@@ -1,0 +1,45 @@
+.footer{
+    height: 225px;
+    background-color: #545A2F;
+    &__container{
+        margin: 0 5.2%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        height: 100%;
+    }
+    &__contacts{
+        display: grid;
+        grid-template-rows: 1fr 1fr 2fr;
+        padding-top: 50px;
+    }
+    &__contact-item {
+        font-size: 20px;
+        font-family: "Noah";
+        font-weight: 400;
+        font-style: normal;
+        color: #FFFFFF;
+    }
+    &__contact-item.footer__contact-item--top {
+        display: grid;
+        padding-top: 50px;
+        font-size: 16px;
+    }
+    &__logo{
+        display: grid;
+        justify-content: center;
+        align-content: center
+    }
+    &__icon{
+        display: grid;
+        justify-items: end;
+        align-content: space-around;
+        gap: 38%;
+    }
+    &__icon-link{
+        color: #FFFFFF;
+        font-family: "Noah";
+        font-weight: 400;
+        font-style: normal;
+        font-size: 16px;
+    }
+}
