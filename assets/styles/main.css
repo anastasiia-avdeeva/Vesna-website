@@ -106,14 +106,18 @@ ul li {
 }
 .footer__icon {
   display: grid;
+  grid-template-rows: 1fr 1fr;
+  padding-top: 50px;
   justify-items: end;
   align-content: space-around;
-  gap: 32%;
-}
-.footer__icon-link {
   color: #FFFFFF;
   font-family: "Noah";
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
-}/*# sourceMappingURL=main.css.map */
+  gap: 60px;
+}
+.footer__icon-link.footer__icon-link--top {
+  display: grid;
+  padding-top: 20px;
+}
