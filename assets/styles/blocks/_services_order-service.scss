@@ -1,3 +1,9 @@
+input:focus,
+textarea:focus {
+  outline: none; /* Убирает стандартное выделение */
+  border: 1px solid $olive-dark; /* Цвет рамки при фокусе */
+}
+
 .order-service {
   margin: 0 12.5% 111px 12.5%;
   padding: 7.4% 5.5% 3.3%;
@@ -47,40 +53,96 @@
   grid-area: form;
   display: flex;
   flex-direction: column;
-  // justify-content: space-between;
+  justify-content: space-between;
   gap: 24px;
 
   &__input-container {
     height: 50px;
     max-width: 660px;
     min-width: 300px;
+    position: relative;
   }
 
-  &__input {
-    padding: 16px 10px 16px 22.5px;
+  &__input-field {
+    padding: 18px 10px 5px 23px;
     height: 100%;
     width: 100%;
     border: 0.7px solid $olive-light;
     background: $white;
   }
 
-  &__input::placeholder {
+  // использую лэйбл вместо placeholder для полей имя и email
+  &__input-label {
+    position: absolute;
+    top: 12px;
+    left: 22.5px;
     color: $brown;
+    pointer-events: none;
+    transition: all 0.2s ease;
+  }
+
+  // перемещаю лэйбл наверх и уменьшаю шрифт когда юзер вводит информацию в поля имя и email
+  &__input-field:focus + &__input-label,
+  &__input-field:valid + &__input-label {
+    top: 2px;
+    left: 22px;
+    font-size: 12px;
   }
 
   &__comments-container {
     height: 124px;
+    max-width: 660px;
+    min-width: 300px;
+    position: relative;
   }
 
-  &__input--tel {
-    padding: 10px 480px 10px 22px;
+  &__comments-field {
+    padding-left: 22.5px;
+    padding-top: 18px;
+    height: 100%;
+    width: 100%;
+    border: 0.7px solid $olive-light;
+    background: $white;
+  }
+  // у полей для комментария и телефона 2 лэйбла
+  // когда курсор не в поле, default виден, а focus спрятан
+  &__input-label--default {
+    position: absolute;
+    top: 10px;
+    left: 22.5px;
+    color: $brown;
+    pointer-events: none;
+    color: $brown;
+    opacity: 1;
+    transition: opacity 0.4s ease;
   }
 
-  &__input--comments {
-    padding: 10px 10px 10px 22.6px;
+  &__input-label--focus {
+    // display: none;
+    position: absolute;
+    color: $brown;
+    top: 2px;
+    left: 22px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
   }
+
+  // когда курсор в поле, default прячется, а focus появляется
+  &__comments-field:focus ~ &__input-label--default,
+  &__input-field--tel:focus ~ &__input-label--default {
+    // display: none;
+    opacity: 0;
+  }
+
+  &__comments-field:focus ~ &__input-label--focus,
+  &__input-field--tel:focus ~ &__input-label--focus {
+    // display: block;
+    opacity: 1;
+  }
+
   // стилизую чекбокс создавая custom checkbox и скрываю оригинальный
-  &__consent-text {
+  &__consent-label {
     padding-left: 44px;
     position: relative;
     display: inline-block;
@@ -92,7 +154,7 @@
     display: none;
   }
 
-  &__consent-text::before {
+  &__consent-label::before {
     content: "";
     height: 20px;
     width: 20px;
@@ -101,7 +163,7 @@
     border: 1px solid $olive-light;
   }
 
-  &__consent-checkbox:checked + &__consent-text::before {
+  &__consent-checkbox:checked + &__consent-label::before {
     content: url("../icons/akar-icons_check.svg");
     height: 20px;
     width: 20px;
