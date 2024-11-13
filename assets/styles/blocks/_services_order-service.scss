@@ -1,0 +1,68 @@
+.order-service {
+  margin: 0 7.3% 111px 7.3%;
+  padding: 7.4% 7.3% 3.3%;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  grid-template-rows: min-content 1fr;
+  grid-template-areas:
+    "title form"
+    "contacts form";
+  gap: 40px 57px;
+  font-family: "Noah";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #1a1a18;
+
+  &__title {
+    grid-area: title;
+    font-size: 48px;
+    font-weight: 400;
+  }
+
+  &__contacts {
+    grid-area: contacts;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.form {
+  grid-area: form;
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
+  gap: 24px;
+
+  &__input-container {
+    height: 50px;
+    max-width: 660px;
+    min-width: 300px;
+  }
+
+  &__input {
+    padding: 16px 10px 16px 22.5px;
+    height: 100%;
+    width: 100%;
+    border: 0.7px solid #99a18e;
+    background: #fff;
+  }
+
+  &__input::placeholder {
+    color: #63533e;
+  }
+
+  &__comments-container {
+    height: 124px;
+  }
+
+  &__input--tel {
+    padding: 10px 480px 10px 22px;
+  }
+
+  &__input--comments {
+    padding: 10px 10px 10px 22.6px;
+  }
+}
