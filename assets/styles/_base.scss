@@ -8,11 +8,6 @@
 //   font-size: $baseFontSize;
 // }
 
-html,
-body {
-  height: 100%;
-}
-
 body {
   // font-family: "Alegreya Sans", Arial, Helvetica, sans-serif;
   // line-height: 1.42;
@@ -20,17 +15,6 @@ body {
   // -moz-osx-font-smoothing: grayscale;
   // position: relative;
   // color: $body;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h5,
-h6 {
-  margin-top: 0;
-  font-weight: normal;
 }
 
 a {
@@ -47,12 +31,3 @@ ul {
   }
 }
 
-p{
-  padding: 0;
-  margin: 0;
-}
-
-image {
-  display: block;
-  min-width: 100%;
-}
