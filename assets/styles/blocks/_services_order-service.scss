@@ -115,7 +115,7 @@ textarea:focus {
     transform: scale(0.5) translateY(-30px) translateX(-75px);
   }
 
-  // у полей для комментария и телефона 2 лэйбла которые выполняют роль плейсходера, т.к нужно поменять текст
+  // у полей для телефона 2 лэйбла которые выполняют роль плейсходера, т.к нужно поменять текст
   // label--default виден только тогда, когда настоящий плейсхолдер должен быть на месте (т.е в поле нет курсора и ничего не введено) (состояние по умолчанию)
 
   &__input-label--default {
@@ -134,6 +134,7 @@ textarea:focus {
     top: 2px;
     left: 19px;
     font-size: 12px;
+    // font-size: $font-size-label-focus;
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
   }
@@ -156,7 +157,7 @@ textarea:focus {
     padding-left: 44px;
     position: relative;
     display: inline-block;
-    font-size: 16px;
+    font-size: $font-size-smallest;
     color: $black;
   }
 
@@ -244,6 +245,7 @@ textarea:focus {
     }
     &__consent-label {
       font-size: 14px;
+      // font-size: $font-size-label-consent-phone;
     }
   }
 }
