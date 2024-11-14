@@ -13,7 +13,7 @@ textarea:focus {
   padding-bottom: 2.5%;
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
-  grid-template-rows: min-content 1fr;
+  grid-template-rows: auto 1fr;
   grid-template-areas:
     "title form"
     "contacts form";
@@ -47,22 +47,29 @@ textarea:focus {
   }
 
   &__button-container {
-    align-self: flex-end;
+    // align-self: flex-end;
+    justify-self: end;
   }
 }
 
 .form {
   max-width: 660px;
   grid-area: form;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
+  // gap: 24px;
+  display: grid;
+  grid-template-rows: auto auto;
   gap: 24px;
 
   &__input-group {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
+    // gap: 24px;
+    display: grid;
+    grid-template-rows: repeat(5, auto);
     gap: 24px;
   }
 
@@ -200,6 +207,7 @@ textarea:focus {
     margin-right: 40px;
     margin-bottom: 79px;
     padding-top: 77px;
+    gap: 40px 20px;
   }
 
   .form {
