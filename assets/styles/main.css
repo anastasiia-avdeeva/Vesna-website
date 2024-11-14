@@ -71,6 +71,7 @@ ul li {
   background-color: #545A2F;
   width: 100%;
 }
+
 .footer__container {
   padding-left: 5.2%;
   padding-right: 5.2%;
@@ -78,20 +79,25 @@ ul li {
   grid-template-columns: 1fr 1fr 1fr;
   height: 100%;
 }
+
 .footer__contacts {
   display: grid;
   grid-template-rows: 1fr 1fr 2fr;
   padding-top: 50px;
 }
+
 .footer__contact-item {
   font-family: "Geometria", sans-serif;
   font-weight: 500;
   font-size: 24px;
   line-height: 100%;
   font-style: normal;
+  line-height: normal;
+  font-weight: 400;
   font-size: 20px;
   color: #FFFFFF;
 }
+
 .footer__contact-item.footer__contact-item--top {
   display: grid;
   padding-top: 50px;
@@ -103,11 +109,13 @@ ul li {
   font-size: 18px;
   font-size: 16px;
 }
+
 .footer__logo {
   display: grid;
   justify-content: center;
   align-content: center;
 }
+
 .footer__icon {
   display: grid;
   grid-template-rows: 1fr 1fr;
@@ -120,24 +128,27 @@ ul li {
   font-size: 58px;
   line-height: auto;
   font-style: normal;
-  font-size: 18px;
   font-size: 16px;
   gap: 60px;
 }
+
 .footer__icon-link.footer__icon-link--top {
   display: grid;
   font-size: 18px;
   padding-top: 20px;
 }
+
 .footer__icon-link {
   padding-bottom: 20px;
 }
+
 @media screen and (max-width: 440px) {
   .footer {
     height: 520px;
     width: 100%;
     margin: 0;
   }
+
   .footer__container {
     padding-left: 16px;
     padding-right: 16px;
@@ -145,11 +156,13 @@ ul li {
     grid-template-rows: auto auto auto;
     padding: 0;
   }
+
   .footer__logo {
     grid-column: 1;
     grid-row: 1;
     padding: 20px 0;
   }
+
   .footer__contacts {
     display: grid;
     position: relative;
@@ -159,11 +172,14 @@ ul li {
     text-align: center;
     grid-template-rows: auto;
   }
+
   .footer__contact-item.footer__contact-item--top {
     position: absolute;
     bottom: -120px;
     padding-left: 16px;
+    font-size: 18px;
   }
+
   .footer__icon {
     position: relative;
     grid-column: 1;
@@ -172,6 +188,7 @@ ul li {
     padding: 0;
     gap: 0;
   }
+
   .footer__icon-link.footer__icon-link--top {
     padding: 0;
     padding-right: 170px;
