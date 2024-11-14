@@ -5,12 +5,9 @@ textarea:focus {
 }
 
 .order-service {
-  margin: 0 17.97% 111px 17.97%;
-  // padding: 7.4% 5.5% 3.3%;
+  margin: 0 12.5% 130px 12.5%;
+  padding: 107px 5.5% 47px;
   // padding-top: 107px;
-  padding-top: 5.6%;
-  // padding-bottom: 47px;
-  padding-bottom: 2.5%;
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
   grid-template-rows: auto 1fr;
@@ -53,15 +50,18 @@ textarea:focus {
 }
 
 .form {
-  max-width: 660px;
   grid-area: form;
   display: grid;
-  grid-template-rows: auto auto;
+  grid-auto-rows: auto; //более гибко чем grid-template-rows если не знаешь сколько строк будет в форме
   gap: 24px;
 
+  // Изменила с grid на флекс чтобы был более гибкий
   &__input-group {
-    display: grid;
-    grid-template-rows: repeat(5, auto);
+    // display: grid;
+    // grid-template-rows: repeat(5, auto);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     gap: 24px;
   }
 
@@ -157,7 +157,15 @@ textarea:focus {
     position: relative;
     display: inline-block;
     font-size: 16px;
+    color: $black;
+  }
+
+  &__consent-link {
     color: $olive-dark;
+  }
+
+  &__consent-link:hover {
+    text-decoration: underline;
   }
 
   &__consent-checkbox {

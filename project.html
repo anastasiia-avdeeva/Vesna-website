@@ -7,7 +7,10 @@
     <title>Vesna | project</title>
   </head>
   <body>
-    <header class="header"></header>
+    <header class="header">
+      <div class="header__fitst-line"></div>
+      <div class="header__gallery"></div>
+    </header>
     <main class="main">
       <section class="order-service">
         <h2 class="order-service__title">
@@ -100,13 +103,18 @@
                 checked
               />
               <label for="userConsent" class="form__consent-label"
-                >Я даю согласие на обработку своих персональных данных</label
+                >Я даю согласие на обработку своих
+                <a href="#" class="form__consent-link"
+                  >персональных данных</a
+                ></label
               >
             </div>
           </div>
 
           <div class="order-service__button-container">
-            <button type="submit">Отправить</button>
+            <button type="submit" class="button button--olive-large">
+              Отправить
+            </button>
           </div>
         </form>
       </section>
