@@ -1,0 +1,86 @@
+// номер телефона
+.button--phone{
+    width: 240px;
+    height: 60px;
+    background-color: $white;
+    color: $black;
+    border: none;
+    @include h5;
+        &:hover{
+            background-color: $olive-dark;
+            color: $white;
+            cursor: pointer;
+        }
+}
+// номер телефона зеленая кнопка
+.button--green-phone{
+    width: 240px;
+    height: 60px;
+    background-color: $olive-dark;
+    color: $white;
+    border: none;
+    @include h5;
+        &:hover{
+            background-color: $olive-light;
+            cursor: pointer;
+        }
+}
+// "перезвоните мне"
+.button--callback{
+    width: 311px;
+    height: 60px;
+    background-color: $olive-dark;
+    color: $white;
+    border: none;
+    @include h5;
+    &:hover {
+            background-color: $olive-light;
+            cursor: pointer;
+        }
+}
+// бепсплатная консультация
+.button--free-consultation{
+    width: 240px;
+    height: 38px;
+    background-color: transparent;
+    color: $white;
+    border: none;
+    font-family: "Noah";
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    &:hover {
+            cursor: pointer;
+            border-bottom: 1px solid $white;
+        }
+}
+// перезвоните мне белая кнопка
+.button--callback-white{
+    width: 311px;
+    height: 60px;
+    background-color: transparent;
+    color: $white;
+    border: 1px solid $white;
+    @include h5;
+        &:hover {
+            background-color: $white;
+            cursor: pointer;
+            color: $black;
+            border: none;
+        }
+}
+// кнопка Заказать услугу
+.button--order-service{
+    width: 311px;
+    height: 60px;
+    background-color: transparent;
+    color: $olive-dark;
+    border: 1px solid $olive-dark;
+    @include h5;
+        &:hover {
+            background-color: $olive-dark;
+            cursor: pointer;
+            color: $white;
+            border: none;
+        }
+}
