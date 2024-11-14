@@ -15,6 +15,7 @@
     }
     &__contact-item {
         @include header-nav-font;
+        line-height: normal;
         font-size: 20px;
         color: #FFFFFF;
     }
@@ -22,7 +23,7 @@
         display: grid;
         padding-top: 50px;
         @include h6;
-        font-size: 16px;
+        font-size: $font-size-smalles;
     }
     &__logo{
         display: grid;
@@ -37,12 +38,12 @@
         align-content: space-around;
         color: #FFFFFF;
         @include h6;
-        font-size: 16px;
+        font-size: $font-size-smalles;
         gap: 60px;
     }
     &__icon-link.footer__icon-link--top{
         display: grid;
-        font-size: 18px;
+        font-size: $font-size-h6;
         padding-top: 20px;
     }
         &__icon-link {
@@ -90,6 +91,7 @@
         &__icon-link.footer__icon-link--top{
             padding: 0;
             padding-right: 170px;
+            margin: auto;
         }
 
     }
