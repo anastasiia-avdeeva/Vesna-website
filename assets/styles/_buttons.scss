@@ -42,10 +42,7 @@
     height: 38px;
     background-color: transparent;
     color: $white;
-    font-family: "Noah";
-    font-weight: 700;
-    font-style: normal;
-    font-size: 20px;
+    @include button-free-consultation;
     &:hover {
             border-bottom: 1px solid $white;
             color: $white;
