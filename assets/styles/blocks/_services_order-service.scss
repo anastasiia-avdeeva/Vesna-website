@@ -5,10 +5,14 @@ textarea:focus {
 }
 
 .order-service {
-  margin: 0 12.5% 111px 12.5%;
-  padding: 7.4% 5.5% 3.3%;
+  margin: 0 17.97% 111px 17.97%;
+  // padding: 7.4% 5.5% 3.3%;
+  // padding-top: 107px;
+  padding-top: 5.6%;
+  // padding-bottom: 47px;
+  padding-bottom: 2.5%;
   display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
+  grid-template-columns: 0.9fr 1.1fr;
   grid-template-rows: min-content 1fr;
   grid-template-areas:
     "title form"
@@ -54,6 +58,13 @@ textarea:focus {
   flex-direction: column;
   justify-content: space-between;
   gap: 24px;
+
+  &__input-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+  }
 
   &__input-container {
     height: 50px;
@@ -180,5 +191,61 @@ textarea:focus {
     height: 20px;
     width: 20px;
     border: none;
+  }
+}
+
+@include tablets {
+  .order-service {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 79px;
+    padding-top: 77px;
+  }
+
+  .form {
+    &__input-container,
+    &__comments-container {
+      min-width: 288px;
+    }
+  }
+}
+
+@include phones {
+  .order-service {
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-top: 33px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, min-content);
+    grid-template-areas:
+      "title"
+      "form";
+    gap: 53px;
+    @include h6;
+    line-height: normal;
+
+    &__title {
+      margin-left: 12px;
+      margin-right: 12px;
+      text-align: center;
+      @include h5;
+    }
+
+    &__contacts {
+      display: none;
+    }
+  }
+
+  .form {
+    &__input-group {
+      margin-left: 12px;
+      margin-right: 10px;
+    }
+    &__consent-container {
+      margin-right: 24px;
+    }
+    &__consent-label {
+      font-size: 14px;
+    }
   }
 }
