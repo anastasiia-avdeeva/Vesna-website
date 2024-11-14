@@ -191,10 +191,8 @@ textarea:focus {
 
 @include tablets {
   .order-service {
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-bottom: 79px;
-    padding-top: 77px;
+    margin: 0px 40px 79px;
+    padding: 77px 0px 0px 0px;
     gap: 40px 20px;
   }
 
@@ -217,12 +215,14 @@ textarea:focus {
       "title"
       "form";
     gap: 53px;
+    justify-items: center;
     @include h6;
     line-height: normal;
 
     &__title {
-      margin-left: 12px;
-      margin-right: 12px;
+      margin-left: 20px;
+      margin-right: 20px;
+      max-width: 300px;
       text-align: center;
       @include h5;
     }
@@ -233,9 +233,11 @@ textarea:focus {
   }
 
   .form {
+    min-width: 288px;
     &__input-group {
       margin-left: 12px;
       margin-right: 10px;
+      max-width: 300px;
     }
     &__consent-container {
       margin-right: 24px;
