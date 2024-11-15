@@ -16,7 +16,6 @@ textarea:focus {
     "contacts form";
   gap: 40px 57px;
   @include h5;
-  line-height: normal;
   color: $black;
 
   &__title {
@@ -54,6 +53,8 @@ textarea:focus {
   display: grid;
   grid-auto-rows: auto; //более гибко чем grid-template-rows если не знаешь сколько строк будет в форме
   gap: 24px;
+  @include h5;
+  color: $brown;
 
   // Изменила с grid на флекс чтобы был более гибкий
   &__input-group {
@@ -78,7 +79,7 @@ textarea:focus {
     width: 100%;
     border: 0.7px solid $olive-light;
     background: $white;
-    color: $brown;
+    color: $black;
   }
 
   &__comments-container {
@@ -102,7 +103,6 @@ textarea:focus {
     left: 22px;
     pointer-events: none;
     transition: transform 0.1s ease-in-out;
-    color: $brown;
   }
 
   &__input-field:focus ~ &__input-label,
@@ -218,7 +218,6 @@ textarea:focus {
     gap: 53px;
     justify-items: center;
     @include h6;
-    line-height: normal;
 
     &__title {
       margin-left: 20px;
