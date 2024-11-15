@@ -76,3 +76,8 @@
   line-height: $line-height-100;
   font-style: normal;
 }
+
+@mixin button-free-consultation {
+  @include h1;
+  font-size: $font-size-button-free-consultation;
+}
