@@ -1,4 +1,4 @@
-// номер телефона
+// номер телефона белая кнопка
 .button{
     width: 240px;
     height:60px;
@@ -9,17 +9,12 @@
     &:hover{
         cursor: pointer;
         background-color: $olive-dark;
+        color: $white;
     }
 }
 
-// номер телефона белая кнопка
-.button--white-phone{
-        &:hover{
-            color: $white;
-        }
-}
 // номер телефона зеленая кнопка
-.button--green-phone{
+.button--olive{
     background-color: $olive-dark;
     color: $white;
     border: none;
@@ -28,7 +23,7 @@
         }
 }
 // "перезвоните мне"
-.button--callback{
+.button--olive-large{
     width: 311px;
     background-color: $olive-dark;
     color: $white;
@@ -37,18 +32,18 @@
         }
 }
 // бепсплатная консультация
-.button--free-consultation{
+.button--transparent{
     height: 38px;
     background-color: transparent;
     color: $white;
     @include button-free-consultation;
     &:hover {
+            background-color: transparent;
             border-bottom: 1px solid $white;
-            color: $white;
         }
 }
 // перезвоните мне белая кнопка
-.button--callback-white{
+.button--outline-white{
     width: 311px;
     background-color: transparent;
     color: $white;
@@ -60,7 +55,7 @@
         }
 }
 // кнопка Заказать услугу
-.button--order-service{
+.button--outline-green{
     width: 311px;
     background-color: transparent;
     color: $olive-dark;
@@ -69,4 +64,47 @@
             color: $white;
             border: none;
         }
+}
+// КРУГЛЫЕ НОПОЧКИ
+// общий стиль для круглых кнопок
+.button-round{
+    display: flex;
+    flex-direction: column;
+    width: 191px;
+    height: 191px;
+    border: none;
+    background-color: $white;
+    color: $black;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    @include h5;
+}
+// Все проекты
+.button-round--arrow{
+    .button-round__icon--white{
+        display: none;
+    }
+    &:hover{
+        cursor: pointer;
+        color: $white;
+        background-color: $olive-dark;
+        .button-round__icon--black{
+            display: none;
+        }
+        .button-round__icon--white{
+            display: block;
+        }
+    }
+}
+// Кнопка наверх
+.button-round--up{
+    width: 124px;
+    height: 124px;
+    background-color: $olive-light;
+    color: $white;
+    &:hover{
+        cursor: pointer;
+        background-color: $olive-dark;
+    }
 }
