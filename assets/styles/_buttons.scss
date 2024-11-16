@@ -55,16 +55,12 @@
   }
 }
 // кнопка Заказать услугу
-.button--order-service {
+.button--outline-green {
   width: 311px;
-  height: 60px;
   background-color: transparent;
   color: $olive-dark;
   border: 1px solid $olive-dark;
-  @include h5;
   &:hover {
-    background-color: $olive-dark;
-    cursor: pointer;
     color: $white;
     border: none;
   }
@@ -210,6 +206,31 @@
   }
 }
 
+// адаптив на 768
+@include tablets {
+  .button-round--arrow {
+    width: 110px;
+    height: 110px;
+    .button-round__link {
+      display: none;
+    }
+  }
+}
+// адаптив на 440
+@include phones {
+  .button-round--arrow {
+    width: 76px;
+    height: 76px;
+    background-color: rgba(255, 255, 255, 0.7);
+    .button-round__icon--black {
+      display: none;
+    }
+    .button-round__icon--white {
+      display: block;
+    }
+  }
+}
+
 // Кнопка наверх
 .button-round--up {
   width: 124px;
@@ -221,6 +242,23 @@
     background-color: $olive-dark;
   }
 }
+// адаптив на 768
+@include tablets {
+  .button-round--up {
+    width: 105px;
+    height: 105px;
+    font-size: 20px;
+  }
+}
+// адаптив на 440
+@include phones {
+  .button-round--up {
+    width: 95px;
+    height: 95px;
+    font-size: 14px;
+  }
+}
+
 // адаптив на 768
 @include tablets {
   .button-round--up {
