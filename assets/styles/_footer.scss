@@ -6,6 +6,7 @@
         @include margin-header-footer-1920;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
         height: 100%;
     }
     &__contacts{
@@ -94,11 +95,5 @@
             padding: 0;
             padding-right: 170px;
         }
-
     }
-        @include tablets {
-            &__container {
-                height: auto;
-            }
-        }
 }
