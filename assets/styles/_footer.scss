@@ -1,99 +1,102 @@
 .footer{
-    height: 225px;
+    height: auto;
     background-color: $olive-dark;
     width: 100%;
     &__container{
         @include margin-header-footer-1920;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        height: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: min-content min-content;
+        height: auto;
+        padding-top: 50px;
+        padding-bottom: 30px;
     }
     &__contacts{
         display: grid;
-        grid-template-rows: 1fr 1fr 2fr;
-        padding-top: 50px;
+        grid-template-rows: 1fr 2fr;
     }
     &__contact-item {
         @include header-nav-font;
         line-height: normal;
         font-size: 20px;
         font-weight: 400;
-        color: #FFFFFF;
+        color: $white;
     }
-    &__contact-item.footer__contact-item--top {
+    &__copyright{
         display: grid;
-        padding-top: 50px;
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    &__copyright-link{
         @include h6;
-        font-size: $font-size-smalles;
+        font-size: $font-size-smallest;
+        color: $white;
+        display: grid;
+        align-items: end
     }
     &__logo{
+        grid-column: 2/2;
+        grid-row: 1/3;
         display: grid;
         justify-content: center;
-        align-content: center
+        align-content: center;
     }
     &__icon{
         display: grid;
-        grid-template-rows: 1fr 1fr;
-        padding-top: 50px;
         justify-items: end;
-        align-content: space-around;
-        color: #FFFFFF;
-        @include h6;
-        font-size: $font-size-smalles;
-        gap: 60px;
     }
-    &__icon-link.footer__icon-link--top{
+    &__privacy-policy{
         display: grid;
-        font-size: $font-size-h6;
-        padding-top: 20px;
+        justify-items: end;
+        align-items: end;
+        color: $white;
+        @include h6;
+        font-size: $font-size-smallest;
     }
-        &__icon-link {
-            padding-bottom: 20px;
+    // адаптив для 768
+    @include tablets{
+        &__container{
+            @include margin-header-footer-768;
         }
-    @include phones{ // адаптив
-        &{
-            height: 520px;
-            width: 100%;
-            margin: 0;
-        }
+    }
+    // адаптив для 440
+    @include phones{
         &__container{
             @include margin-header-footer-440;
+            width: 100%;
+            height: auto;
             grid-template-columns: 1fr;
-            grid-template-rows: auto auto auto;
-            padding: 0;
-        }
-        &__logo {
-            grid-column: 1; // Логотип занимает первую строку
-            grid-row: 1; // Первую ячейку
-            padding: 20px 0;
+            padding-bottom: 20px;
         }
         &__contacts {
-            display: grid;
-            position: relative;
-            grid-column: 1; // Контакты занимают ту же колонку
-            grid-row: 2; // Вторую ячейку
-            padding-top: 0px; 
-            text-align: center;
-            grid-template-rows: auto;
+            grid-row: 2/3;
+            grid-column: 1/4;
+            justify-items: center;
         }
-        &__contact-item.footer__contact-item--top{
-            position: absolute;
-            bottom: -120px;
-            padding-left: 16px;
-            font-size: $font-size-h6;
+        &__copyright {
+            grid-column: 1/2;
+            grid-row: 3/4;
+        }
+        &__logo {
+            grid-row: 1/2;
+            grid-column: 1/2;
+            padding-bottom: 30px;
         }
         &__icon {
-            position: relative;
-            grid-column: 1; // Иконки также могут занимать третью строку, если нужно
-            grid-row: 3; // Третью ячейку
-            justify-items: center;
-            padding: 0;
-            gap: 0;
+            justify-items: end;
+            grid-area: icon;
+            grid-column: 1/2;
+            grid-row: 2/3;
+            justify-content: center;
+            padding-top: 30%;
         }
-        &__icon-link.footer__icon-link--top{
-            padding: 0;
-            padding-right: 170px;
+        &__privacy-policy {
+            grid-column: 1/2;
+            grid-row: 3/4;
+            align-items: start;
+            justify-items: start;
+            padding-top: 20%;
+            padding-bottom: 30px;
         }
     }
 }
