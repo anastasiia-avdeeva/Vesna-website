@@ -11,8 +11,9 @@
 @import "./normalize.css";
 
 @import "./buttons";
-// link blocks
 @import "./blocks/forms";
-@import "./blocks/services_order-service.scss";
 @import "./blocks/popup-windows";
-@import "./buttons";
+
+// blocks
+@import "./blocks/services_order-service.scss";
+@import "./blocks/main_garden-guide";
