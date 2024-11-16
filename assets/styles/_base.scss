@@ -18,3 +18,9 @@ ul {
   }
 }
 
+input:focus,
+textarea:focus {
+  outline: none; // Убирает стандартное выделение
+  border: 1px solid $olive-dark; // Цвет рамки при фокусе
+}
+
