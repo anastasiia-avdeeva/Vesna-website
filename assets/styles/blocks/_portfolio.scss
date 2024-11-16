@@ -1,0 +1,17 @@
+.project-portfolio{
+    padding: 5% 15.2%;
+    // 5% для удобства видения блока потом посчитаем
+}
+// первая карточка
+.project-card{
+    width: 100%;
+    &__title{
+        @include h2;
+        color: $black;
+    }
+    &__details{
+        display: grid;
+        grid-template-columns: max-content max-content max-content;
+        gap: 83px;
+    }
+}
