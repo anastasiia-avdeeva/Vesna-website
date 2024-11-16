@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
   <link rel="stylesheet" href="./assets/styles/main.css">
+  <title>Vesna | Главная</title>
 </head>
 <body>
 
   <main>
-    <!-- <section class="garden-guide">
+    <section class="garden-guide">
       <div class="garden-guide__book">
         <img
           class="garden-guide__book-image"
@@ -18,7 +18,7 @@
         />
       </div>
     
-      <h2 class="garden-guide__title">Как выбрать растения для сада?</h2>
+      <h2 class="garden-guide__title">Как выбрать растения <br class="br">для сада?</h2>
       <p class="garden-guide__subtitle">Пришлем инструкцию!</p>
     
       <div class="garden-guide__content">
@@ -29,63 +29,25 @@
             placeholder="Ваш Email"
             required
           />
-          <label class="garden-guide__consent">
+          <div class="garden-guide__consent-container">
             <input
               type="checkbox"
-              class="garden-guide__checkbox"
-              required
+              name="order-service__garden-guide-consent"
+              id="userConsent"
+              class="garden-guide__consent-checkbox"
+              checked
             />
-            <span class="garden-guide__checkbox-custom"></span>
-            <span class="garden-guide__consent-label">
-              Я даю согласие на обработку своих
-              <a href="#" class="garden-guide__link">персональных данных</a>
-            </span>
-          </label>
+            <label for="userConsent" class="garden-guide__consent-label"
+              >Я даю согласие на обработку своих
+              <a href="#" class="garden-guide__consent-link"
+                >персональных данных</a
+              ></label
+            >
+          </div>
           <button class="garden-guide__button" type="submit">
             Хочу инструкцию
           </button>
         </form>
-      </div>
-    </section> -->
-
-    <section class="garden-guide">
-      <div class="garden-guide__book">
-        <img
-          class="garden-guide__book-image"
-          src="./assets/img/garden-guide.png"
-          alt="Book about garden plants"
-        />
-      </div>
-    
-      <div class="garden-guide__content-wrapper">
-        <h2 class="garden-guide__title">Как выбрать растения для сада?</h2>
-        <p class="garden-guide__subtitle">Пришлем инструкцию!</p>
-    
-        <div class="garden-guide__content">
-          <form class="garden-guide__form">
-            <input
-              class="garden-guide__input"
-              type="email"
-              placeholder="Ваш Email"
-              required
-            />
-            <label class="garden-guide__consent">
-              <input
-                type="checkbox"
-                class="garden-guide__checkbox"
-                required
-              />
-              <span class="garden-guide__checkbox-custom"></span>
-              <span class="garden-guide__consent-label">
-                Я даю согласие на обработку своих
-                <a href="#" class="garden-guide__link">персональных данных</a>
-              </span>
-            </label>
-            <button class="garden-guide__button" type="submit">
-              Хочу инструкцию
-            </button>
-          </form>
-        </div>
       </div>
     </section>
 
