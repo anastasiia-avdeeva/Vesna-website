@@ -1,0 +1,238 @@
+.landscape {
+    margin: 0 87px;
+    margin-bottom: 437px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 43%;
+      left: 29%;
+      transform: translateY(-50%);
+      width: 883px;
+      height: 930px;
+      background-image: url('../img/landscape-bg.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 86px;
+    @include h3;
+    color: $black;
+  }
+
+  &__content {
+    display: flex;
+    gap: 75px;
+    justify-content: space-between;
+  }
+
+  &__image {
+    position: relative;
+    max-width: 50%;
+    width: 100%; // ширина блока с изображениями
+    max-width: 701px; // ограничение ширины, если нужно
+    margin: 0 auto; // центрирование блока
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+   
+
+    ::after {
+      content: '';
+      position: absolute;
+      top: 472px; // смещение вниз
+      left: 258px; // смещение вправо
+      width: 536px; // ширина второго изображения
+      height: 402px;
+      z-index: 2; // на передний план
+      background: url('../img/landscape2.jpg') no-repeat center center;
+      background-size: cover;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &__img {
+    position: relative;
+  max-width: 50%;
+  width: 100%; // ширина блока с изображениями
+  max-width: 701px; // ограничение ширины, если нужно
+  margin: 0 auto; // центрирование блока
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+
+  &__caption {
+    @include h5;
+    margin-bottom: 14px;
+  }
+
+  &__list {
+    max-width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    justify-content: center;
+    margin-top: 124px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 35px;
+    padding-left: 28px;
+    margin-bottom: 156px;
+    width: 65%;
+
+    &:nth-child(2) {
+      padding-left: 72px;
+      margin-bottom: 161px;
+      width: 81%;
+    }
+
+    &:nth-child(3) {
+      padding-left: 124px;
+      margin-bottom: 0;
+      width: 84%;
+    }
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+  }
+
+  &__text {
+    @include h5;
+    color: $black;
+  }
+
+  @include tablets {
+
+    margin: 500px 20px;
+
+    &__title {
+      margin-bottom: 66px;
+    }
+
+    &__content {
+      flex-direction: column-reverse;
+    justify-content: space-between;
+    gap: 66px;
+    }
+
+    &__list {
+      max-width: 100%;
+      margin-top: 0px;
+    }
+
+    &__item{
+      width: 100%;
+      padding: 0px;
+      margin-bottom: 50px;
+
+      &:nth-child(2) {
+        padding: 0px;
+        margin-bottom: 50px;
+        width: 100%;
+      }
+  
+      &:nth-child(3) {
+        padding: 0px;
+        width: 100%;
+      }
+    }
+
+    &__image {
+  
+      ::after {
+        left: 165px; // смещение вправо
+      }
+    }
+    
+  }
+
+  @include phones {
+    .landscape {
+      margin: 0 10px; // Уменьшаем горизонтальные отступы
+      margin-bottom: 200px;
+  
+      &__title {
+        margin-bottom: 40px; // Уменьшаем отступ
+        font-size: 18px; // Уменьшаем размер текста
+      }
+  
+      &__content {
+        gap: 30px; // Уменьшаем расстояние между блоками
+      }
+  
+      &__image {
+        max-width: 100%; // Изображение занимает всю ширину
+        margin: 0 auto;
+
+        ::before {
+          content: '';
+          position: absolute;
+          top: 347px; // смещение вниз
+          left: 18px; // смещение вправо
+          width: 15px; // ширина второго изображения
+          height: 177px;
+          z-index: 3; // на передний план
+          background: url('../img/3d.svg') no-repeat center center;
+          background-size: cover;
+        }
+  
+        ::after {
+          content: '';
+          position: absolute;
+          top: 321px; // смещение вниз
+          left: 48px; // смещение вправо
+          width: 352px; // ширина второго изображения
+          height: 204px;
+          z-index: 2; // на передний план
+          background: url('../img/landscape2.jpg') no-repeat center center;
+          background-size: cover;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+      }
+  
+      &__caption {
+        color: $white;
+      }
+  
+      &__list {
+        max-width: 100%; // Список занимает всю ширину
+        gap: 20px; // Уменьшаем расстояние между пунктами
+        margin-top: 0;
+      }
+  
+      &__item {
+        gap: 30px; // Уменьшаем расстояние между иконкой и текстом
+        padding: 0;
+        margin-bottom: 20px;
+  
+        &:nth-child(2),
+        &:nth-child(3) {
+          // margin-bottom: 20px;
+          padding: 0;
+        }
+      }
+  
+      &__icon {
+        width: 40px; // Уменьшаем размер иконки
+        height: 40px;
+        margin: 0 auto; // Центровка иконки
+      }
+  
+      &__text {
+        font-size: 16px; // Уменьшаем размер текста
+      }
+    }
+  }
+}

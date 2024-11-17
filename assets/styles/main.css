@@ -291,7 +291,6 @@ textarea:focus {
   background-size: 100% clamp(200px, 26.34vw, 350px);
   background-position: 0 clamp(150px, 11.41vw, 265px);
   margin-bottom: 300px;
-  margin-top: 700px;
   padding: 0 60px;
   grid-template-areas: "book title" "book subtitle" "book content";
 }
@@ -521,5 +520,219 @@ textarea:focus {
   }
   .garden-guide__button {
     width: 100%;
+  }
+}
+
+.landscape {
+  margin: 0 87px;
+  margin-bottom: 437px;
+}
+.landscape::before {
+  content: "";
+  position: absolute;
+  top: 43%;
+  left: 29%;
+  transform: translateY(-50%);
+  width: 883px;
+  height: 930px;
+  background-image: url("../img/landscape-bg.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+  pointer-events: none;
+}
+.landscape__title {
+  text-align: center;
+  margin-bottom: 86px;
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  font-size: 48px;
+  color: #1a1a18;
+}
+.landscape__content {
+  display: flex;
+  gap: 75px;
+  justify-content: space-between;
+}
+.landscape__image {
+  position: relative;
+  max-width: 50%;
+  width: 100%;
+  max-width: 701px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.landscape__image ::after {
+  content: "";
+  position: absolute;
+  top: 472px;
+  left: 258px;
+  width: 536px;
+  height: 402px;
+  z-index: 2;
+  background: url("../img/landscape2.jpg") no-repeat center center;
+  background-size: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.landscape__img {
+  position: relative;
+  max-width: 50%;
+  width: 100%;
+  max-width: 701px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.landscape__caption {
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  font-size: 24px;
+  margin-bottom: 14px;
+}
+.landscape__list {
+  max-width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  justify-content: center;
+  margin-top: 124px;
+}
+.landscape__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 35px;
+  padding-left: 28px;
+  margin-bottom: 156px;
+  width: 65%;
+}
+.landscape__item:nth-child(2) {
+  padding-left: 72px;
+  margin-bottom: 161px;
+  width: 81%;
+}
+.landscape__item:nth-child(3) {
+  padding-left: 124px;
+  margin-bottom: 0;
+  width: 84%;
+}
+.landscape__icon {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+}
+.landscape__text {
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  font-size: 24px;
+  color: #1a1a18;
+}
+@media screen and (max-width: 768px) {
+  .landscape {
+    margin: 500px 20px;
+  }
+  .landscape__title {
+    margin-bottom: 66px;
+  }
+  .landscape__content {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    gap: 66px;
+  }
+  .landscape__list {
+    max-width: 100%;
+    margin-top: 0px;
+  }
+  .landscape__item {
+    width: 100%;
+    padding: 0px;
+    margin-bottom: 50px;
+  }
+  .landscape__item:nth-child(2) {
+    padding: 0px;
+    margin-bottom: 50px;
+    width: 100%;
+  }
+  .landscape__item:nth-child(3) {
+    padding: 0px;
+    width: 100%;
+  }
+  .landscape__image ::after {
+    left: 165px;
+  }
+}
+@media screen and (max-width: 440px) {
+  .landscape .landscape {
+    margin: 0 10px;
+    margin-bottom: 200px;
+  }
+  .landscape .landscape__title {
+    margin-bottom: 40px;
+    font-size: 18px;
+  }
+  .landscape .landscape__content {
+    gap: 30px;
+  }
+  .landscape .landscape__image {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .landscape .landscape__image ::before {
+    content: "";
+    position: absolute;
+    top: 347px;
+    left: 18px;
+    width: 15px;
+    height: 177px;
+    z-index: 3;
+    background: url("../img/3d.svg") no-repeat center center;
+    background-size: cover;
+  }
+  .landscape .landscape__image ::after {
+    content: "";
+    position: absolute;
+    top: 321px;
+    left: 48px;
+    width: 352px;
+    height: 204px;
+    z-index: 2;
+    background: url("../img/landscape2.jpg") no-repeat center center;
+    background-size: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  .landscape .landscape__caption {
+    color: #ffffff;
+  }
+  .landscape .landscape__list {
+    max-width: 100%;
+    gap: 20px;
+    margin-top: 0;
+  }
+  .landscape .landscape__item {
+    gap: 30px;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  .landscape .landscape__item:nth-child(2), .landscape .landscape__item:nth-child(3) {
+    padding: 0;
+  }
+  .landscape .landscape__icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+  }
+  .landscape .landscape__text {
+    font-size: 16px;
   }
 }
