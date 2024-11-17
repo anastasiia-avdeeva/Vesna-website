@@ -40,8 +40,6 @@
     flex-direction: column;
     align-items: center;
 
-   
-
     ::after {
       content: '';
       position: absolute;
@@ -100,12 +98,17 @@
       margin-bottom: 0;
       width: 84%;
     }
-  }
 
-  &__icon {
-    flex-shrink: 0;
-    width: 50px;
+    &::before {
+      content: "";
+      flex-shrink: 0;
+      width: 50px;
     height: 50px;
+    background-image: url("../icons/circle-checked.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+    }
   }
 
   &__text {
@@ -116,6 +119,10 @@
   @include tablets {
 
     margin: 500px 20px;
+
+    &::before {
+      content: none;
+    }
 
     &__title {
       margin-bottom: 66px;
@@ -179,7 +186,7 @@
         ::before {
           content: '';
           position: absolute;
-          top: 347px; // смещение вниз
+          top: 320px; // смещение вниз
           left: 18px; // смещение вправо
           width: 15px; // ширина второго изображения
           height: 177px;
@@ -191,7 +198,7 @@
         ::after {
           content: '';
           position: absolute;
-          top: 321px; // смещение вниз
+          top: 296px; // смещение вниз
           left: 48px; // смещение вправо
           width: 352px; // ширина второго изображения
           height: 204px;
@@ -203,7 +210,9 @@
       }
   
       &__caption {
-        color: $white;
+        overflow: hidden;
+        width: 0;
+        height: 0;
       }
   
       &__list {
@@ -213,14 +222,18 @@
       }
   
       &__item {
-        gap: 30px; // Уменьшаем расстояние между иконкой и текстом
+        gap: 19px; // Уменьшаем расстояние между иконкой и текстом
         padding: 0;
         margin-bottom: 20px;
   
         &:nth-child(2),
         &:nth-child(3) {
-          // margin-bottom: 20px;
           padding: 0;
+        }
+
+        &::before {
+          width: 33px;
+        height: 33px;
         }
       }
   
