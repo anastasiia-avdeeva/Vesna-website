@@ -16,17 +16,17 @@
 // }
 
 // миксины для отступов у хедера и футера
-@mixin margin-header-footer-1920 {
+@mixin padding-header-footer-1920 {
   padding-left: 5.2%;
   padding-right: 5.2%;
 }
 
-@mixin margin-header-footer-768 {
+@mixin padding-header-footer-768 {
   padding-left: 4%; //32px примерно
   padding-right: 4%;
 }
 
-@mixin margin-header-footer-440 {
+@mixin padding-header-footer-440 {
   padding-left: 16px;
   padding-right: 16px;
 }
@@ -85,7 +85,7 @@
   font-size: $font-size-button-transparent;
 }
 
-// миксин для шрифта в шапке и футере
+// миксин для шрифта в шапке 
 @mixin header-nav-font {
   font-family: $font-family-geometria;
   font-weight: $font-weight-500;
