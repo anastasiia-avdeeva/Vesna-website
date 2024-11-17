@@ -624,10 +624,15 @@ textarea:focus {
   margin-bottom: 0;
   width: 84%;
 }
-.landscape__icon {
+.landscape__item::before {
+  content: "";
   flex-shrink: 0;
   width: 50px;
   height: 50px;
+  background-image: url("../icons/circle-checked.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: inline-block;
 }
 .landscape__text {
   font-family: "Noah", sans-serif;
@@ -641,6 +646,9 @@ textarea:focus {
 @media screen and (max-width: 768px) {
   .landscape {
     margin: 500px 20px;
+  }
+  .landscape::before {
+    content: none;
   }
   .landscape__title {
     margin-bottom: 66px;
@@ -691,7 +699,7 @@ textarea:focus {
   .landscape .landscape__image ::before {
     content: "";
     position: absolute;
-    top: 347px;
+    top: 320px;
     left: 18px;
     width: 15px;
     height: 177px;
@@ -702,7 +710,7 @@ textarea:focus {
   .landscape .landscape__image ::after {
     content: "";
     position: absolute;
-    top: 321px;
+    top: 296px;
     left: 48px;
     width: 352px;
     height: 204px;
@@ -712,7 +720,9 @@ textarea:focus {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
   .landscape .landscape__caption {
-    color: #ffffff;
+    overflow: hidden;
+    width: 0;
+    height: 0;
   }
   .landscape .landscape__list {
     max-width: 100%;
@@ -720,12 +730,16 @@ textarea:focus {
     margin-top: 0;
   }
   .landscape .landscape__item {
-    gap: 30px;
+    gap: 19px;
     padding: 0;
     margin-bottom: 20px;
   }
   .landscape .landscape__item:nth-child(2), .landscape .landscape__item:nth-child(3) {
     padding: 0;
+  }
+  .landscape .landscape__item::before {
+    width: 33px;
+    height: 33px;
   }
   .landscape .landscape__icon {
     width: 40px;
