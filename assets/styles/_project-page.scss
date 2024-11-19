@@ -49,7 +49,11 @@
     align-self: center;
   }
 
-  // create styles for the first project__details
+  &__details-description:nth-of-type(n + 2) {
+    color: $grey1;
+  }
+
+  // styles for the first project__details
   &__details-description--long {
     max-width: 600px;
     display: grid;
@@ -88,5 +92,24 @@
 
   &__feature-name {
     font-size: $font-size-h6;
+  }
+
+  &__text {
+    color: $grey1;
+  }
+
+  // styles for the second project__details
+  &__details--narrow {
+    padding-left: 11.1%;
+    padding-right: 7.2%;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 50px;
+  }
+
+  &__details--narrow &__details-description {
+    padding-bottom: 50px;
+    align-self: center;
+    color: $forest;
+    @include h4;
   }
 }
