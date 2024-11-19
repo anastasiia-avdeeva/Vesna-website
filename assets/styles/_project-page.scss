@@ -42,6 +42,7 @@
 
   &__details-description {
     grid-area: text;
+    max-width: 597px;
   }
 
   &__details-img-container {
@@ -49,7 +50,7 @@
     align-self: center;
   }
 
-  &__details-description:nth-of-type(n + 2) {
+  &__text--grey {
     color: $grey1;
   }
 
@@ -94,10 +95,6 @@
     font-size: $font-size-h6;
   }
 
-  &__text {
-    color: $grey1;
-  }
-
   // styles for the second project__details
   &__details--narrow {
     padding-left: 11.1%;
@@ -111,5 +108,14 @@
     align-self: center;
     color: $forest;
     @include h4;
+  }
+
+  // styles for the third project__details
+  &__details--big-gap {
+    gap: 109px;
+  }
+
+  &__details--big-gap &__details-description {
+    padding-top: 61px;
   }
 }
