@@ -552,6 +552,9 @@ textarea:focus {
   font-size: 48px;
   color: #1a1a18;
 }
+.landscape__title .bold {
+  font-weight: bold;
+}
 .landscape__content {
   display: flex;
   gap: 75px;
@@ -579,16 +582,6 @@ textarea:focus {
   background-size: cover;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-.landscape__img {
-  position: relative;
-  max-width: 50%;
-  width: 100%;
-  max-width: 701px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 .landscape__caption {
   font-family: "Noah", sans-serif;
   font-weight: 400;
@@ -605,6 +598,7 @@ textarea:focus {
   gap: 0px;
   justify-content: center;
   margin-top: 124px;
+  z-index: 3;
 }
 .landscape__item {
   display: flex;
@@ -645,7 +639,8 @@ textarea:focus {
 }
 @media screen and (max-width: 768px) {
   .landscape {
-    margin: 500px 20px;
+    margin: 0 20px;
+    margin-bottom: 437px;
   }
   .landscape::before {
     content: none;
@@ -655,7 +650,6 @@ textarea:focus {
   }
   .landscape__content {
     flex-direction: column-reverse;
-    justify-content: space-between;
     gap: 66px;
   }
   .landscape__list {
@@ -681,25 +675,44 @@ textarea:focus {
   }
 }
 @media screen and (max-width: 440px) {
-  .landscape .landscape {
-    margin: 0 10px;
-    margin-bottom: 200px;
+  .landscape {
+    margin: 0 16px;
+    margin-bottom: 287px;
   }
-  .landscape .landscape__title {
-    margin-bottom: 40px;
-    font-size: 18px;
-  }
-  .landscape .landscape__content {
-    gap: 30px;
-  }
-  .landscape .landscape__image {
-    max-width: 100%;
-    margin: 0 auto;
-  }
-  .landscape .landscape__image ::before {
+  .landscape::before {
     content: "";
     position: absolute;
-    top: 320px;
+    top: 22%;
+    left: 9%;
+    width: 367px;
+    height: 383px;
+    background-image: url("../img/landscape-bg.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+    pointer-events: none;
+  }
+  .landscape__title {
+    font-family: "Noah", sans-serif;
+    font-weight: 400;
+    font-size: 58px;
+    line-height: normal;
+    font-style: normal;
+    font-size: 24px;
+  }
+  .landscape__title br {
+    display: none;
+  }
+  .landscape__content {
+    gap: 56px;
+  }
+  .landscape__image {
+    max-width: 100%;
+  }
+  .landscape__image ::before {
+    content: "";
+    position: absolute;
+    top: 330px;
     left: 18px;
     width: 15px;
     height: 177px;
@@ -707,11 +720,11 @@ textarea:focus {
     background: url("../img/3d.svg") no-repeat center center;
     background-size: cover;
   }
-  .landscape .landscape__image ::after {
+  .landscape__image ::after {
     content: "";
     position: absolute;
-    top: 296px;
-    left: 48px;
+    top: 306px;
+    left: 56px;
     width: 352px;
     height: 204px;
     z-index: 2;
@@ -719,34 +732,33 @@ textarea:focus {
     background-size: cover;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
-  .landscape .landscape__caption {
-    overflow: hidden;
+  .landscape__img {
+    position: relative;
+    width: 100%;
+    max-width: 440px;
+  }
+  .landscape__caption {
     width: 0;
     height: 0;
+    overflow: hidden;
   }
-  .landscape .landscape__list {
-    max-width: 100%;
-    gap: 20px;
-    margin-top: 0;
-  }
-  .landscape .landscape__item {
+  .landscape__item {
     gap: 19px;
-    padding: 0;
-    margin-bottom: 20px;
+    margin-bottom: 36px;
   }
-  .landscape .landscape__item:nth-child(2), .landscape .landscape__item:nth-child(3) {
-    padding: 0;
+  .landscape__item:nth-child(2) {
+    margin-bottom: 36px;
   }
-  .landscape .landscape__item::before {
-    width: 33px;
-    height: 33px;
+  .landscape__item::before {
+    width: 35px;
+    height: 35px;
   }
-  .landscape .landscape__icon {
-    width: 40px;
-    height: 40px;
-    margin: 0 auto;
-  }
-  .landscape .landscape__text {
+  .landscape__text {
+    font-family: "Noah", sans-serif;
+    font-weight: 400;
+    font-size: 58px;
+    line-height: normal;
+    font-style: normal;
     font-size: 16px;
   }
 }
