@@ -36,9 +36,9 @@
 
 &__image {
   position: relative; // Устанавливаем позицию относительно родителя
-  width: 100%; // Ширина блока
+  max-width: 700px; // Ширина блока
   margin: 0 auto; // Центрируем блок в своей колонке
-  display: flex; // Используем флексбокс
+  display: flex; 
   flex-direction: column; // Элементы располагаются вертикально
   align-items: center; // Выравниваем изображение и текст над ним 
 
