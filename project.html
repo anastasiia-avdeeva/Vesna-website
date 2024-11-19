@@ -12,114 +12,15 @@
       <div class="header__gallery"></div>
     </header>
     <main class="main">
-      <section class="order-service">
-        <h2 class="order-service__title">
-          Свяжитесь с&nbsp;нами, чтобы заказать услугу
-        </h2>
-        <div class="order-service__contacts">
-          <p class="order-service__contacts-city">Санкт-Петербург</p>
-          <p class="order-service__contacts-tel">
-            <a href="tel:+79218888888" class="order-service__contacts-tel-link"
-              >+7(921) 888 88 88</a
-            >
-          </p>
-          <p class="order-service__contacts-email">
-            <a
-              href="mailto:info@vesna.ru"
-              class="order-service__contacts-email-link"
-              >info@vesna.ru</a
-            >
-          </p>
-          <p class="order-service__contacts-insta">
-            <a href="#" class="order-service__contacts-insta-link">
-              <img
-                src="./assets/icons/insta.svg"
-                alt="иконка сайта Инстаграм"
-                class="order-service__contacts-insta-icon"
-              />
-            </a>
-          </p>
-        </div>
-        <form action="submit" class="form">
-          <div class="form__input-group">
-            <div class="form__input-container">
-              <input
-                type="text"
-                name="name"
-                id="userName"
-                placeholder=" "
-                class="form__input-field form__input-field--name"
-                required
-              />
-              <label for="userName" class="form__input-label">Имя</label>
-            </div>
-            <div class="form__input-container">
-              <input
-                type="email"
-                name="email"
-                id="userEmail"
-                placeholder=" "
-                class="form__input-field form__input-field--email"
-                required
-              />
-              <label for="userEmail" class="form__input-label">Email</label>
-            </div>
-            <div class="form__input-container">
-              <input
-                type="tel"
-                id="userPhone"
-                name="phone"
-                placeholder=" "
-                pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
-                class="form__input-field form__input-field--tel"
-                required
-              />
-              <label for="userPhone" class="form__input-label--default"
-                >+7 (___) ___ __ __</label
-              >
-              <label for="userPhone" class="form__input-label--focus"
-                >Телефон</label
-              >
-            </div>
-            <div class="form__input-container form__comments-container">
-              <textarea
-                name="comments"
-                id="userComments"
-                placeholder=" "
-                class="form__input-field form__comments-field"
-              ></textarea>
-              <label
-                for="userComments"
-                class="form__input-label form__comments-label"
-                >Комментарий</label
-              >
-            </div>
-            <div class="form__consent-container">
-              <input
-                type="checkbox"
-                name="order-service__form-consent"
-                id="order-service__userConsent"
-                class="form__consent-checkbox"
-                checked
-                required
-              />
-              <label
-                for="order-service__userConsent"
-                class="form__consent-label"
-                >Я даю согласие на обработку своих
-                <a href="#" class="form__consent-link"
-                  >персональных данных</a
-                ></label
-              >
-            </div>
-          </div>
-
-          <div class="order-service__button-container">
-            <button type="submit" class="button button--olive-large">
-              Отправить
-            </button>
-          </div>
-        </form>
+      <section class="back-to-portfolio">
+        <a href="#" class="back-to-portfolio__link"
+          ><img
+            src="./assets/icons/back-arrow.svg"
+            alt="стрелка влево"
+            class="back-to-portfolio__icon"
+          />
+          Назад к портфолио</a
+        >
       </section>
     </main>
     <footer class="footer"></footer>
