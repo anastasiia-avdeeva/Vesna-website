@@ -596,7 +596,7 @@ textarea:focus {
   transform: translateY(-50%);
   width: 930px;
   height: 930px;
-  background-image: url("../img/garden-guide-bg1.svg");
+  background-image: url("../img/garden-guide-left.svg");
   background-size: contain;
   background-repeat: no-repeat;
   z-index: -1;
@@ -610,7 +610,7 @@ textarea:focus {
   transform: translateY(-50%);
   width: 600px;
   height: 930px;
-  background-image: url("../img/garden-guide-bg2.svg");
+  background-image: url("../img/garden-guide-right.svg");
   background-size: contain;
   background-repeat: no-repeat;
   z-index: -1;
@@ -1033,6 +1033,202 @@ textarea:focus {
     line-height: normal;
     font-style: normal;
     font-size: 16px;
+  }
+}
+
+.reviews {
+  margin: 0px 331px 200px 331px;
+}
+.reviews__title {
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  text-align: center;
+  color: #1a1a18;
+  margin-bottom: 103px;
+}
+.reviews__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 106px;
+  margin-bottom: 80px;
+}
+.reviews__image img {
+  width: 100%;
+  height: auto;
+}
+.reviews__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.reviews__icon {
+  margin-bottom: 28px;
+}
+.reviews__icon img {
+  width: 54px;
+  height: 54px;
+  display: block;
+}
+.reviews__name {
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  font-size: 38px;
+  color: #545a2f;
+  margin-bottom: 8px;
+}
+.reviews__occupation {
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  font-size: 24px;
+  color: #545a2f;
+  margin-bottom: 34px;
+}
+.reviews__text {
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  font-size: 24px;
+  color: #1a1a18;
+  margin-bottom: 31px;
+  width: 86%;
+}
+.reviews__arrows {
+  display: flex;
+  gap: 47px;
+  align-self: flex-end;
+}
+.reviews__arrow {
+  width: 33px;
+  height: 15px;
+  border: none;
+  background: url("../icons/reviews_arrow-next.svg") no-repeat center;
+  background-size: contain;
+  cursor: pointer;
+}
+.reviews__arrow:hover {
+  transform: translateX(10px);
+}
+.reviews__arrow--prev {
+  width: 33px;
+  height: 15px;
+  border: none;
+  background: url("../icons/reviews_arrow-prev.svg") no-repeat center;
+  background-size: contain;
+  cursor: pointer;
+}
+.reviews__arrow--prev:hover {
+  transform: translateX(-10px);
+}
+.reviews__pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+}
+.reviews__current-slide {
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  font-size: 16px;
+  color: #1a1a18;
+  margin-right: 6px;
+}
+.reviews__total-slides {
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  font-size: 16px;
+  color: #979797;
+  margin-left: 6px;
+}
+@media screen and (max-width: 768px) {
+  .reviews {
+    margin: 0 20px;
+    margin-bottom: 108px;
+  }
+  .reviews__content {
+    grid-template-columns: 1fr;
+    grid-gap: 40px;
+  }
+  .reviews__info {
+    order: 1;
+  }
+  .reviews__image {
+    order: 2;
+  }
+  .reviews__text {
+    width: 100%;
+  }
+  .reviews__arrows {
+    display: none;
+  }
+}
+@media screen and (max-width: 440px) {
+  .reviews {
+    margin: 0 16px;
+    margin-bottom: 108px;
+  }
+  .reviews__title {
+    font-family: "Noah", sans-serif;
+    font-weight: 400;
+    font-size: 58px;
+    line-height: normal;
+    font-style: normal;
+    font-size: 24px;
+    margin-bottom: 47px;
+  }
+  .reviews__content {
+    grid-gap: 35px;
+    margin-bottom: 34px;
+  }
+  .reviews__icon {
+    margin-bottom: 24px;
+  }
+  .reviews__icon img {
+    width: 50px;
+    height: 50px;
+  }
+  .reviews__name {
+    font-family: "Noah", sans-serif;
+    font-weight: 400;
+    font-size: 58px;
+    line-height: normal;
+    font-style: normal;
+    font-size: 18px;
+  }
+  .reviews__occupation {
+    font-family: "Noah", sans-serif;
+    font-weight: 400;
+    font-size: 58px;
+    line-height: normal;
+    font-style: normal;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .reviews__text {
+    font-family: "Noah", sans-serif;
+    font-weight: 400;
+    font-size: 58px;
+    line-height: normal;
+    font-style: normal;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 0px;
   }
 }
 
