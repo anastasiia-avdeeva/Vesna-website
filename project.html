@@ -98,11 +98,14 @@
               <input
                 type="checkbox"
                 name="order-service__form-consent"
-                id="userConsent"
+                id="order-service__userConsent"
                 class="form__consent-checkbox"
                 checked
+                required
               />
-              <label for="userConsent" class="form__consent-label"
+              <label
+                for="order-service__userConsent"
+                class="form__consent-label"
                 >Я даю согласие на обработку своих
                 <a href="#" class="form__consent-link"
                   >персональных данных</a
@@ -148,6 +151,17 @@
 
           input.value = formattedValue;
         });
+    </script>
+    <script>
+      function openWindow() {
+        document.getElementById("popupWindow").style.display = "block";
+        document.getElementById("overlay").style.display = "block";
+      }
+
+      function closewindow() {
+        document.getElementById("popupWindow").style.display = "none";
+        document.getElementById("overlay").style.display = "none";
+      }
     </script>
   </body>
 </html>

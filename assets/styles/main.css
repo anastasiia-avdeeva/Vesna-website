@@ -522,4 +522,124 @@ textarea:focus {
   .garden-guide__button {
     width: 100%;
   }
+
+.button {
+  width: 240px;
+  height: 60px;
+  border: none;
+  background-color: #ffffff;
+  color: #1A1A18;
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  font-size: 24px;
+}
+.button:hover {
+  cursor: pointer;
+  background-color: #545A2F;
+  color: #ffffff;
+}
+
+.button--olive {
+  background-color: #545A2F;
+  color: #ffffff;
+  border: none;
+}
+.button--olive:hover {
+  background-color: #99A18E;
+}
+
+.button--olive-large {
+  width: 311px;
+  background-color: #545A2F;
+  color: #ffffff;
+}
+.button--olive-large:hover {
+  background-color: #99A18E;
+}
+
+.button--transparent {
+  height: 38px;
+  background-color: transparent;
+  color: #ffffff;
+  font-family: "Noah", sans-serif;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: normal;
+  font-style: normal;
+  font-size: 20px;
+}
+.button--transparent:hover {
+  background-color: transparent;
+  border-bottom: 1px solid #ffffff;
+}
+
+.button--outline-white {
+  width: 311px;
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+.button--outline-white:hover {
+  background-color: #ffffff;
+  color: #1A1A18;
+  border: none;
+}
+
+.button--outline-green {
+  width: 311px;
+  background-color: transparent;
+  color: #545A2F;
+  border: 1px solid #545A2F;
+}
+.button--outline-green:hover {
+  color: #ffffff;
+  border: none;
+}
+
+.button-round {
+  display: flex;
+  flex-direction: column;
+  width: 191px;
+  height: 191px;
+  border: none;
+  background-color: #ffffff;
+  color: #1A1A18;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  font-size: 24px;
+}
+
+.button-round--arrow .button-round__icon--white {
+  display: none;
+}
+.button-round--arrow:hover {
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #545A2F;
+}
+.button-round--arrow:hover .button-round__icon--black {
+  display: none;
+}
+.button-round--arrow:hover .button-round__icon--white {
+  display: block;
+}
+
+.button-round--up {
+  width: 124px;
+  height: 124px;
+  background-color: #99A18E;
+  color: #ffffff;
+}
+.button-round--up:hover {
+  cursor: pointer;
+  background-color: #545A2F;
 }
