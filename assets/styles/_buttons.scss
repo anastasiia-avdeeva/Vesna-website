@@ -1,0 +1,151 @@
+// номер телефона белая кнопка
+.button{
+    width: 240px;
+    height:60px;
+    border: none;
+    background-color: $white;
+    color: $black;
+    @include h5;
+    &:hover{
+        cursor: pointer;
+        background-color: $olive-dark;
+        color: $white;
+    }
+}
+
+// номер телефона зеленая кнопка
+.button--olive{
+    background-color: $olive-dark;
+    color: $white;
+    border: none;
+        &:hover{
+            background-color: $olive-light;
+        }
+}
+// "перезвоните мне"
+.button--olive-large{
+    width: 311px;
+    background-color: $olive-dark;
+    color: $white;
+    &:hover {
+            background-color: $olive-light;
+        }
+}
+// бепсплатная консультация
+.button--transparent{
+    height: 38px;
+    background-color: transparent;
+    color: $white;
+    @include button-transparent;
+    &:hover {
+            background-color: transparent;
+            border-bottom: 1px solid $white;
+        }
+}
+// перезвоните мне белая кнопка
+.button--outline-white{
+    width: 311px;
+    background-color: transparent;
+    color: $white;
+    border: 1px solid $white;
+        &:hover {
+            background-color: $white;
+            color: $black;
+            border: none;
+        }
+}
+// кнопка Заказать услугу
+.button--outline-green{
+    width: 311px;
+    background-color: transparent;
+    color: $olive-dark;
+    border: 1px solid $olive-dark;
+        &:hover {
+            color: $white;
+            border: none;
+        }
+}
+// КРУГЛЫЕ НОПОЧКИ
+// общий стиль для круглых кнопок
+.button-round{
+    display: flex;
+    flex-direction: column;
+    width: 191px;
+    height: 191px;
+    border: none;
+    background-color: $white;
+    color: $black;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    @include h5;
+}
+// Все проекты
+.button-round--arrow{
+    .button-round__icon--white{
+        display: none;
+    }
+    &:hover{
+        cursor: pointer;
+        color: $white;
+        background-color: $olive-dark;
+        .button-round__icon--black{
+            display: none;
+        }
+        .button-round__icon--white{
+            display: block;
+        }
+    }
+}
+// адаптив на 768
+@include tablets{
+    .button-round--arrow {
+            width: 110px;
+            height: 110px;
+            .button-round__link {
+                display: none;
+            }
+    }
+}
+// адаптив на 440
+@include phones {
+        .button-round--arrow {
+        width: 76px;
+        height: 76px;
+        background-color: rgba(255, 255, 255, 0.7);
+        .button-round__icon--black {
+            display: none;
+        }
+        .button-round__icon--white {
+            display: block;
+        }
+    }
+}
+
+// Кнопка наверх
+.button-round--up{
+    width: 124px;
+    height: 124px;
+    background-color: $olive-light;
+    color: $white;
+    &:hover{
+        cursor: pointer;
+        background-color: $olive-dark;
+    }
+}
+// адаптив на 768
+@include tablets{
+    .button-round--up {
+        width: 105px;
+        height: 105px;
+        font-size: 20px;
+    }
+}
+// адаптив на 440
+@include phones{
+    .button-round--up {
+        width: 95px;
+        height: 95px;
+        font-size: 14px;
+    }
+}

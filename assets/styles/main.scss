@@ -1,4 +1,4 @@
-// import files with mixins and variables // base and media 
+// import files with mixins and variables // base and media
 @import "./vars";
 @import "./mixins";
 @import "./base";
@@ -10,7 +10,11 @@
 // link normalize
 @import "./normalize.css";
 
-// common blocks 
+// common blocks
+@import "./blocks/forms";
+@import "./buttons";
+@import "./blocks/popup-windows";
+
 @import "./blocks/services_order-service.scss";
 @import "./blocks/main_garden-guide";
 
@@ -27,3 +31,4 @@
 
 // link blocks contacts page
 
+// link blocks
