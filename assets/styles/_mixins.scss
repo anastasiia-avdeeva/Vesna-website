@@ -84,6 +84,11 @@
   font-size: $font-size-button-transparent;
 }
 
+@mixin faq-question {
+  @include h1;
+  font-size: $font-size-faq-question;
+}
+
 // миксин для шрифта в шапке
 @mixin header-nav-font {
   font-family: $font-family-geometria;
