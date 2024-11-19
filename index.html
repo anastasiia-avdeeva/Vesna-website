@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/styles/main.css">
+  <title>Vesna | Главная</title>
+</head>
+<body>
+
+  <main>
+
+    <section class="landscape">
+        <h2 class="landscape__title">
+          <span class="bold">Доверьте свой участок профессионалам —</span>
+          <br>
+          пусть они позаботятся о ландшафтном дизайне <br>и благоустройстве
+        </h2>
+        <div class="landscape__content">
+          <div class="landscape__image">
+              <p class="landscape__caption">Пример 3D-визуализации</p>
+              <img src="./assets/img/landscape1.jpg" alt="Пример 3D-визуализации" class="landscape__img">
+          </div>
+          <ul class="landscape__list">
+            <li class="landscape__item">
+              <p class="landscape__text">
+                Вы оцените будущий ландшафт с помощью 3D-визуализации и, если это требуется, внесете изменения.
+              </p>
+            </li>
+            <li class="landscape__item">
+              <p class="landscape__text">
+                Вам не придется контролировать качество нашей работы: отдыхайте и занимайтесь своими делами, пока специалисты технадзора следят за процессом.
+              </p>
+            </li>
+            <li class="landscape__item">
+              <p class="landscape__text">
+                Вы подарите себе красивый и ухоженный сад, переложите заботы по уходу на наши плечи и получите гарантию на все работы.
+              </p>
+            </li>
+          </ul>
+        </div>
+    </section>
+
+
+
+    <section class="garden-guide">
+      <div class="garden-guide__book">
+        <img
+          class="garden-guide__book-image"
+          src="./assets/img/garden-guide.png"
+          alt="Book about garden plants"
+        />
+      </div>
+    
+      <h2 class="garden-guide__title">Как выбрать растения <br class="br">для сада?</h2>
+      <p class="garden-guide__subtitle">Пришлем инструкцию!</p>
+    
+      <div class="garden-guide__content">
+        <form class="garden-guide__form">
+          <input
+            class="garden-guide__input"
+            type="email"
+            placeholder="Ваш Email"
+            required
+          />
+          <div class="garden-guide__consent-container">
+            <input
+              type="checkbox"
+              name="order-service__garden-guide-consent"
+              id="userConsent"
+              class="garden-guide__consent-checkbox"
+              checked
+            />
+            <label for="userConsent" class="garden-guide__consent-label"
+              >Я даю согласие на обработку своих
+              <a href="#" class="garden-guide__consent-link"
+                >персональных данных</a
+              ></label
+            >
+          </div>
+          <button class="garden-guide__button" type="submit">
+            Хочу инструкцию
+          </button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+
+</body>
+</html>

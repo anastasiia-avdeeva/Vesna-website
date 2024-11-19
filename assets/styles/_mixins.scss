@@ -16,17 +16,17 @@
 // }
 
 // миксины для отступов у хедера и футера
-@mixin margin-header-footer-1920 {
+@mixin padding-header-footer-1920 {
   padding-left: 5.2%;
   padding-right: 5.2%;
 }
 
-@mixin margin-header-footer-768 {
+@mixin padding-header-footer-768 {
   padding-left: 4%; //32px примерно
   padding-right: 4%;
 }
 
-@mixin margin-header-footer-440 {
+@mixin padding-header-footer-440 {
   padding-left: 16px;
   padding-right: 16px;
 }
@@ -68,16 +68,28 @@
   font-size: $font-size-h6;
 }
 
-// миксин для шрифта в шапке и футере
+@mixin font-size-smallest {
+  @include h2;
+  font-size: $font-size-smallest;
+}
+
+@mixin marck-font {
+  font-family: $font-family-marck;
+  font-weight: $font-weight-400;
+  font-size: $font-size-marck;
+  line-height: $line-height;
+}
+
+@mixin button-transparent {
+  @include h1;
+  font-size: $font-size-button-transparent;
+}
+
+// миксин для шрифта в шапке 
 @mixin header-nav-font {
   font-family: $font-family-geometria;
   font-weight: $font-weight-500;
   font-size: $font-size-h5;
   line-height: $line-height-100;
   font-style: normal;
-}
-
-@mixin button-free-consultation {
-  @include h1;
-  font-size: $font-size-button-free-consultation;
 }
