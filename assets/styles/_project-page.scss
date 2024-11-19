@@ -1,4 +1,92 @@
-.project {
+.project,
+.back-to-portfolio {
   margin-left: 15.2%;
   margin-right: 15.2%;
+  @include h5;
+  color: $black;
+}
+
+.back-to-portfolio {
+  margin-bottom: 100px;
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    cursor: pointer;
+  }
+
+  &__icon {
+    width: 66px;
+    height: 30px;
+  }
+}
+
+.project {
+  margin-bottom: 147px;
+
+  &__details {
+    margin-bottom: 110px;
+    display: grid;
+    grid-template-columns: min-content auto;
+    gap: 66px;
+  }
+
+  &__details--img-left {
+    grid-template-areas: "pic text";
+  }
+
+  &__details--img-right {
+    grid-template-columns: auto min-content;
+    grid-template-areas: "text pic";
+  }
+
+  &__details-description {
+    grid-area: text;
+  }
+
+  &__details-img-container {
+    grid-area: pic;
+    align-self: center;
+  }
+
+  // create styles for the first project__details
+  &__details-description--long {
+    max-width: 600px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    gap: 47px;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    @include h2;
+  }
+
+  &__features {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "year square"
+      "location location";
+    gap: 26px 90px;
+  }
+
+  &__feature-year {
+    grid-area: year;
+  }
+
+  &__feature-square {
+    grid-area: square;
+  }
+
+  &__feature-location {
+    grid-area: location;
+  }
+
+  &__feature-name {
+    font-size: $font-size-h6;
+  }
 }
