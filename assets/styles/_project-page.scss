@@ -1,5 +1,6 @@
 .project,
-.back-to-portfolio {
+.back-to-portfolio,
+.order-project {
   margin-left: 15.2%;
   margin-right: 15.2%;
   @include h5;
@@ -134,5 +135,113 @@
 
   &__details--big-gap &__details-description {
     padding-top: 61px;
+  }
+}
+
+.order-project {
+  &__text {
+    width: 500px;
+    margin: 0 auto 66px;
+    text-align: center;
+    @include h4;
+    color: $forest;
+  }
+  &__img-container {
+    width: 100%;
+    max-height: 387px;
+    max-width: 430px;
+  }
+
+  &__img-container > img {
+    height: 100%;
+    width: 100%;
+    // object-fit: contain;
+    object-fit: cover;
+  }
+  &__banner {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    grid-template-rows: auto auto;
+    gap: 23px;
+    grid-template-areas:
+      "form pic1 pic1"
+      "form pic2 pic3";
+  }
+
+  &__img-container1 {
+    grid-area: pic1;
+    max-width: 883px;
+  }
+
+  &__img-container2 {
+    grid-area: pic2;
+  }
+
+  &__img-container3 {
+    grid-area: pic3;
+  }
+
+  &__img-container4 {
+    display: none;
+  }
+
+  &__title-form {
+    grid-area: form;
+    padding: 0 19px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    background-color: $olive-dark;
+    color: $white;
+  }
+
+  &__title {
+    @include h2;
+    text-align: center;
+  }
+
+  &__subtitle {
+    padding-bottom: 15px;
+    max-width: 351px;
+    @include h5;
+    text-align: center;
+  }
+
+  //redefine some of form styles using higher weight of selectors through nesting
+  &__form {
+    gap: 36px;
+    justify-items: center;
+
+    .form__input-group {
+      gap: 32px;
+    }
+
+    .form__consent-label {
+      padding-left: 41px;
+      width: 80%;
+      min-width: 312px;
+      color: $white;
+    }
+
+    .form__consent-link {
+      color: $black;
+    }
+
+    .form__consent-label::before {
+      border-color: $white;
+      top: 5px;
+      pointer-events: none;
+    }
+
+    .form__consent-checkbox:checked + .form__consent-label::before {
+      content: url("../icons/checked-white.svg");
+    }
+  }
+
+  .button {
+    width: 289px;
+    height: 60px;
   }
 }
