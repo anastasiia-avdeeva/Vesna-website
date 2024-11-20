@@ -5,6 +5,7 @@
 // первая карточка
 .project-card{
     width: 100%;
+    margin-bottom: 130px; // примерно
     &__title{
         @include h2;
         color: $black;
@@ -13,5 +14,49 @@
         display: grid;
         grid-template-columns: max-content max-content max-content;
         gap: 83px;
+    }
+    &__detail-label{
+        @include h6;
+        color: $black;
+    }
+    &__detail-value{
+        @include h5;
+        color: $black;
+        padding-top: 8px;
+    }
+    // галерея
+    &__gallery{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-rows: 1fr 1fr;
+        gap: 24px;
+        padding-top: 20px;
+    }
+    &__gallery-item-1{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    &__gallery-item-2{
+        grid-column: 2/4;
+    }
+    &__gallery-item-3{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    &__quote{
+        display: grid;
+        grid-column: 2/3;
+        background-color: #E9ECE0;
+        @include h5;
+        line-height: 29.98px;
+        font-style: italic;
+        align-items: center;
+        justify-items: center;
+    }
+    .gallery-pic{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
     }
 }
