@@ -8,11 +8,15 @@
     margin-bottom: 103px;
   }
 
-  &__content {
+  &__card1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 106px;
     margin-bottom: 80px;
+  }
+
+  &__card2 {
+    display: none;
   }
 
   &__image {
@@ -112,7 +116,7 @@
       margin: 0 20px; // Уменьшение отступов для планшетов
       margin-bottom: 108px;
   
-      &__content {
+      &__card1 {
         grid-template-columns: 1fr; // Одна колонка вместо двух
         grid-gap: 40px; // Уменьшение расстояния между элементами
       }
@@ -144,8 +148,26 @@
     }
 
     &__content {
-      grid-gap: 35px;
+      display: flex;
+      position: relative; // Для работы абсолютного позиционирования
+      overflow: hidden; // Ограничиваем видимую область
+    }
+  
+    &__card1 {
+      width: 90%;
+      padding: 16px;
       margin-bottom: 34px;
+    }
+    
+    &__card2 {
+      display: grid;
+      background-color: $green;
+      padding: 16px;
+      position: absolute;
+      width: 345px; // Фиксированная ширина карточки
+      right: -302px; // Смещаем карточку за пределы экрана, оставляя видимой только часть
+      grid-template-columns: 1fr; // Одна колонка вместо двух
+      grid-gap: 40px; // Уменьшение расстояния между элементами
     }
 
     &__icon {

@@ -1049,11 +1049,14 @@ textarea:focus {
   color: #1a1a18;
   margin-bottom: 103px;
 }
-.reviews__content {
+.reviews__card1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 106px;
   margin-bottom: 80px;
+}
+.reviews__card2 {
+  display: none;
 }
 .reviews__image img {
   width: 100%;
@@ -1161,7 +1164,7 @@ textarea:focus {
     margin: 0 20px;
     margin-bottom: 108px;
   }
-  .reviews__content {
+  .reviews__card1 {
     grid-template-columns: 1fr;
     grid-gap: 40px;
   }
@@ -1193,8 +1196,24 @@ textarea:focus {
     margin-bottom: 47px;
   }
   .reviews__content {
-    grid-gap: 35px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+  }
+  .reviews__card1 {
+    width: 90%;
+    padding: 16px;
     margin-bottom: 34px;
+  }
+  .reviews__card2 {
+    display: grid;
+    background-color: #DDE3E1;
+    padding: 16px;
+    position: absolute;
+    width: 345px;
+    right: -302px;
+    grid-template-columns: 1fr;
+    grid-gap: 40px;
   }
   .reviews__icon {
     margin-bottom: 24px;
