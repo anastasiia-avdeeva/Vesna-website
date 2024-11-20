@@ -1,0 +1,197 @@
+.reviews {
+  margin: 0px 331px 200px 331px;
+
+  &__title {
+    @include h2;
+    text-align: center;
+    color: $black;
+    margin-bottom: 103px;
+  }
+
+  &__card1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 106px;
+    margin-bottom: 80px;
+  }
+
+  &__card2 {
+    display: none;
+  }
+
+  &__image {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__icon {
+    margin-bottom: 28px;
+
+    img {
+      width: 54px; 
+      height: 54px;
+      display: block;
+    }
+  }
+
+  &__name {
+    @include h4;
+    color: $olive-dark;
+    margin-bottom: 8px;
+  }
+
+  &__occupation {
+    @include h5;
+    color: $olive-dark;
+    margin-bottom: 34px;
+  }
+
+  &__text {
+    @include h5;
+    color: $black;
+    margin-bottom: 31px;
+    width: 86%;
+  }
+
+  &__arrows {
+    display: flex;
+    gap: 47px;
+    align-self: flex-end;
+  }
+
+  &__arrow {
+    width: 33px;
+    height: 15px;
+    border: none;
+    background: url('../icons/reviews_arrow-next.svg') no-repeat center;
+    background-size: contain;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateX(10px); 
+    }
+
+    &--prev {
+      width: 33px;
+      height: 15px;
+      border: none;
+      background: url('../icons/reviews_arrow-prev.svg') no-repeat center;
+      background-size: contain;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateX(-10px); 
+      }
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0px; 
+  }
+
+  &__current-slide {
+    @include font-size-smallest; 
+    color: $black;
+    margin-right: 6px;
+  }
+
+  &__total-slides {
+    @include font-size-smallest; 
+    color: $gray;
+    margin-left: 6px;
+  }
+  
+  @include tablets {
+      margin: 0 20px; // Уменьшение отступов для планшетов
+      margin-bottom: 108px;
+  
+      &__card1 {
+        grid-template-columns: 1fr; // Одна колонка вместо двух
+        grid-gap: 40px; // Уменьшение расстояния между элементами
+      }
+
+      &__info {
+        order: 1; // Задать порядок элемента
+      }
+      
+      &__image {
+        order: 2;
+      }
+  
+      &__text {
+        width: 100%; // Полная ширина текста
+      }
+  
+      &__arrows {
+        display: none;
+      }
+  }
+
+  @include phones {
+    margin: 0 16px; 
+    margin-bottom: 108px;
+
+    &__title {
+      @include h5;
+      margin-bottom: 47px;
+    }
+
+    &__content {
+      display: flex;
+      position: relative; // Для работы абсолютного позиционирования
+      overflow: hidden; // Ограничиваем видимую область
+    }
+  
+    &__card1 {
+      width: 90%;
+      padding: 16px;
+      margin-bottom: 34px;
+    }
+    
+    &__card2 {
+      display: grid;
+      background-color: $green;
+      padding: 16px;
+      position: absolute;
+      width: 345px; // Фиксированная ширина карточки
+      right: -302px; // Смещаем карточку за пределы экрана, оставляя видимой только часть
+      grid-template-columns: 1fr; // Одна колонка вместо двух
+      grid-gap: 40px; // Уменьшение расстояния между элементами
+    }
+
+    &__icon {
+      margin-bottom: 24px;
+  
+      img {
+        width: 50px; 
+        height: 50px;
+      }
+    }
+
+    &__name {
+      @include h6;
+    }
+  
+    &__occupation {
+      @include font-size-smallest;
+      margin-bottom: 10px;
+    }
+
+    &__text {
+      @include font-size-smallest;
+      width: 100%;
+      margin-bottom: 0px;
+    }
+  }
+}
