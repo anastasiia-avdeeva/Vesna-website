@@ -293,6 +293,7 @@ textarea:focus {
   line-height: normal;
   font-style: normal;
   font-size: 24px;
+  gap: 15px;
 }
 
 .button-round--arrow .button-round__icon--white {
@@ -1033,6 +1034,197 @@ textarea:focus {
     line-height: normal;
     font-style: normal;
     font-size: 16px;
+  }
+}
+
+.projects {
+  margin: 0 65px;
+  margin-bottom: 205px;
+  position: relative;
+}
+.projects__title {
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  text-align: center;
+  margin-bottom: 68px;
+}
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px;
+}
+.projects__item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.projects__item:hover .projects__overlay {
+  opacity: 1;
+}
+.projects__item-button {
+  display: none;
+}
+.projects__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.projects__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.projects__info {
+  text-align: center;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.projects__info::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 416px;
+  height: 437px;
+  background: url("../img/projects_overlay-bg.svg") no-repeat center/contain;
+}
+.projects__name {
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  font-size: 48px;
+  margin-bottom: 37px;
+}
+.projects__details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Отступ между строками */
+  text-align: center;
+  color: #ffffff;
+}
+.projects__row {
+  display: flex;
+  justify-content: space-between; /* Разделяем элементы в строке */
+  gap: 92px;
+  text-align: left;
+}
+.projects__detail {
+  display: flex;
+  flex-direction: column;
+}
+.projects__label {
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.projects__value {
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  font-size: 24px;
+}
+.projects__all-button {
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+}
+.projects__button {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .projects {
+    margin: 0 20px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .projects__item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .projects__item-button {
+    position: absolute;
+    top: 70%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    z-index: 5;
+    background-color: rgba(233, 236, 224, 0.33);
+    width: 80px;
+    height: 80px;
+  }
+  .projects__overlay {
+    display: none;
+  }
+  .projects__all-button {
+    display: none;
+  }
+  .projects__button {
+    display: block;
+    margin-top: 60px;
+  }
+}
+@media screen and (max-width: 440px) {
+  .projects {
+    margin: 0 16px;
+    margin-bottom: 96px;
+  }
+  .projects__title {
+    font-family: "Noah", sans-serif;
+    font-weight: 400;
+    font-size: 58px;
+    line-height: normal;
+    font-style: normal;
+    font-size: 24px;
+    margin-bottom: 27px;
+  }
+  .projects__grid {
+    grid-template-columns: 1fr;
+  }
+  .projects__item-button {
+    top: 75%;
+    left: 87%;
+    width: 76px;
+    height: 76px;
+  }
+  .projects__button {
+    margin-top: 31px;
   }
 }
 
