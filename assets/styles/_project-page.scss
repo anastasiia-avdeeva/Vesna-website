@@ -328,3 +328,112 @@
     background-image: url("../icons/project-next-hover.svg");
   }
 }
+
+@include tablets {
+  .project__details-description,
+  .back-to-portfolio,
+  .order-project {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .back-to-portfolio {
+    margin-bottom: 53px;
+  }
+
+  .project {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 88.14px;
+
+    &__details {
+      margin-bottom: 87.69px;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+      gap: 42px;
+      grid-template-areas:
+        "text"
+        "pic";
+      justify-items: center;
+    }
+
+    &__details-description {
+      max-width: none;
+    }
+
+    // styles for the first project__details
+    &__details-description--long {
+      gap: 24px;
+    }
+
+    &__details-description--long &__text {
+      padding-top: 13px;
+    }
+
+    &__features {
+      grid-template-columns: auto auto;
+      gap: 29px 10px;
+    }
+
+    &__details-img-container--big-padd-bot {
+      padding-top: 11px;
+      padding-bottom: 18.45px;
+    }
+
+    // styles for the second project__details
+    &__details--narrow {
+      padding-left: 0px;
+      padding-right: 0px;
+      gap: 42px;
+    }
+
+    &__details--narrow &__details-description {
+      padding-bottom: 0px;
+      width: 80%;
+      text-align: center;
+    }
+
+    // styles for the third project__details
+    &__details--big-gap &__details-description {
+      padding-top: 0px;
+    }
+
+    // styles for the forth project__details
+    &__details--big-gap-phone {
+      gap: 88px;
+    }
+  }
+
+  .order-project {
+    margin-bottom: 66px;
+
+    &__banner {
+      gap: 10px;
+    }
+  }
+
+  .projects-nav {
+    &__prev-container {
+      padding-right: 10px;
+      padding-left: 20px;
+      grid-template-columns: min-content 1fr;
+      grid-template-areas: "link text";
+    }
+
+    &__next-container {
+      padding-left: 10px;
+      padding-right: 20px;
+      grid-template-columns: 1fr min-content;
+      grid-template-areas: "text link";
+    }
+
+    &__next-container &__text {
+      text-align: left;
+    }
+
+    &__text {
+      padding-left: 0px;
+      text-align: right;
+    }
+  }
+}
