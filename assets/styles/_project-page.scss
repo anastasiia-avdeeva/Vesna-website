@@ -315,7 +315,6 @@
   }
 
   //make hover effect through pseudoelements, so the arrows will be thicker when cursor in on links
-
   &__link:hover::after {
     content: "";
     position: absolute;
@@ -421,6 +420,11 @@
 
     &__imgs {
       gap: 10px;
+    }
+
+    &__title-form {
+      padding: 44px 16px 57px;
+      gap: 22px;
     }
   }
 
@@ -546,7 +550,7 @@
     }
 
     &__title-form {
-      padding: 43px 16px 57px;
+      padding: 44px 16px 57px;
       gap: 22px;
     }
 
