@@ -53,6 +53,12 @@ textarea:focus {
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "GeometriaRegular";
+  src: url("../fonts/GeometriaRegular.woff2") format("woff2"), url("../fonts/GeometriaRegular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+}
 .form {
   grid-area: form;
   display: grid;
@@ -1399,7 +1405,7 @@ textarea:focus {
   }
   .reviews__card2 {
     display: grid;
-    background-color: #DDE3E1;
+    background-color: #dde3e1;
     padding: 16px;
     position: absolute;
     width: 345px;
@@ -1515,7 +1521,7 @@ textarea:focus {
 }
 
 .guide {
-  background-color: #DDE3E1;
+  background-color: #dde3e1;
 }
 .guide__title {
   font-family: "Noah", sans-serif;
