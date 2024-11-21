@@ -1,3 +1,7 @@
+.header {
+  background-color: black; // чтобы было видно кнопку Бесплатная консультация при тестах
+}
+
 .popup-open__button-container {
   text-align: center;
 }
@@ -93,8 +97,6 @@
 
   &__title {
     grid-area: title;
-    // margin-left: 150px;
-    // margin-right: 150px;
     width: 344px;
     margin-bottom: 19px;
     text-align: center;
