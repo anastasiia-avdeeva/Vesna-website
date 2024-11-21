@@ -1,4 +1,3 @@
-
 // миксины для общих боковых марджинов
 // @mixin margin-lateral-1920 {
 //   margin-left: 16%;
@@ -90,11 +89,20 @@
   font-size: $font-size-faq-question;
 }
 
-// миксин для шрифта в шапке 
+// миксин для шрифта в шапке
 @mixin header-nav-font {
   font-family: $font-family-geometria;
   font-weight: $font-weight-500;
   font-size: $font-size-h5;
   line-height: $line-height-100;
+  font-style: normal;
+}
+
+// миксин для шрифта Геометрия в пагинации
+@mixin geometria-font {
+  font-family: $font-family-geometria;
+  font-weight: $font-weight-400;
+  font-size: $font-size-pagination;
+  line-height: $line-height;
   font-style: normal;
 }
