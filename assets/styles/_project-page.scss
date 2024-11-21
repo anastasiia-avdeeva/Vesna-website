@@ -141,7 +141,7 @@
 .order-project {
   margin-bottom: 213px;
   &__text {
-    width: 500px;
+    max-width: 500px;
     margin: 0 auto 66px;
     text-align: center;
     @include h4;
@@ -161,15 +161,23 @@
   }
   &__banner {
     display: grid;
-    grid-template-columns: 1fr auto auto;
-    grid-template-rows: auto auto;
+    grid-template-columns: 1fr auto;
+    // grid-template-rows: auto auto;
     gap: 23px;
-    grid-template-areas:
-      "form pic1 pic1"
-      "form pic2 pic3";
+    grid-template-areas: "form imgs";
   }
 
-  &__img-container1 {
+  &__imgs {
+    grid-area: imgs;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "pic1 pic1"
+      "pic2 pic3";
+    gap: 23px;
+  }
+  &__img-container4 {
     grid-area: pic1;
     max-width: 883px;
   }
@@ -182,7 +190,7 @@
     grid-area: pic3;
   }
 
-  &__img-container4 {
+  &__img-container1 {
     display: none;
   }
 
@@ -410,9 +418,14 @@
     &__banner {
       gap: 10px;
     }
+
+    &__imgs {
+      gap: 10px;
+    }
   }
 
   .projects-nav {
+    gap: 10px;
     &__prev-container {
       padding-right: 10px;
       padding-left: 20px;
@@ -434,6 +447,181 @@
     &__text {
       padding-left: 0px;
       text-align: right;
+    }
+  }
+}
+
+@include phones {
+  .project__details-description,
+  .back-to-portfolio {
+    margin-left: 16px;
+    margin-right: 16px;
+    font-size: $font-size-smallest; //16px
+  }
+
+  .back-to-portfolio {
+    &__link {
+      gap: 13px;
+      font-size: $font-size-label-consent-phone; //14px
+    }
+
+    &__title--hidden {
+      display: none;
+    }
+
+    &__icon {
+      width: 25px;
+      height: 15px;
+    }
+  }
+
+  .project {
+    &__title {
+      font-size: $font-size-h5;
+    }
+
+    &__subtitle {
+      display: none;
+    }
+
+    &__feature-name {
+      font-size: $font-size-smallest;
+    }
+
+    &__feature-text {
+      font-size: $font-size-h6;
+    }
+
+    &__details--narrow &__details-description {
+      font-size: $font-size-h5;
+    }
+  }
+
+  .order-project {
+    margin-left: 0px;
+    margin-right: 0px;
+    &__text {
+      max-width: 288px;
+      font-size: $font-size-h5;
+    }
+
+    &__banner {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+      grid-template-areas:
+        "imgs"
+        "form";
+      gap: 50px;
+    }
+    &__imgs {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+    }
+    &__imgs::-webkit-scrollbar {
+      display: none;
+    }
+
+    &__img-container1 {
+      display: block;
+    }
+
+    &__img-container {
+      scroll-snap-align: start;
+      flex: 0 0 auto;
+      width: 300px;
+      height: 270px;
+      overflow: hidden;
+    }
+
+    &__img-container4 {
+      width: 440px;
+    }
+    &__img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    &__title-form {
+      padding: 43px 16px 57px;
+      gap: 22px;
+    }
+
+    &__title {
+      font-size: $font-size-h5;
+    }
+
+    &__subtitle {
+      padding-bottom: 14px;
+      max-width: 351px;
+      font-size: $font-size-h6;
+      text-align: center;
+    }
+
+    &__form {
+      gap: 44px;
+
+      .form__input-group {
+        max-width: none;
+        margin-left: 0px;
+        margin-right: 0px;
+        gap: 20px;
+        font-size: $font-size-h6;
+      }
+
+      .form__consent-label {
+        width: 100%;
+        min-width: 255px;
+      }
+
+      .button {
+        width: 256px;
+      }
+    }
+  }
+
+  .projects-nav {
+    gap: 10px;
+
+    &__container {
+      padding-left: 15px;
+      padding-right: 15px;
+      height: 133px;
+      grid-template-columns: 1fr;
+      grid-template-rows: min-content auto;
+      grid-template-areas:
+        "link"
+        "text";
+      gap: 13px;
+      justify-items: end;
+      background-image: url("../img/project-nav-phone.png");
+    }
+
+    &__next-container {
+      justify-items: start;
+    }
+    &__text {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      font-size: $font-size-label-consent-phone;
+    }
+
+    &__title {
+      font-size: $font-size-smallest;
+    }
+
+    &__link {
+      width: 39px;
+      height: 17.71px;
+    }
+
+    &__link:hover::after {
+      width: 39px;
+      height: 17.71px;
     }
   }
 }
