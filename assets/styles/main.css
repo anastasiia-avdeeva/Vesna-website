@@ -596,7 +596,7 @@ textarea:focus {
   transform: translateY(-50%);
   width: 930px;
   height: 930px;
-  background-image: url("../img/garden-guide-bg1.svg");
+  background-image: url("../img/garden-guide-left.svg");
   background-size: contain;
   background-repeat: no-repeat;
   z-index: -1;
@@ -610,7 +610,7 @@ textarea:focus {
   transform: translateY(-50%);
   width: 600px;
   height: 930px;
-  background-image: url("../img/garden-guide-bg2.svg");
+  background-image: url("../img/garden-guide-right.svg");
   background-size: contain;
   background-repeat: no-repeat;
   z-index: -1;
@@ -690,6 +690,7 @@ textarea:focus {
   font-style: normal;
   font-size: 16px;
   color: #1a1a18;
+  cursor: pointer;
 }
 .garden-guide__consent-link {
   color: #545a2f;
@@ -707,28 +708,12 @@ textarea:focus {
   position: absolute;
   left: 0;
   border: 1px solid #ffffff;
+  cursor: pointer;
 }
 .garden-guide__consent-checkbox:checked + .garden-guide__consent-label::before {
   content: url("../icons/checked.svg");
   height: 20px;
   width: 20px;
-}
-.garden-guide__button {
-  width: 311px;
-  height: 60px;
-  background-color: #545a2f;
-  color: #ffffff;
-  border: none;
-  font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
-  line-height: normal;
-  font-style: normal;
-  font-size: 24px;
-}
-.garden-guide__button:hover {
-  background-color: #99a18e;
-  cursor: pointer;
 }
 @media screen and (max-width: 768px) {
   .garden-guide {
@@ -1048,5 +1033,463 @@ textarea:focus {
     line-height: normal;
     font-style: normal;
     font-size: 16px;
+  }
+}
+
+.reviews {
+  margin: 0px 331px 200px 331px;
+}
+.reviews__title {
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  text-align: center;
+  color: #1a1a18;
+  margin-bottom: 103px;
+}
+.reviews__card1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 106px;
+  margin-bottom: 80px;
+}
+.reviews__card2 {
+  display: none;
+}
+.reviews__image img {
+  width: 100%;
+  height: auto;
+}
+.reviews__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.reviews__icon {
+  margin-bottom: 28px;
+}
+.reviews__icon img {
+  width: 54px;
+  height: 54px;
+  display: block;
+}
+.reviews__name {
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  font-size: 38px;
+  color: #545a2f;
+  margin-bottom: 8px;
+}
+.reviews__occupation {
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  font-size: 24px;
+  color: #545a2f;
+  margin-bottom: 34px;
+}
+.reviews__text {
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  font-size: 24px;
+  color: #1a1a18;
+  margin-bottom: 31px;
+  width: 86%;
+}
+.reviews__arrows {
+  display: flex;
+  gap: 47px;
+  align-self: flex-end;
+}
+.reviews__arrow {
+  width: 33px;
+  height: 15px;
+  border: none;
+  background: url("../icons/reviews_arrow-next.svg") no-repeat center;
+  background-size: contain;
+  cursor: pointer;
+}
+.reviews__arrow:hover {
+  transform: translateX(10px);
+}
+.reviews__arrow--prev {
+  width: 33px;
+  height: 15px;
+  border: none;
+  background: url("../icons/reviews_arrow-prev.svg") no-repeat center;
+  background-size: contain;
+  cursor: pointer;
+}
+.reviews__arrow--prev:hover {
+  transform: translateX(-10px);
+}
+.reviews__pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+}
+.reviews__current-slide {
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  font-size: 16px;
+  color: #1a1a18;
+  margin-right: 6px;
+}
+.reviews__total-slides {
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  font-size: 16px;
+  color: #979797;
+  margin-left: 6px;
+}
+@media screen and (max-width: 768px) {
+  .reviews {
+    margin: 0 20px;
+    margin-bottom: 108px;
+  }
+  .reviews__card1 {
+    grid-template-columns: 1fr;
+    grid-gap: 40px;
+  }
+  .reviews__info {
+    order: 1;
+  }
+  .reviews__image {
+    order: 2;
+  }
+  .reviews__text {
+    width: 100%;
+  }
+  .reviews__arrows {
+    display: none;
+  }
+}
+@media screen and (max-width: 440px) {
+  .reviews {
+    margin: 0 16px;
+    margin-bottom: 108px;
+  }
+  .reviews__title {
+    font-family: "Noah", sans-serif;
+    font-weight: 400;
+    font-size: 58px;
+    line-height: normal;
+    font-style: normal;
+    font-size: 24px;
+    margin-bottom: 47px;
+  }
+  .reviews__content {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+  }
+  .reviews__card1 {
+    width: 90%;
+    padding: 16px;
+    margin-bottom: 34px;
+  }
+  .reviews__card2 {
+    display: grid;
+    background-color: #DDE3E1;
+    padding: 16px;
+    position: absolute;
+    width: 345px;
+    right: -302px;
+    grid-template-columns: 1fr;
+    grid-gap: 40px;
+  }
+  .reviews__icon {
+    margin-bottom: 24px;
+  }
+  .reviews__icon img {
+    width: 50px;
+    height: 50px;
+  }
+  .reviews__name {
+    font-family: "Noah", sans-serif;
+    font-weight: 400;
+    font-size: 58px;
+    line-height: normal;
+    font-style: normal;
+    font-size: 18px;
+  }
+  .reviews__occupation {
+    font-family: "Noah", sans-serif;
+    font-weight: 400;
+    font-size: 58px;
+    line-height: normal;
+    font-style: normal;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .reviews__text {
+    font-family: "Noah", sans-serif;
+    font-weight: 400;
+    font-size: 58px;
+    line-height: normal;
+    font-style: normal;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 0px;
+  }
+}
+
+.faq-guide {
+  display: grid;
+  grid-template-columns: 1fr 464px;
+  gap: 75px;
+  padding: 0 266px;
+  margin-bottom: 140px;
+}
+
+.faq__title {
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  color: #1a1a18;
+  margin-bottom: 58px;
+}
+.faq__item {
+  border-bottom: 1px solid #979797;
+  padding: 35px 0;
+}
+.faq__question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-family: "Noah", sans-serif;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: normal;
+  font-style: normal;
+  font-size: 28px;
+  text-align: left;
+}
+.faq__question:hover {
+  color: #545a2f;
+}
+.faq__icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+}
+.faq__icon--plus {
+  background: url("../icons/plus.svg") no-repeat center;
+  background-size: contain;
+}
+.faq__icon--minus {
+  background: url("../icons/minus.svg") no-repeat center;
+  background-size: contain;
+}
+.faq__answer {
+  display: none;
+  margin-top: 34px;
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  font-size: 24px;
+  color: #1a1a18;
+}
+.faq__answer--visible {
+  display: block;
+  width: 85%;
+}
+
+.guide {
+  background-color: #DDE3E1;
+}
+.guide__title {
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  font-size: 38px;
+  color: #1a1a18;
+  text-align: center;
+  padding: 33px 72px 25px 72px;
+}
+.guide__subtitle {
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  font-size: 24px;
+  color: #1a1a18;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.guide__image {
+  width: 378px;
+  height: 350px;
+  background: url("../img/faq-guide.png") center/cover no-repeat;
+  margin: 0 auto;
+}
+.guide__form {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  padding-bottom: 42px;
+}
+.guide__input {
+  padding: 10px 0px 10px 19px;
+  width: 392px;
+  border: none;
+  margin-bottom: 25px;
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  font-size: 24px;
+  align-self: center;
+}
+.guide__input::-moz-placeholder {
+  color: #1a1a18;
+}
+.guide__input::placeholder {
+  color: #1a1a18;
+}
+.guide__consent-container {
+  margin-bottom: 27px;
+  padding-left: 42px;
+}
+.guide__consent-label {
+  padding-left: 44px;
+  position: relative;
+  display: inline-block;
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  font-size: 16px;
+  color: #1a1a18;
+  cursor: pointer;
+}
+.guide__consent-link {
+  color: #545a2f;
+}
+.guide__consent-link:hover {
+  text-decoration: underline;
+}
+.guide__consent-checkbox {
+  display: none;
+}
+.guide__consent-label::before {
+  content: "";
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  left: 0;
+  border: 1px solid #ffffff;
+  cursor: pointer;
+}
+.guide__consent-checkbox:checked + .guide__consent-label::before {
+  content: url("../icons/checked.svg");
+  height: 20px;
+  width: 20px;
+}
+.guide__button {
+  align-self: center;
+  width: 317px;
+}
+
+@media screen and (max-width: 768px) {
+  .faq-guide {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+    margin-bottom: 100px;
+  }
+  .faq__title {
+    text-align: center;
+  }
+  .guide__subtitle {
+    margin-bottom: 40px;
+  }
+  .guide__image {
+    display: none;
+  }
+  .guide__form {
+    align-items: center;
+  }
+  .guide__input {
+    width: 311px;
+  }
+  .guide__consent-container {
+    margin-bottom: 27px;
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 440px) {
+  .faq-guide {
+    padding: 0 16px;
+    margin-bottom: 116px;
+  }
+  .faq__title {
+    font-family: "Noah", sans-serif;
+    font-weight: 400;
+    font-size: 58px;
+    line-height: normal;
+    font-style: normal;
+    font-size: 24px;
+    text-align: center;
+  }
+  .faq__question {
+    font-family: "Noah", sans-serif;
+    font-weight: 400;
+    font-size: 58px;
+    line-height: normal;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .faq__icon {
+    width: 30px;
+    height: 30px;
+  }
+  .faq__answer {
+    margin-top: 34px;
+    font-family: "Noah", sans-serif;
+    font-weight: 400;
+    font-size: 58px;
+    line-height: normal;
+    font-style: normal;
+    font-size: 16px;
+  }
+  .faq__answer--visible {
+    display: block;
+    width: 100%;
+  }
+  .guide {
+    display: none;
   }
 }

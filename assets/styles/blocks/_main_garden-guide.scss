@@ -25,7 +25,7 @@
       transform: translateY(-50%);
       width: 930px;
       height: 930px;
-      background-image: url('../img/garden-guide-bg1.svg');
+      background-image: url('../img/garden-guide-left.svg');
       background-size: contain;
       background-repeat: no-repeat;
       z-index: -1;
@@ -40,7 +40,7 @@
       transform: translateY(-50%);
       width: 600px;
       height: 930px;
-      background-image: url('../img/garden-guide-bg2.svg');
+      background-image: url('../img/garden-guide-right.svg');
       background-size: contain;
       background-repeat: no-repeat;
       z-index: -1;
@@ -111,6 +111,7 @@
     display: inline-block;
     @include font-size-smallest;
     color: $black;
+    cursor: pointer;
   }
 
   &__consent-link {
@@ -132,26 +133,13 @@
     position: absolute;
     left: 0;
     border: 1px solid $white;
+    cursor: pointer;
   }
 
   &__consent-checkbox:checked + &__consent-label::before {
     content: url("../icons/checked.svg");
     height: 20px;
     width: 20px;
-  }
-
-  &__button {
-    width: 311px;
-    height: 60px;
-    background-color: $olive-dark;
-    color: $white;
-    border: none;
-    @include h5;
-
-    &:hover {
-      background-color: $olive-light;
-      cursor: pointer;
-    }
   }
 
   // Адаптация на экранах 768px

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,10 +51,8 @@
           alt="Book about garden plants"
         />
       </div>
-    
       <h2 class="garden-guide__title">Как выбрать растения <br class="br">для сада?</h2>
       <p class="garden-guide__subtitle">Пришлем инструкцию!</p>
-    
       <div class="garden-guide__content">
         <form class="garden-guide__form">
           <input
@@ -66,26 +64,203 @@
           <div class="garden-guide__consent-container">
             <input
               type="checkbox"
-              name="order-service__garden-guide-consent"
-              id="userConsent"
+              name="garden-guide-consent"
+              id="guide__userConsent"
               class="garden-guide__consent-checkbox"
               checked
+              required
             />
-            <label for="userConsent" class="garden-guide__consent-label"
+            <label for="guide__userConsent" class="garden-guide__consent-label"
               >Я даю согласие на обработку своих
               <a href="#" class="garden-guide__consent-link"
                 >персональных данных</a
               ></label
             >
           </div>
-          <button class="garden-guide__button" type="submit">
+          <button class="button button--olive-large garden-guide__button" type="submit">
             Хочу инструкцию
           </button>
         </form>
       </div>
     </section>
 
+    <section class="reviews">
+      <h2 class="reviews__title">Отзывы о нас</h2>
+      <div class="reviews__content">
+        <div class="reviews__card1">
+          <div class="reviews__image">
+            <img src="./assets/img/reviews.jpg" alt="Сад">
+          </div>
+          <div class="reviews__info">
+            <div class="reviews__icon">
+              <img src="./assets/icons/tree.svg" alt="Иконка дерева">
+            </div>
+            <h3 class="reviews__name">Анна Смирнова</h3>
+            <p class="reviews__occupation">Благоустройство сада в Агалатово</p>
+            <p class="reviews__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+            </p>
+            <div class="reviews__arrows">
+              <button class="reviews__arrow reviews__arrow--prev" aria-label="Предыдущий отзыв"></button>
+              <button class="reviews__arrow reviews__arrow--next" aria-label="Следующий отзыв"></button>
+            </div>
+          </div>
+        </div>
+        <div class="reviews__card2">
+          <div class="reviews__image">
+            <img src="./assets/img/reviews.jpg" alt="Сад">
+          </div>
+          <div class="reviews__info">
+            <div class="reviews__icon">
+              <img src="./assets/icons/tree.svg" alt="Иконка дерева">
+            </div>
+            <h3 class="reviews__name">Анна Смирнова</h3>
+            <p class="reviews__occupation">Благоустройство сада в Агалатово</p>
+            <p class="reviews__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+            </p>
+            <div class="reviews__arrows">
+              <button class="reviews__arrow reviews__arrow--prev" aria-label="Предыдущий отзыв"></button>
+              <button class="reviews__arrow reviews__arrow--next" aria-label="Следующий отзыв"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reviews__pagination">
+        <span class="reviews__current-slide">01</span>
+        <img class="reviews__line__progress" src="./assets/icons/reviews_progress-line.svg" alt="линия прогресса">
+        <span class="reviews__total-slides">05</span>
+      </div>
+    </section>
+    
+    <section class="faq-guide">
+      <div class="faq">
+        <h2 class="faq__title">Часто задаваемые вопросы</h2>
+        <ul class="faq__list">
+          <li class="faq__item">
+            <button class="faq__question">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+              <span class="faq__icon faq__icon--plus"></span>
+            </button>
+            <div class="faq__answer">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex e
+            </div>
+          </li>
+          <li class="faq__item">
+            <button class="faq__question">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+              <span class="faq__icon faq__icon--plus"></span>
+            </button>
+            <div class="faq__answer">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex e
+            </div>
+          </li>
+          <li class="faq__item">
+            <button class="faq__question">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+              <span class="faq__icon faq__icon--plus"></span>
+            </button>
+            <div class="faq__answer">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex e
+            </div>
+          </li>
+          <li class="faq__item">
+            <button class="faq__question">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+              <span class="faq__icon faq__icon--plus"></span>
+            </button>
+            <div class="faq__answer">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex e
+            </div>
+          </li>
+          <li class="faq__item">
+            <button class="faq__question">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+              <span class="faq__icon faq__icon--plus"></span>
+            </button>
+            <div class="faq__answer">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex e
+            </div>
+          </li>
+        </ul>
+      </div>
+    
+      <div class="guide">
+        <h2 class="guide__title">Как выбрать растения для сада?</h2>
+        <p class="guide__subtitle">Пришлем инструкцию!</p>
+        <div class="guide__image"></div>
+        <form class="guide__form">
+          <input
+            class="guide__input"
+            type="email"
+            placeholder="Ваш Email"
+            required
+          />
+          <div class="guide__consent-container">
+            <input
+              type="checkbox"
+              name="guide-consent"
+              id="faq__userConsent"
+              class="guide__consent-checkbox"
+              checked
+              required
+            />
+            <label for="faq__userConsent" class="guide__consent-label"
+              >Я даю согласие на обработку своих
+              <a href="#" class="guide__consent-link"
+                >персональных данных</a
+              ></label
+            >
+          </div>
+          <button class="button button--olive-large guide__button" type="submit">
+            Хочу инструкцию
+          </button>
+        </form>
+      </div>
+    </section>
+    
+    
+    
+
   </main>
+
+  <script>
+    //аккордеон в faq 
+        document.addEventListener('DOMContentLoaded', () => {
+      const faqQuestions = document.querySelectorAll('.faq__question');
+
+      faqQuestions.forEach((question) => {
+        question.addEventListener('click', () => {
+          const answer = question.nextElementSibling; // Находим следующий элемент (ответ)
+          const icon = question.querySelector('.faq__icon');
+
+          if (answer.classList.contains('faq__answer--visible')) {
+            // Если ответ уже открыт
+            answer.classList.remove('faq__answer--visible');
+            icon.classList.remove('faq__icon--minus');
+            icon.classList.add('faq__icon--plus');
+          } else {
+            // Закрываем все ответы
+            document.querySelectorAll('.faq__answer--visible').forEach((openAnswer) => {
+              openAnswer.classList.remove('faq__answer--visible');
+              openAnswer.previousElementSibling
+                .querySelector('.faq__icon')
+                .classList.remove('faq__icon--minus');
+              openAnswer.previousElementSibling
+                .querySelector('.faq__icon')
+                .classList.add('faq__icon--plus');
+            });
+
+            // Открываем текущий ответ
+            answer.classList.add('faq__answer--visible');
+            icon.classList.remove('faq__icon--plus');
+            icon.classList.add('faq__icon--minus');
+          }
+        });
+      });
+      });
+
+  </script>
 
 
 </body>
