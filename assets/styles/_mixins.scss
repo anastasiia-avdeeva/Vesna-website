@@ -97,3 +97,12 @@
   line-height: $line-height-100;
   font-style: normal;
 }
+
+// миксин для шрифта Геометрия в пагинации
+@mixin geometria-font {
+  font-family: $font-family-geometria;
+  font-weight: $font-weight-400;
+  font-size: $font-size-pagination;
+  line-height: $line-height;
+  font-style: normal;
+}
