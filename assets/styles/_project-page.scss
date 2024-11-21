@@ -1,3 +1,77 @@
+.slider {
+  margin-bottom: 100px;
+
+  &__track {
+    // height: 578px;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+  }
+
+  &__slide2 {
+    // flex: 1 0 75%;
+    flex-basis: 75%;
+  }
+
+  &__slide1,
+  &__slide3 {
+    // flex: 1 0 12.5%;
+    flex-basis: 12.5%;
+  }
+
+  &__slide-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__btns {
+    padding-right: 8px;
+    width: 68.3%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15.9%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__btn {
+    position: relative;
+    width: 128.58px;
+    height: 58.38px;
+    border: none;
+    background-color: transparent;
+  }
+
+  &__btn-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  &__btn:hover::after {
+    content: "";
+    position: absolute;
+    width: 128.58px;
+    height: 58.38px;
+    top: 0;
+    left: 0;
+    display: block;
+    z-index: 2;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__btn-prev:hover::after {
+    background-image: url("../icons/project-prev-hover.svg");
+  }
+
+  &__btn-next:hover::after {
+    background-image: url("../icons/project-next-hover.svg");
+  }
+}
+
 .project,
 .back-to-portfolio,
 .order-project {
