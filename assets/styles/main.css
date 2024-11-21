@@ -955,7 +955,7 @@ textarea:focus {
     width: 100%;
   }
   .landscape__image ::after {
-    left: 178px;
+    left: 165px;
   }
 }
 @media screen and (max-width: 440px) {
