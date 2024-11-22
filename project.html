@@ -9,7 +9,7 @@
   <body>
     <header class="header">
       <div class="header__fitst-line"></div>
-      <section class="header__slider">
+      <section class="slider">
         <div class="slider__track">
           <div class="slider__slide slider__slide1">
             <img
@@ -48,17 +48,52 @@
               />
             </button>
           </div>
-        </div>
-        <div class="slider__navigation">
-          <span class="slider__navigation-current">01</span>
-          <div class="slider__navigation-track">
+          <div class="slider__progress">
+            <span class="slider__progress-current">01</span>
             <img
               src="./assets/icons/project-nav-progress.svg"
               alt="линия прогресса"
-              class="slider__navigation-img"
+              class="slider__progress-track-img"
+            />
+            <span class="slider__progress-total">11</span>
+          </div>
+          <button class="slider__open-modal-btn">
+            <img
+              src="./assets/icons/project-btn-expand.svg"
+              alt="кнопка для увеличения картинки"
+              class="slider__open-modal-btn-img"
+            />
+          </button>
+          <!-- <div id="image-modal" class="modal">
+            <div class="modal__content">
+              <span class="modal__close-btn"></span>
+              <img
+                src="./assets/img/project-slider1.png"
+                alt="дорога в цветочном саду"
+                class="modal__img"
+              />
+            </div>
+          </div> -->
+        </div>
+        <!-- popup с картинкой -->
+        <button class="slider__open-modal-btn-test" id="open-modal-btn">
+          <img
+            src="./assets/icons/project-btn-expand.svg"
+            alt="кнопка для увеличения картинки"
+            class="slider__open-modal-btn-img"
+          />
+        </button>
+        <div id="image-modal" class="modal">
+          <div class="modal__content">
+            <button class="modal__close-btn">
+              <span></span>
+            </button>
+            <img
+              src="./assets/img/project-slider1.png"
+              alt="дорога в цветочном саду"
+              class="modal__img"
             />
           </div>
-          <span class="slider__navigation-total">11</span>
         </div>
         <div class="slider__thumbnails">
           <div class="slider__thumbnail-container">
@@ -396,7 +431,7 @@
       </section>
     </main>
     <footer class="footer"></footer>
-
+    <!-- скрипт для ввода номера телефона в форму -->
     <script>
       document
         .getElementById("userPhone")
@@ -425,6 +460,7 @@
           input.value = formattedValue;
         });
     </script>
+    <!-- скрипт для закрытия и открытия всплывающих окон -->
     <script>
       function openWindow() {
         document.getElementById("popupWindow").style.display = "block";

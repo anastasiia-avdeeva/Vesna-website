@@ -99,7 +99,7 @@
 }
 
 // миксин для шрифта Геометрия в пагинации
-@mixin geometria-font {
+@mixin geometria-400-font {
   font-family: $font-family-geometria;
   font-weight: $font-weight-400;
   font-size: $font-size-pagination;
