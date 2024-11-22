@@ -3,6 +3,21 @@
   margin-bottom: 170px;
   text-align: center;
 
+  &::before {
+    content: '';
+    position: absolute;
+    top: 5495px;
+    left: 0;
+    transform: translateY(-50%);
+    width: 904px;
+    height: 940px;
+    background-image: url('../img/steps-bg.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+    pointer-events: none;
+  }
+
   &__title {
     @include h2;
     margin-bottom: 122px;

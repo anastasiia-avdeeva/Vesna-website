@@ -1,0 +1,72 @@
+.advantages {
+  background-color: $green; // Цвет фона
+  padding: 77px 297px 98px 297px;
+  margin-bottom: 168px;
+  text-align: center;
+
+  &__title {
+    @include h2;
+    margin-bottom: 116px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 119px; // Отступ между строками
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between; // Равномерное распределение в строке
+    gap: 305px;
+
+
+    &--center {
+      justify-content: center; // Центрируем нижнюю строку
+      gap: 420px; // Расстояние между двумя нижними элементами
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; // Центрируем содержимое внутри элемента
+    text-align: left;
+  }
+
+  &__icon {
+    width: 85px;
+    height: 85px;
+    margin-bottom: 26px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; 
+    }
+  }
+
+  &__text {
+    @include h5;
+  }
+
+  @include tablets {
+
+    padding: 77px 20px 98px 20px;
+    margin-bottom: 100px;
+
+    &__row {
+      flex-direction: column;
+    }
+
+    &__item {
+      flex-direction: row;
+      align-items: center;
+      gap: 66px;
+    }
+
+    br {
+      display: none;
+    }
+  }
+}
