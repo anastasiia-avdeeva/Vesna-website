@@ -1344,6 +1344,127 @@ textarea:focus {
   }
 }
 
+.steps {
+  margin: 0 210px;
+  margin-bottom: 170px;
+  text-align: center;
+}
+.steps__title {
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  margin-bottom: 122px;
+}
+.steps__title .bold {
+  font-weight: bold;
+}
+.steps__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 142px 166px;
+}
+.steps__item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+.steps__number {
+  font-family: "Marck Script", cursive;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: normal;
+  color: #545a2f;
+  margin-right: 35px;
+}
+.steps__content {
+  text-align: left;
+}
+.steps__content > .steps__item-title {
+  font-family: "Noah", sans-serif;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: normal;
+  font-style: normal;
+  font-size: 28px;
+  font-weight: bold;
+}
+.steps__content > .steps__description {
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  font-size: 24px;
+}
+@media screen and (max-width: 768px) {
+  .steps {
+    margin: 0 20px;
+    margin-bottom: 108px;
+  }
+  .steps__list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 100px;
+  }
+}
+@media screen and (max-width: 440px) {
+  .steps {
+    margin: 0 16px;
+    margin-bottom: 108px;
+  }
+  .steps__title {
+    font-family: "Noah", sans-serif;
+    font-weight: 400;
+    font-size: 58px;
+    line-height: normal;
+    font-style: normal;
+    font-size: 24px;
+    margin-bottom: 22px;
+  }
+  .steps__list {
+    gap: 62px;
+  }
+  .steps__item {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "number" "content";
+    text-align: center;
+  }
+  .steps__number {
+    grid-area: number;
+    margin-right: 0;
+    margin-bottom: 10px;
+    font-family: "Marck Script", cursive;
+    font-weight: 400;
+    font-size: 96px;
+    line-height: normal;
+    font-size: 64px;
+  }
+  .steps__content {
+    grid-area: content;
+  }
+  .steps__content > .steps__item-title {
+    font-family: "Noah", sans-serif;
+    font-weight: 400;
+    font-size: 58px;
+    line-height: normal;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .steps__content > .steps__description {
+    font-family: "Noah", sans-serif;
+    font-weight: 400;
+    font-size: 58px;
+    line-height: normal;
+    font-style: normal;
+    font-size: 16px;
+  }
+}
+
 .reviews {
   margin: 0px 331px 200px 331px;
 }
