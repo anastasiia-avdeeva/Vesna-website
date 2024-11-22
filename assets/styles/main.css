@@ -1417,6 +1417,9 @@ textarea:focus {
     margin: 0 20px;
     margin-bottom: 108px;
   }
+  .steps::before {
+    display: none;
+  }
   .steps__list {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -1871,7 +1874,7 @@ textarea:focus {
   display: flex;
   flex-direction: column;
   gap: 0px;
-  padding-bottom: 42px;
+  padding-bottom: 75px;
 }
 .guide__input {
   padding: 10px 0px 10px 19px;
