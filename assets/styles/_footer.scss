@@ -1,13 +1,10 @@
 .footer{
-    height: auto;
     background-color: $olive-dark;
-    width: 100%;
     &__container{
-        @include margin-header-footer-1920;
+        @include padding-header-footer-1920;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: min-content min-content;
-        height: auto;
         padding-top: 50px;
         padding-bottom: 30px;
     }
@@ -18,7 +15,7 @@
     &__contact-item {
         @include header-nav-font;
         line-height: normal;
-        font-size: 20px;
+        font-size: $font-size-contact-item;
         font-weight: 400;
         color: $white;
     }
@@ -56,14 +53,13 @@
     // адаптив для 768
     @include tablets{
         &__container{
-            @include margin-header-footer-768;
+            @include padding-header-footer-768;
         }
     }
     // адаптив для 440
     @include phones{
         &__container{
-            @include margin-header-footer-440;
-            width: 100%;
+            @include padding-header-footer-440;
             height: auto;
             grid-template-columns: 1fr;
             padding-bottom: 20px;
