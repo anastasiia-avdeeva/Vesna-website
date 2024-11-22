@@ -13,14 +13,11 @@
 // link normalize
 @import "./normalize.css";
 
-@import "./footer"
-
-@import "./footer";
-
 // common blocks
 @import "./blocks/forms";
 @import "./buttons";
 @import "./blocks/popup-windows";
+@import "./footer";
 
 @import "./blocks/services_order-service.scss";
 @import "./blocks/main_garden-guide";
