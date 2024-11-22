@@ -1,15 +1,18 @@
-//colors 
-$olive-dark: #545A2F;
-$olive-light: #99A18E;
-$brown: #63533E;
-$black: #1A1A18;
+//colors
+$olive-dark: #545a2f;
+$olive-light: #99a18e;
+$brown: #63533e;
+$black: #1a1a18;
 $white: #ffffff;
+$light-green: #e9ece0;
+$gray: #979797;
+$green: #dde3e1;
 
 //breakpoints
 $tablets: 768px;
 $phones: 440px;
 
-//fonts 
+//fonts
 $font-family-noah: "Noah", sans-serif;
 $font-family-marck: "Marck Script", cursive;
 $font-family-geometria: "Geometria", sans-serif;
@@ -26,6 +29,15 @@ $font-size-h5: 24px;
 $font-size-h6: 18px;
 $font-size-smallest: 16px;
 $font-size-marck: 70px;
+$font-size-marck: 96px;
+
+$font-size-label-focus: 12px;
+$font-size-label-consent-phone: 14px;
+
+$font-size-button-transparent: 20px;
+
+$font-size-faq-question: 28px;
+$font-size-pagination: 17px;
 
 $line-height: normal;
 $line-height-100: 100%;

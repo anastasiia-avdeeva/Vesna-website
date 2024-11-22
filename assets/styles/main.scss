@@ -1,4 +1,4 @@
-// import files with mixins and variables
+// import files with mixins and variables // base and media
 @import "./vars";
 @import "./mixins";
 @import "./base";
@@ -15,3 +15,30 @@
 
 @import "./footer"
 
+@import "./footer";
+
+// common blocks
+@import "./blocks/forms";
+@import "./buttons";
+@import "./blocks/popup-windows";
+
+@import "./blocks/services_order-service.scss";
+@import "./blocks/main_garden-guide";
+
+// link blocks main page
+@import "./blocks/main_landscape";
+@import "./blocks/main_projects";
+@import "./blocks/main_reviews";
+@import "./blocks/main_faq";
+
+// link blocks portfolio page
+
+// link blocks project page
+
+// link blocks services page
+
+// link blocks service page
+
+// link blocks contacts page
+
+// link blocks
