@@ -79,6 +79,8 @@
     align-items: center;
     justify-content: center;
     @include h5;
+    gap: 15px;
+
 }
 // Все проекты
 .button-round--arrow{
@@ -96,6 +98,16 @@
             display: block;
         }
     }
+
+    // &:hover {
+    //     cursor: pointer;
+    //     color: $white;
+    //     background-color: $olive-dark;
+    
+    //     img {
+    //       filter: invert(1) brightness(2); /* Инвертируем цвет и увеличиваем яркость для белого эффекта */
+    //     }
+    // }
 }
 // адаптив на 768
 @include tablets{
