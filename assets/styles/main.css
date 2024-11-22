@@ -811,7 +811,7 @@ textarea:focus {
 
 .landscape {
   margin: 0 87px;
-  margin-bottom: 437px;
+  margin-bottom: 380px;
 }
 .landscape::before {
   content: "";
@@ -1040,6 +1040,116 @@ textarea:focus {
     line-height: normal;
     font-style: normal;
     font-size: 16px;
+  }
+}
+
+.services {
+  margin: 0px 292px;
+  margin-bottom: 253px;
+  text-align: center;
+}
+.services__title {
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  margin-bottom: 40px;
+}
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(399px, 1fr));
+  gap: 69px;
+  margin-bottom: 30px;
+}
+.services__item {
+  padding: 20px;
+  text-align: left;
+}
+.services__icon {
+  width: 55px;
+  height: 55px;
+  margin-bottom: 24px;
+}
+.services__subtitle {
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  font-size: 38px;
+  margin-bottom: 56px;
+}
+.services__list-item {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 30px;
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  font-size: 24px;
+}
+.services__list-item::before {
+  content: "•"; /* Используем символ точки */
+  position: absolute;
+  left: 0; /* Маркер слева */
+  top: 15px;
+  transform: translateY(-50%);
+  font-size: 16px; /* Размер маркера */
+  color: #1a1a18; /* Цвет маркера */
+}
+@media screen and (max-width: 768px) {
+  .services {
+    margin: 0 20px;
+    margin-bottom: 108px;
+  }
+}
+@media screen and (max-width: 440px) {
+  .services {
+    margin: 0 16px;
+    margin-bottom: 108px;
+  }
+  .services__title {
+    font-family: "Noah", sans-serif;
+    font-weight: 400;
+    font-size: 58px;
+    line-height: normal;
+    font-style: normal;
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  .services__grid {
+    gap: 37px;
+    margin-bottom: 39px;
+  }
+  .services__icon {
+    width: 41px;
+    height: 41px;
+    margin-bottom: 30px;
+  }
+  .services__subtitle {
+    font-family: "Noah", sans-serif;
+    font-weight: 400;
+    font-size: 58px;
+    line-height: normal;
+    font-style: normal;
+    font-size: 24px;
+    margin-bottom: 22px;
+  }
+  .services__list-item {
+    padding-left: 15px;
+    margin-bottom: 24px;
+    font-family: "Noah", sans-serif;
+    font-weight: 400;
+    font-size: 58px;
+    line-height: normal;
+    font-style: normal;
+    font-size: 16px;
+  }
+  .services__list-item::before {
+    top: 10px;
   }
 }
 

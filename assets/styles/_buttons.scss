@@ -80,7 +80,6 @@
     justify-content: center;
     @include h5;
     gap: 15px;
-
 }
 // Все проекты
 .button-round--arrow{
@@ -98,7 +97,6 @@
             display: block;
         }
     }
-
     // &:hover {
     //     cursor: pointer;
     //     color: $white;
@@ -106,6 +104,7 @@
     
     //     img {
     //       filter: invert(1) brightness(2); /* Инвертируем цвет и увеличиваем яркость для белого эффекта */
+    //       background-color: transparent;
     //     }
     // }
 }
