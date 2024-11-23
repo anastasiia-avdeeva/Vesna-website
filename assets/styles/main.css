@@ -2657,6 +2657,7 @@ textarea:focus {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 60px;
 }
 .service__title {
   font-family: "Noah", sans-serif;
@@ -2668,28 +2669,34 @@ textarea:focus {
 }
 
 .service-detail {
-  margin: 0 auto;
+  margin: 0 292px 155px;
 }
 .service-detail__back {
-  margin-bottom: 40px;
+  margin-bottom: 100px;
 }
 .service-detail__back-link {
+  text-decoration: none;
+  color: #1a1a18;
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  font-size: 24px;
   display: inline-flex;
   align-items: center;
-  text-decoration: none;
-  color: #000;
-  font-size: 16px;
+  gap: 42px;
 }
 .service-detail__back-link:hover {
   text-decoration: underline;
 }
 .service-detail__back-link-icon {
-  margin-right: 10px;
-  font-size: 18px;
+  width: 66px;
+  height: 30px;
 }
 .service-detail__content {
   display: flex;
-  gap: 40px;
+  gap: 83px;
   align-items: center;
 }
 @media (max-width: 768px) {
