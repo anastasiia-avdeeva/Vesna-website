@@ -1,58 +1,59 @@
 .landscape { 
-  margin: 0 87px; // Устанавливаем отступы слева и справа
-  margin-bottom: 437px; // Отступ снизу для разделения секции
+  margin: 0 87px; 
+  margin-bottom: 380px; 
+  position: relative;
 
   &::before { 
-    content: ''; // Добавляем пустой псевдоэлемент
-    position: absolute; // Позиционируем элемент относительно родителя
-    top: 43%; // Смещаем элемент вниз от верхней границы
-    left: 29%; // Смещаем элемент вправо от левой границы
-    transform: translateY(-50%); // Центрируем элемент по вертикали
-    width: 883px; // Ширина псевдоэлемента
-    height: 930px; // Высота псевдоэлемента
-    background-image: url('../img/landscape-bg.svg'); // Задаём фоновое изображение
-    background-size: contain; // Изображение подгоняется по размеру контейнера
-    background-repeat: no-repeat; // Изображение не повторяется
-    z-index: -1; // Помещаем элемент на задний план
-    pointer-events: none; // Отключаем взаимодействие с псевдоэлементом
+    content: ''; 
+    position: absolute; 
+    top: 57%; 
+    left: 26%; 
+    transform: translateY(-50%); 
+    width: 883px;
+    height: 930px; 
+    background-image: url('../img/landscape-bg.svg'); 
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    z-index: -1;
+    pointer-events: none; 
   }
 
 &__title {
-  text-align: center; // Выравниваем заголовок по центру
-  margin-bottom: 86px; // Отступ снизу
+  text-align: center; 
+  margin-bottom: 86px; 
   @include h3;
   color: $black; 
 
   .bold {
-    font-weight: bold; // Делаем часть заголовка жирным
+    font-weight: bold; 
   }
 }
 
 &__content {
-  display: flex; // Используем флексбокс для расположения элементов (изображения слева и текст справа)
-  gap: 75px; // Расстояние между элементами
-  justify-content: space-between; // Распределяем элементы равномерно по ширине
+  display: flex; 
+  gap: 75px; 
+  justify-content: space-between; 
 }
 
 &__image {
-  position: relative; // Устанавливаем позицию относительно родителя
-  max-width: 700px; // Ширина блока
-  margin: 0 auto; // Центрируем блок в своей колонке
+  position: relative; 
+  max-width: 700px; 
+  margin: 0 auto; 
   display: flex; 
-  flex-direction: column; // Элементы располагаются вертикально
-  align-items: center; // Выравниваем изображение и текст над ним 
+  flex-direction: column; 
+  align-items: center; 
 
   ::after { 
-    content: ''; // Добавляем псевдоэлемент
-    position: absolute; // Позиционируем относительно родителя
-    top: 472px; // Смещение вниз
-    left: 258px; // Смещение вправо
-    width: 536px; // Ширина псевдоэлемента
-    height: 402px; // Высота псевдоэлемента
-    z-index: 2; // Помещаем элемент перед другими
-    background: url('../img/landscape2.jpg') no-repeat center center; // Добавляем фон
-    background-size: cover; // Изображение покрывает весь элемент
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); // Добавляем тень
+    content: ''; 
+    position: absolute; 
+    top: 472px; 
+    left: 258px; 
+    width: 536px;
+    height: 402px;
+    z-index: 2;
+    background: url('../img/landscape2.jpg') no-repeat center center;
+    background-size: cover; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -62,44 +63,44 @@
 }
 
 &__list {
-  max-width: 45%; // Максимальная ширина списка
-  display: flex; // Используем флексбокс
-  flex-direction: column; // Элементы располагаются вертикально
-  gap: 0px; // Убираем расстояние между элементами
-  justify-content: center; // Центрируем элементы по вертикали
-  margin-top: 124px; // Отступ сверху
-  z-index: 3; // Ставим список на передний план
+  max-width: 45%; 
+  display: flex; 
+  flex-direction: column; 
+  gap: 0px; 
+  justify-content: center; 
+  margin-top: 124px;
+  z-index: 3;
 }
 
 &__item {
-  display: flex; // Используем флексбокс
-  align-items: flex-start; // Выравниваем элементы по началу
-  gap: 35px; // Расстояние между иконкой и текстом
-  padding-left: 28px; // Отступ слева
-  margin-bottom: 156px; // Отступ снизу
-  width: 65%; // Ширина элемента
+  display: flex; 
+  align-items: flex-start;
+  gap: 35px;
+  padding-left: 28px;
+  margin-bottom: 156px; 
+  width: 65%;
 
   &:nth-child(2) {
-    padding-left: 72px; // Отступ слева для второго элемента
-    margin-bottom: 161px; // Отступ снизу
-    width: 81%; // Ширина второго элемента
+    padding-left: 72px; 
+    margin-bottom: 161px;
+    width: 81%; 
   }
 
   &:nth-child(3) {
-    padding-left: 124px; // Отступ слева для третьего элемента
-    margin-bottom: 0; // Убираем отступ снизу
-    width: 84%; // Ширина третьего элемента
+    padding-left: 124px; 
+    margin-bottom: 0; 
+    width: 84%;
   }
 
   &::before { 
-    content: ""; // Добавляем псевдоэлемент для иконки
-    flex-shrink: 0; // Предотвращаем сжатие элемента
-    width: 50px; // Размер иконки
-    height: 50px; // Размер иконки
-    background-image: url("../icons/circle-checked.svg"); // Путь к иконке
-    background-size: cover; // Изображение покрывает весь блок
-    background-repeat: no-repeat; // Убираем повтор изображения
-    display: inline-block; // Отображаем элемент как встроенный блок
+    content: ""; 
+    flex-shrink: 0;
+    width: 50px; 
+    height: 50px;
+    background-image: url("../icons/circle-checked.svg"); 
+    background-size: cover;
+    background-repeat: no-repeat; 
+    display: inline-block;
   }
 }
 
@@ -111,47 +112,47 @@
  // Медиа-запрос для экрана 768px
 @include tablets {
 
-  margin: 0 20px; // Уменьшаем горизонтальные отступы
-  margin-bottom: 437px; // Отступ снизу
+  margin: 0 20px;
+  margin-bottom: 437px; 
 
   &::before {
-    content: none; // Убираем фоновый псевдоэлемент
+    content: none;
   }
 
   &__title {
-    margin-bottom: 66px; // Уменьшаем отступ снизу
+    margin-bottom: 66px;
   }
 
   &__content {
-    flex-direction: column-reverse; // Меняем порядок элементов
-    gap: 66px; // Расстояние между элементами
+    flex-direction: column-reverse; 
+    gap: 66px; 
   }
 
   &__list {
-    max-width: 100%; // Список занимает всю ширину
-    margin-top: 0px; // Убираем отступ сверху
+    max-width: 100%; 
+    margin-top: 0px; 
   }
 
   &__item {
-    width: 100%; // Элемент занимает всю ширину
-    padding: 0px; // Убираем отступы
-    margin-bottom: 50px; // Отступ снизу
+    width: 100%; 
+    padding: 0px;
+    margin-bottom: 50px; 
 
     &:nth-child(2) {
-      padding: 0px; // Убираем отступы для второго элемента
-      margin-bottom: 50px; // Отступ снизу
-      width: 100%; // Элемент занимает всю ширину
+      padding: 0px; 
+      margin-bottom: 50px; 
+      width: 100%;
     }
 
     &:nth-child(3) {
-      padding: 0px; // Убираем отступы для третьего элемента
-      width: 100%; // Элемент занимает всю ширину
+      padding: 0px; 
+      width: 100%; 
     }
   }
 
   &__image {
     ::after {
-      left: 165px; // Смещение псевдоэлемента вправо
+      left: 165px; 
     }
   }
   
@@ -160,88 +161,88 @@
 // Адаптивные стили для экрана 440px
 @include phones {
 
-  margin: 0 16px; // Уменьшаем горизонтальные отступы
-  margin-bottom: 287px; // Уменьшаем отступ снизу
+  margin: 0 16px; 
+  margin-bottom: 287px; 
 
   &::before {
-      content: ''; // Вставляем пустой псевдоэлемент
-      position: absolute; // Абсолютное позиционирование
-      top: 22%; // Смещаем вниз на 22% высоты
-      left: 9%; // Смещаем вправо на 9% ширины
-      width: 367px; // Устанавливаем ширину фона
-      height: 383px; // Устанавливаем высоту фона
-      background-image: url('../img/landscape-bg.svg'); // Указываем фоновое изображение
-      background-size: contain; // Масштабируем изображение, чтобы оно уместилось
-      background-repeat: no-repeat; // Отключаем повторение изображения
-      z-index: -1; // Размещаем элемент под основным содержимым
-      pointer-events: none; // Отключаем взаимодействие с элементом
+      content: ''; 
+      position: absolute; 
+      top: 30%; 
+      left: 8%; 
+      width: 367px; 
+      height: 383px; 
+      background-image: url('../img/landscape-bg.svg'); 
+      background-size: contain; 
+      background-repeat: no-repeat; 
+      z-index: -1; 
+      pointer-events: none; 
   }
 
   &__title {
-      @include h5; // Применяем миксин для заголовков меньшего размера
+      @include h5; 
 
       br {
-        display: none; // Убираем переносы строк для заголовков
+        display: none; 
       }
   }
 
   &__content {
-      gap: 56px; // Уменьшаем расстояние между элементами
+      gap: 56px; 
   }
 
   &__image {
 
       ::before {
-          content: ''; // Вставляем пустой псевдоэлемент
-          position: absolute; // Абсолютное позиционирование
-          top: 330px; // Смещаем элемент вниз на 330px
-          left: 18px; // Смещаем вправо на 18px
-          width: 15px; // Устанавливаем ширину псевдоэлемента
-          height: 177px; // Устанавливаем высоту псевдоэлемента
-          z-index: 3; // Размещаем элемент выше других
-          background: url('../img/3d.svg') no-repeat center center; // Добавляем фоновое изображение
-          background-size: cover; // Масштабируем фон, чтобы он полностью покрыл элемент
+          content: ''; 
+          position: absolute;
+          top: 330px; 
+          left: 18px; 
+          width: 15px;
+          height: 177px; 
+          z-index: 3; 
+          background: url('../img/3d.svg') no-repeat center center; 
+          background-size: cover; 
       }
 
       ::after {
-          content: ''; // Вставляем пустой псевдоэлемент
-          position: absolute; // Абсолютное позиционирование
-          top: 306px; // Смещаем элемент вниз на 306px
-          left: 56px; // Смещаем вправо на 56px
-          width: 352px; // Устанавливаем ширину псевдоэлемента
-          height: 204px; // Устанавливаем высоту псевдоэлемента
-          z-index: 2; // Размещаем элемент выше заднего фона, но ниже остальных
-          background: url('../img/landscape2.jpg') no-repeat center center; // Указываем фоновое изображение
-          background-size: cover; // Фон полностью покрывает элемент
-          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); // Добавляем тень для псевдоэлемента
+          content: ''; 
+          position: absolute; 
+          top: 306px; 
+          left: 56px; 
+          width: 352px; 
+          height: 204px; 
+          z-index: 2; 
+          background: url('../img/landscape2.jpg') no-repeat center center; 
+          background-size: cover;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
       }
   }
 
 
 &__img {
-  position: relative; // Устанавливаем относительное позиционирование
-  width: 100%; // Ширина блока
+  position: relative; 
+  width: 100%; 
 }
 
   &__caption {
-      width: 0; // Устанавливаем ширину в 0, чтобы скрыть блок
-      height: 0; // Устанавливаем высоту в 0
-      overflow: hidden; // Прячем содержимое, выходящее за границы
+      width: 0; 
+      height: 0; 
+      overflow: hidden; 
   }
 
   &__item {
-      gap: 19px; // Уменьшаем расстояние между иконкой и текстом
-      margin-bottom: 36px; // Уменьшаем отступ снизу
+      gap: 19px; 
+      margin-bottom: 36px; 
      
 
       &:nth-child(2) {
-        margin-bottom: 36px; // Уменьшаем отступ снизу
+        margin-bottom: 36px; 
       }
 
 
       &::before {
-          width: 35px; // Уменьшаем размер иконки
-          height: 35px; // Уменьшаем высоту иконки
+          width: 35px; 
+          height: 35px; 
       }
   }
 
