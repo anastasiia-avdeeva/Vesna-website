@@ -57,25 +57,38 @@
             />
             <span class="slider__progress-total">11</span>
           </div>
-          <button class="slider__open-modal-btn">
+          <!-- Кнопка для вывода картинки поверх контента -->
+          <button
+            class="expand-pic-btn"
+            onclick="openWindow('pic__popupWindow')"
+          >
             <img
               src="./assets/icons/project-btn-expand.svg"
               alt="кнопка для увеличения картинки"
-              class="slider__open-modal-btn-img"
+              class="expand-pic-btn__img"
             />
           </button>
-          <!-- <div id="image-modal" class="modal">
-            <div class="modal__content">
-              <span class="modal__close-btn"></span>
-              <img
-                src="./assets/img/project-slider1.png"
-                alt="дорога в цветочном саду"
-                class="modal__img"
-              />
+          <!-- контейнер для размытия элементов за картинкой -->
+          <div class="popup-overlay" id="overlay"></div>
+          <!-- сам попап для картинки-->
+          <div class="popup" id="pic__popupWindow">
+            <div class="popup__wrapper-pic">
+              <div class="popup__wrapper-pic-content">
+                <button
+                  class="close-btn close-btn--white"
+                  onclick="closewindow('pic__popupWindow')"
+                >
+                  <span></span>
+                </button>
+                <img
+                  src="./assets/img/project-slider1.png"
+                  alt="дорога в цветочном саду"
+                  class="popup__img"
+                />
+              </div>
             </div>
-          </div> -->
+          </div>
         </div>
-
         <div class="slider__thumbnails">
           <div class="slider__thumbnail-container">
             <img
@@ -450,6 +463,17 @@
 
       function closewindow() {
         document.getElementById("popupWindow").style.display = "none";
+        document.getElementById("overlay").style.display = "none";
+      }
+    </script>
+    <script>
+      function openWindow(popupId) {
+        document.getElementById(popupId).style.display = "block";
+        document.getElementById("overlay").style.display = "block";
+      }
+
+      function closewindow(popupId) {
+        document.getElementById(popupId).style.display = "none";
         document.getElementById("overlay").style.display = "none";
       }
     </script>
