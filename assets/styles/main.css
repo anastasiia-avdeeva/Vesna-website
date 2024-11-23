@@ -2668,8 +2668,6 @@ textarea:focus {
 }
 
 .service-detail {
-  padding: 40px;
-  max-width: 1200px;
   margin: 0 auto;
 }
 .service-detail__back {
@@ -2692,7 +2690,7 @@ textarea:focus {
 .service-detail__content {
   display: flex;
   gap: 40px;
-  align-items: flex-start;
+  align-items: center;
 }
 @media (max-width: 768px) {
   .service-detail__content {
