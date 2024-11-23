@@ -55,8 +55,17 @@
     padding: 77px 20px 98px 20px;
     margin-bottom: 100px;
 
+    &__list {
+      gap: 50px; // Отступ между строками
+    }
+
     &__row {
       flex-direction: column;
+      gap: 50px;
+
+      &--center {
+        gap: 50px; // Расстояние между двумя нижними элементами
+      }
     }
 
     &__item {
@@ -65,8 +74,49 @@
       gap: 66px;
     }
 
+    &__icon {
+      margin-bottom: 0px;
+    }
+
     br {
       display: none;
+    }
+  }
+
+  @include phones {
+
+    padding: 40px 16px;
+    margin-bottom: 88px;
+
+    &__title {
+      @include h5;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+
+    &__icon {
+      width: 58px;
+      height: 58px;
+    }
+  
+    &__text {
+      @include font-size-smallest;
+    }
+
+    &__list {
+      gap: 30px; // Отступ между строками
+    }
+
+    &__row {
+      gap: 30px;
+
+      &--center {
+        gap: 30px; // Расстояние между двумя нижними элементами
+      }
+    }
+
+    &__item {
+      gap: 30px;
     }
   }
 }
