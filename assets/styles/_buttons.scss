@@ -67,19 +67,19 @@
 }
 // КРУГЛЫЕ НОПОЧКИ
 // общий стиль для круглых кнопок
-.button-round{
-    display: flex;
-    flex-direction: column;
-    width: 191px;
-    height: 191px;
-    border: none;
-    background-color: $white;
-    color: $black;
-    border-radius: 50%;
-    align-items: center;
-    justify-content: center;
-    @include h5;
-    gap: 15px;
+.button-round {
+  display: flex;
+  flex-direction: column;
+  width: 191px;
+  height: 191px;
+  border: none;
+  background-color: $white;
+  color: $black;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  @include h5;
+  gap: 15px;
 }
 
 // Все проекты
@@ -97,18 +97,9 @@
     .button-round__icon--white {
       display: block;
     }
-    // &:hover {
-    //     cursor: pointer;
-    //     color: $white;
-    //     background-color: $olive-dark;
-    
-    //     img {
-    //       filter: invert(1) brightness(2); /* Инвертируем цвет и увеличиваем яркость для белого эффекта */
-    //       background-color: transparent;
-    //     }
-    // }
+  }
 }
-  
+
 // адаптив на 768
 @include tablets {
   .button-round--arrow {
@@ -215,5 +206,4 @@
     width: 24px;
     height: 24px;
   }
-}
 }
