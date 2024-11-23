@@ -1,0 +1,97 @@
+.services {
+  margin: 0px 292px;
+  margin-bottom: 253px;
+  text-align: center;
+
+  &__title {
+    @include h2;
+    margin-bottom: 40px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(399px, 1fr));
+    gap: 69px;
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    padding: 20px;
+    text-align: left;
+  }
+
+  &__icon {
+    width: 55px;
+    height: 55px;
+    margin-bottom: 24px;
+  }
+
+  &__subtitle {
+    @include h4;
+    margin-bottom: 56px;
+  }
+
+  &__list {
+
+    &-item {
+      position: relative; 
+      padding-left: 20px; 
+      margin-bottom: 30px;
+      @include h5;
+
+      &::before {
+        content: '•'; /* Используем символ точки */
+        position: absolute;
+        left: 0; /* Маркер слева */
+        top: 15px;
+        transform: translateY(-50%);
+        font-size: 16px; /* Размер маркера */
+        color: $black; /* Цвет маркера */
+      }
+    }
+  }
+
+  @include tablets {
+    margin: 0 20px; // Уменьшение отступов для планшетов
+    margin-bottom: 108px;
+  }
+
+  @include phones {
+    margin: 0 16px; // Уменьшение отступов для планшетов
+    margin-bottom: 108px;
+
+    &__title {
+      @include h5;
+      margin-bottom: 30px;
+    }
+
+    &__grid {
+      gap: 37px;
+      margin-bottom: 39px;
+    }
+
+    &__icon {
+      width: 41px;
+      height: 41px;
+      margin-bottom: 30px;
+    }
+
+    &__subtitle {
+      @include h5;
+      margin-bottom: 22px;
+    }
+
+    &__list {
+
+      &-item {
+        padding-left: 15px; 
+        margin-bottom: 24px;
+        @include font-size-smallest;
+  
+        &::before {
+          top: 10px;
+        }
+      }
+    }
+  }
+}
