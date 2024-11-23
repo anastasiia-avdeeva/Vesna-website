@@ -1,0 +1,138 @@
+.popup-open__button-container {
+  text-align: center;
+}
+
+// создаю слой, который будет покрывать всю страницу под попапом и размываться
+.overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(20px); /* размытие */
+  z-index: 10;
+}
+
+// стили для самого поапа
+.popup {
+  display: none;
+
+  &__wrapper {
+    width: 678px;
+    padding: 16px 16px 62px;
+    position: fixed;
+    top: 179px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, min-content);
+    grid-template-areas:
+      "close"
+      "title"
+      "subtitle"
+      "form";
+    justify-items: center;
+    background: $white;
+    backdrop-filter: blur(10px);
+    background-image: url("../img/popup-bg-left.svg"),
+      url("../img/popup-bg-right.svg");
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+    z-index: 20;
+  }
+
+  &__close-btn {
+    grid-area: close;
+    width: 40px;
+    height: 40px;
+    justify-self: end;
+    border: none;
+    background-color: $white;
+  }
+
+  &__title {
+    grid-area: title;
+    // margin-left: 150px;
+    // margin-right: 150px;
+    width: 344px;
+    margin-bottom: 19px;
+    text-align: center;
+    @include h2;
+    color: $olive-dark;
+  }
+
+  &__description {
+    grid-area: subtitle;
+    margin-bottom: 32px;
+    text-align: center;
+    @include h5;
+    color: $black;
+  }
+
+  // стили для формы внутри поапа, с учетом того что часть стилей определены для класса .form, сейчас они переопределяются за счет вложенности и следовательно увеличения веса селектора
+  .form {
+    grid-area: form;
+    justify-items: center;
+    gap: 50px;
+
+    &__input-group {
+      gap: 20px;
+    }
+
+    &__input-container {
+      max-width: 481px;
+      min-width: 288px;
+    }
+  }
+}
+
+@include phones {
+  .popup {
+    &__wrapper {
+      //   width: 320px;
+      width: 100%;
+      padding-bottom: 90px;
+      top: 0px;
+    }
+
+    &__close-btn {
+      width: 24px;
+      height: 24px;
+    }
+
+    &__close-icon {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    &__title {
+      width: 225px;
+      font-size: $font-size-h4;
+    }
+
+    &__description {
+      font-size: $font-size-h6;
+    }
+
+    .form {
+      gap: 24px;
+      font-size: $font-size-h6;
+
+      &__input-group {
+        gap: 10px;
+      }
+
+      &__input-field:focus ~ .form__input-label,
+      &__input-field:not(:placeholder-shown) ~ .form__input-label {
+        transform: scale(0.67) translateY(-17px) translateX(-13px);
+      }
+
+      &__consent-container {
+        padding-top: 7px;
+      }
+    }
+  }
+}
