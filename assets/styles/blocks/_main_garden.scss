@@ -1,0 +1,136 @@
+.garden {
+  display: grid;
+  grid-template-rows: auto auto;
+  row-gap: 200px;
+  margin: 0 65px; // Устанавливаем отступы слева и справа
+  margin-bottom: 196px; // Отступ снизу для разделения секции
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 400px;
+    left: -63px;
+    transform: translateY(-50%);
+    width: 512px;
+    height: 385px;
+    background-image: url('../img/garden-bg-left.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 400px;
+    right: -63px;
+    transform: translateY(-50%);
+    width: 512px;
+    height: 385px;
+    background-image: url('../img/garden-bg-right.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  &__title {
+    @include h2;
+    margin-bottom: 53px;
+    color: $black;
+    text-align: center;
+
+    .bold{
+      font-weight: bold;
+    }
+  }
+
+  &__description {
+    @include h5;
+    color: $black;
+    width: 41%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  &__images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 27px;
+  }
+  
+  &__image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  @include tablets {
+    margin: 0 20px; // Уменьшение отступов для планшетов
+    row-gap: 150px;
+    margin-bottom: 108px;
+
+    &::before {
+      top: 670px;
+      left: -20px;
+      width: 280px;
+      height: 230px;
+    }
+  
+    &::after {
+      top: 670px;
+      right: -20px;
+      width: 280px;
+      height: 230px;
+    }
+
+    &__description {
+      width: 100%;
+    }
+
+    &__images {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  @include phones {
+    margin: 0 16px; 
+    row-gap: 107px;
+    margin-bottom: 87px;
+
+    &::before {
+      top: 350px;
+      left: -16px;
+      width: 180px;
+      height: 130px;
+    }
+  
+    &::after {
+      top: 350px;
+      right: -16px;
+      width: 180px;
+      height: 130px;
+    }
+
+    &__title {
+      @include h5;
+      margin-bottom: 40px;
+    }
+  
+    &__description {
+      @include font-size-smallest;
+      width: 100%;
+    }
+
+    &__images {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 10px;
+    }
+  }
+}
+
+
+
+
