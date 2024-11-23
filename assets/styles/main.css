@@ -53,8 +53,6 @@ textarea:focus {
   font-style: normal;
   font-display: swap;
 }
-<<<<<<< HEAD
-=======
 @font-face {
   font-family: "GeometriaRegular";
   src: url("../fonts/GeometriaRegular.woff2") format("woff2"), url("../fonts/GeometriaRegular.woff") format("woff");
@@ -490,7 +488,6 @@ textarea:focus {
     padding-top: 7px;
   }
 }
->>>>>>> 3b0283f2a471c1412be8fe017f5dbd82e99fd377
 input:focus,
 textarea:focus {
   outline: none;
@@ -508,12 +505,6 @@ textarea:focus {
   font-family: "Noah", sans-serif;
   font-weight: 400;
   font-size: 58px;
-<<<<<<< HEAD
-  line-height: normal;
-  font-style: normal;
-  font-size: 24px;
-=======
->>>>>>> 3b0283f2a471c1412be8fe017f5dbd82e99fd377
   line-height: normal;
   font-style: normal;
   font-size: 24px;
@@ -548,19 +539,6 @@ textarea:focus {
   justify-self: end;
 }
 
-<<<<<<< HEAD
-.form {
-  grid-area: form;
-  display: grid;
-  grid-auto-rows: auto;
-  gap: 24px;
-}
-.form__input-group {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 24px;
-=======
 @media screen and (max-width: 768px) {
   .order-service {
     margin: 0px 40px 79px;
@@ -682,7 +660,6 @@ textarea:focus {
   display: flex;
   flex-direction: column;
   align-self: flex-start;
->>>>>>> 3b0283f2a471c1412be8fe017f5dbd82e99fd377
 }
 .garden-guide__form {
   display: flex;
@@ -832,6 +809,87 @@ textarea:focus {
   }
 }
 
+.project-portfolio {
+  padding: 5% 15.2%;
+}
+
+.project-card {
+  width: 100%;
+  margin-bottom: 130px;
+}
+.project-card__title {
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  color: #1a1a18;
+}
+.project-card__details {
+  display: grid;
+  grid-template-columns: max-content max-content max-content;
+  gap: 83px;
+}
+.project-card__detail-label {
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  font-size: 18px;
+  color: #1a1a18;
+}
+.project-card__detail-value {
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  font-size: 24px;
+  color: #1a1a18;
+  padding-top: 8px;
+}
+.project-card__gallery {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: 1fr 1fr;
+  gap: 24px;
+  padding-top: 20px;
+}
+.project-card__gallery-item-1 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.project-card__gallery-item-2 {
+  grid-column: 2/4;
+}
+.project-card__gallery-item-3 {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.project-card__quote {
+  display: grid;
+  grid-column: 2/3;
+  background-color: #E9ECE0;
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 29.98px;
+  font-style: italic;
+  align-items: center;
+  justify-items: center;
+}
+.project-card .gallery-pic {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .landscape {
   margin: 0 87px;
   margin-bottom: 437px;
@@ -930,19 +988,6 @@ textarea:focus {
   flex-shrink: 0;
   width: 50px;
   height: 50px;
-<<<<<<< HEAD
-  max-width: 660px;
-  min-width: 300px;
-  position: relative;
-}
-.form__input-field {
-  padding: 18px 10px 5px 23px;
-  height: 100%;
-  width: 100%;
-  border: 0.7px solid #99a18e;
-  background: #ffffff;
-  color: #63533e;
-=======
   background-image: url("../icons/circle-checked.svg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -1137,7 +1182,6 @@ textarea:focus {
   flex-direction: column;
   align-items: center;
   justify-content: center;
->>>>>>> 3b0283f2a471c1412be8fe017f5dbd82e99fd377
 }
 .projects__info::before {
   content: "";
@@ -1149,128 +1193,6 @@ textarea:focus {
   height: 437px;
   background: url("../img/projects_overlay-bg.svg") no-repeat center/contain;
 }
-<<<<<<< HEAD
-.form__comments-field {
-  padding-left: 23px;
-  padding-top: 18px;
-  height: 100%;
-  width: 100%;
-  border: 0.7px solid #99a18e;
-  background: #ffffff;
-}
-.form__input-label {
-  position: absolute;
-  top: 10px;
-  left: 22px;
-  pointer-events: none;
-  transition: transform 0.1s ease-in-out;
-  color: #63533e;
-}
-.form__input-field:not(:-moz-placeholder-shown) ~ .form__input-label {
-  transform: scale(0.5) translateY(-30px) translateX(-30px);
-}
-.form__input-field:focus ~ .form__input-label, .form__input-field:not(:placeholder-shown) ~ .form__input-label {
-  transform: scale(0.5) translateY(-30px) translateX(-30px);
-}
-.form__comments-field:not(:-moz-placeholder-shown) ~ .form__comments-label {
-  transform: scale(0.5) translateY(-30px) translateX(-75px);
-}
-.form__comments-field:focus ~ .form__comments-label, .form__comments-field:not(:placeholder-shown) ~ .form__comments-label {
-  transform: scale(0.5) translateY(-30px) translateX(-75px);
-}
-.form__input-label--default {
-  position: absolute;
-  top: 10px;
-  left: 22px;
-  pointer-events: none;
-  transition: opacity 0.2s ease-in-out;
-  color: #63533e;
-}
-.form__input-label--focus {
-  position: absolute;
-  color: #63533e;
-  top: 2px;
-  left: 19px;
-  font-size: 12px;
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
-}
-.form__input-field--tel:not(:-moz-placeholder-shown) ~ .form__input-label--default {
-  opacity: 0;
-}
-.form__input-field--tel:not(:placeholder-shown) ~ .form__input-label--default, .form__input-field--tel:focus ~ .form__input-label--default {
-  opacity: 0;
-}
-.form__input-field--tel:not(:-moz-placeholder-shown) ~ .form__input-label--focus {
-  opacity: 1;
-}
-.form__input-field--tel:not(:placeholder-shown) ~ .form__input-label--focus, .form__input-field--tel:focus ~ .form__input-label--focus {
-  opacity: 1;
-}
-.form__consent-label {
-  padding-left: 44px;
-  position: relative;
-  display: inline-block;
-  font-size: 16px;
-  color: #1a1a18;
-}
-.form__consent-link {
-  color: #545a2f;
-}
-.form__consent-link:hover {
-  text-decoration: underline;
-}
-.form__consent-checkbox {
-  display: none;
-}
-.form__consent-label::before {
-  content: "";
-  height: 20px;
-  width: 20px;
-  position: absolute;
-  left: 0;
-  border: 1px solid #99a18e;
-}
-.form__consent-checkbox:checked + .form__consent-label::before {
-  content: url("../icons/akar-icons_check.svg");
-  height: 20px;
-  width: 20px;
-}
-
-@media screen and (max-width: 768px) {
-  .order-service {
-    margin: 0px 40px 79px;
-    padding: 77px 0px 0px 0px;
-    gap: 40px 20px;
-  }
-  .form__input-container, .form__comments-container {
-    min-width: 288px;
-  }
-}
-@media screen and (max-width: 440px) {
-  .order-service {
-    margin-left: 5px;
-    margin-right: 5px;
-    padding-top: 33px;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, min-content);
-    grid-template-areas: "title" "form";
-    gap: 53px;
-    justify-items: center;
-    font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
-    line-height: normal;
-    font-style: normal;
-    font-size: 18px;
-    line-height: normal;
-  }
-  .order-service__title {
-    margin-left: 20px;
-    margin-right: 20px;
-    max-width: 300px;
-    text-align: center;
-=======
 .projects__name {
   font-family: "Noah", sans-serif;
   font-weight: 400;
@@ -1371,42 +1293,12 @@ textarea:focus {
     margin-bottom: 96px;
   }
   .projects__title {
->>>>>>> 3b0283f2a471c1412be8fe017f5dbd82e99fd377
     font-family: "Noah", sans-serif;
     font-weight: 400;
     font-size: 58px;
     line-height: normal;
     font-style: normal;
     font-size: 24px;
-<<<<<<< HEAD
-  }
-  .order-service__contacts {
-    display: none;
-  }
-  .form {
-    min-width: 288px;
-  }
-  .form__input-group {
-    margin-left: 12px;
-    margin-right: 10px;
-    max-width: 300px;
-  }
-  .form__consent-container {
-    margin-right: 24px;
-  }
-  .form__consent-label {
-    font-size: 14px;
-  }
-}
-.project-portfolio {
-  padding: 5% 15.2%;
-}
-
-.project-card {
-  width: 100%;
-}
-.project-card__title {
-=======
     margin-bottom: 27px;
   }
   .projects__grid {
@@ -1647,20 +1539,12 @@ textarea:focus {
 }
 
 .faq__title {
->>>>>>> 3b0283f2a471c1412be8fe017f5dbd82e99fd377
   font-family: "Noah", sans-serif;
   font-weight: 400;
   font-size: 58px;
   line-height: normal;
   font-style: normal;
   color: #1a1a18;
-<<<<<<< HEAD
-}
-.project-card__details {
-  display: grid;
-  grid-template-columns: max-content max-content max-content;
-  gap: 83px;
-=======
   margin-bottom: 58px;
 }
 .faq__item {
@@ -1887,5 +1771,4 @@ textarea:focus {
   .guide {
     display: none;
   }
->>>>>>> 3b0283f2a471c1412be8fe017f5dbd82e99fd377
 }
