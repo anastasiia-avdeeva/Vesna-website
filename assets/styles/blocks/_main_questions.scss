@@ -1,0 +1,128 @@
+.questions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; // Центрирование элементов по вертикали
+  margin: 0 240px;
+  margin-bottom: 90px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 111px;
+    left: 635px;
+    transform: translateY(-50%);
+    width: 236px;
+    height: 27px;
+    background-image: url('../icons/questions-arrow.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;    
+    flex: 1;
+  }
+  
+  &__cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    // Центрирование по горизонтали в своих колонках
+    flex: 1;
+  }
+
+  &__title {
+    @include h1;
+    color: $black;
+    margin-bottom: 12px;
+  }
+
+  &__subtitle {
+    @include h4;
+    color: $black;
+  }
+
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    align-items: center; // Центрирование элементов по вертикали
+    gap: 60px;
+    margin: 0 20px;
+    margin-bottom: 90px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 180px;
+      left: 593px;
+      transform: translateY(-50%);
+      width: 57px;
+      height:115px;
+      background-image: url('../icons/questions-arrow-768.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    &__content {
+      align-items: center;
+      text-align: center;    
+    }
+
+    br {
+      display: none;
+    }
+
+    &__subtitle {
+      width: 60%;
+    }
+  }
+
+  @include phones {
+    gap: 38px;
+    margin: 0 16px;
+    margin-bottom: 70px;
+    align-items: flex-start;
+
+    &::before {
+      top: 66px;
+      left: 260px;
+      width: 27px;
+      height:85px;
+    }
+
+    &__content {
+      align-items: center;
+      text-align: center;    
+    }
+
+    &__title {
+      font-size: $font-size-faq-question;
+      margin-bottom: 11px;
+    }
+  
+    &__subtitle {
+      @include h6;
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column; 
+      align-items: flex-start;  
+      text-align: left;  
+      flex: 1;
+    }
+    
+    &__cta {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;    // Центрирование по горизонтали в своих колонках
+      flex: 1;
+    }
+}
+}

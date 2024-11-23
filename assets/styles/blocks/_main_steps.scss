@@ -2,12 +2,13 @@
   margin: 0 210px;
   margin-bottom: 170px;
   text-align: center;
+  position: relative;
 
   &::before {
     content: '';
     position: absolute;
-    top: 5495px;
-    left: 0;
+    top: 582px;
+    left: -202px;
     transform: translateY(-50%);
     width: 904px;
     height: 940px;
