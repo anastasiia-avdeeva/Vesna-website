@@ -2652,6 +2652,7 @@ textarea:focus {
 
 .service {
   position: relative;
+  width: 100%;
   height: 501px;
   background: url("../img/serviceHeroBg.jpg") no-repeat center center/cover;
   display: flex;
@@ -2666,6 +2667,21 @@ textarea:focus {
   line-height: normal;
   font-style: normal;
   color: #ffffff;
+}
+@media screen and (max-width: 440px) {
+  .service {
+    height: 524px;
+    margin-bottom: 60px;
+  }
+  .service__title {
+    font-family: "Noah", sans-serif;
+    font-weight: 400;
+    font-size: 58px;
+    line-height: normal;
+    font-style: normal;
+    font-size: 24px;
+    font-weight: bold;
+  }
 }
 
 .service-detail {
@@ -2699,31 +2715,44 @@ textarea:focus {
   gap: 83px;
   align-items: center;
 }
-@media (max-width: 768px) {
-  .service-detail__content {
-    flex-direction: column;
-  }
-}
 .service-detail__image {
   flex: 1;
 }
 .service-detail__image img {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .service-detail__description {
   flex: 1;
 }
-.service-detail__description-title {
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 20px;
+.service-detail__title {
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  margin-bottom: 56px;
+  color: #1a1a18;
 }
-.service-detail__description-text {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #333;
+.service-detail__text {
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  font-size: 24px;
+  color: #1a1a18;
+}
+@media screen and (max-width: 768px) {
+  .service-detail {
+    margin: 0 20px;
+    margin-bottom: 108px;
+  }
+  .service-detail__content {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 83px;
+    align-items: center;
+  }
 }

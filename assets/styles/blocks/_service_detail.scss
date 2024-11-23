@@ -17,8 +17,8 @@
       }
   
       &-icon {
-        width: 66px; // Устанавливаем размер SVG
-        height: 30px; // Сохраняем пропорции
+        width: 66px; 
+        height: 30px; 
       }
     }
   }
@@ -27,35 +27,41 @@
     display: flex;
     gap: 83px;
     align-items: center;
-
-    @media (max-width: 768px) {
-      flex-direction: column;
-    }
   }
 
   &__image {
     flex: 1;
     img {
       width: 100%;
-      height: auto;
-      border-radius: 8px;
       object-fit: cover;
     }
   }
 
   &__description {
     flex: 1;
+  }
 
-    &-title {
-      font-size: 32px;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
+  &__title {
+    @include h2;
+    margin-bottom: 56px;
+    color: $black;
+  }
 
-    &-text {
-      font-size: 16px;
-      line-height: 1.6;
-      color: #333;
+  &__text {
+    @include h5;
+    color: $black;
+  }
+
+  @include tablets {
+
+    margin: 0 20px; 
+    margin-bottom: 108px;
+
+    &__content {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 83px;
+      align-items: center;
     }
   }
 }
