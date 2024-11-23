@@ -1,0 +1,121 @@
+.steps {
+  margin: 0 210px;
+  margin-bottom: 170px;
+  text-align: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 5495px;
+    left: 0;
+    transform: translateY(-50%);
+    width: 904px;
+    height: 940px;
+    background-image: url('../img/steps-bg.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  &__title {
+    @include h2;
+    margin-bottom: 122px;
+
+    .bold {
+      font-weight: bold; // Делаем часть заголовка жирным
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); // Две колонки
+    gap: 142px 166px; // Вертикальный и горизонтальный отступы
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: auto 1fr; // Две области: для номера и текста
+    align-items: center;
+  }
+
+  &__number {
+    @include marck-font;
+    color: $olive-dark;
+    margin-right: 35px;
+  }
+
+  &__content {
+    text-align: left;
+
+    & > .steps__item-title {
+      @include faq-question;
+      font-weight: bold;
+    }
+
+    & > .steps__description {
+      @include h5;
+    }
+  }
+
+  @include tablets {
+    margin: 0 20px; 
+    margin-bottom: 108px;
+
+    &::before {
+      display: none;
+    }
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr); 
+      gap: 100px; 
+    }
+  }
+
+  @include phones {
+    margin: 0 16px; 
+    margin-bottom: 108px;
+
+    &__title {
+      @include h5;
+      margin-bottom: 22px;
+    }
+
+    &__list {
+      gap: 62px; // Вертикальный и горизонтальный отступы
+    }
+
+    &__item {
+      display: grid;
+      grid-template-columns: 1fr; 
+      grid-template-rows: auto auto; 
+      grid-template-areas: 
+      "number"
+      "content"; 
+      text-align: center; 
+    }
+
+    &__number {
+      grid-area: number; 
+      margin-right: 0; 
+      margin-bottom: 10px;
+      @include marck-font;
+      font-size: 64px;
+      
+    }
+
+    &__content {
+      grid-area: content; 
+
+      & > .steps__item-title {
+        @include font-size-smallest;
+        font-weight: bold;
+      }
+  
+      & > .steps__description {
+        @include font-size-smallest;
+      }
+    }
+  }
+}
