@@ -182,6 +182,12 @@
       </form>
     </section>
 
+    <!-- кнопка прокрутки наверх -->
+    <button class="button-round button-round--up scroll-to-top" id="scrollToTopButton" aria-label="Scroll to top">
+      <img src="./assets/img/buttons.svg/up-white.svg" alt="стрелка вверх">
+      Наверх
+    </button>
+
     <!-- контейнер для размытия элементов за попапом -->
     <div class="popup-overlay" id="overlay"></div>
     <!-- сам попап -->
@@ -323,6 +329,29 @@
       document.getElementById("overlay").style.display = "none";
     }
   </script>
+  <!-- скрипт для кнопки вверх -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const scrollToTopButton = document.getElementById("scrollToTopButton");
 
+  // Показываем кнопку при прокрутке вниз
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollToTopButton.classList.add("visible");
+    } else {
+      scrollToTopButton.classList.remove("visible");
+    }
+  });
+
+  // Перемещение наверх при нажатии
+  scrollToTopButton.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+});
+
+  </script>
 </body>
 </html>
