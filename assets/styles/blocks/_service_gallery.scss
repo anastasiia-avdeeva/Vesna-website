@@ -1,0 +1,97 @@
+.service-gallery {
+  margin: 0 292px 125px;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); // Три колонки
+    grid-template-rows: auto auto auto; // Три строки
+    gap: 23px;
+  }
+
+  &__item--title {
+    grid-column: 2 / 4; // Занимает 2 3 колонки
+    grid-row: 1 / 2; // Первая строка
+    @include h4;
+    color: $black;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 85px;
+  }
+
+  &__item--image {
+    grid-column: 1 / 2; // Первая колонка
+    grid-row: 2 / 3; // Вторая строка
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__item--wide {
+    grid-column: 2 / 4; // Растянуто на 2 и 3 колонку
+    grid-row: 2 / 3; // Вторая строка
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__item--text {
+    grid-row: 3 / 4; // Третья строка
+    grid-column: 1 / 2; // Первая колонка
+    background-color: rgba($light-green, 0.75); // Цвет немного светлее
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 118px 65px;
+    @include h5;
+    font-style: italic;
+    color: $black;
+  }
+
+  &__item--small {
+    grid-row: 3 / 4; // Третья строка
+    grid-column: auto; // Каждое изображение занимает свою колонку
+    width: 100%;
+    object-fit: cover;
+  }
+
+  @include tablets {
+
+    margin: 0 20px 78px;
+
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr); // Три колонки
+      grid-template-rows: auto; // Три строки
+      gap: 23px;
+    }
+
+    &__item--title {
+      grid-column: 1 / 2; // Занимает 2 3 колонки
+    }
+
+    &__item--image {
+      display: none;
+    }
+  
+    &__item--wide {
+      display: none;
+    }
+  
+    &__item--text {
+      display: none;
+    }
+  
+    &__item--small {
+      display: none;
+    }
+  }
+
+  @include tablets {
+
+    margin: 0 16px 78px;
+
+    &__item--title {
+      @include h5;
+    }
+  }
+}
+
+

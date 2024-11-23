@@ -1,6 +1,5 @@
 .service {
   position: relative;
-  width: 100%;
   height: 501px; // Задаем высоту первого экрана
   background: url('../img/serviceHeroBg.jpg') no-repeat center center / cover; 
   display: flex;
@@ -15,12 +14,14 @@
 
   @include phones {
 
-  height: 524px; // Задаем высоту первого экрана
-  margin-bottom: 60px;
+    height: 324px; // Задаем высоту первого экрана
+    margin-bottom: 13px;
+    background: url('../img/serviceHeroBgPhones.jpg') no-repeat center center / cover; 
 
     &__title {
       @include h5; 
       font-weight: bold;
+      margin-top: 50px;
     }
   }
 }

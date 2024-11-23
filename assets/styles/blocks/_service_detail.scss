@@ -3,24 +3,24 @@
 
   &__back {
     margin-bottom: 100px;
+  }
 
-    &-link {
-      text-decoration: none;
-      color: $black;
-      @include h5;
-      display: inline-flex;
-      align-items: center;
-      gap: 42px;
-  
-      &:hover {
-        text-decoration: underline;
-      }
-  
-      &-icon {
-        width: 66px; 
-        height: 30px; 
-      }
+  &__back-link {
+    text-decoration: none;
+    color: $black;
+    @include h5;
+    display: inline-flex;
+    align-items: center;
+    gap: 42px;
+
+    &:hover {
+      text-decoration: underline;
     }
+  }
+
+  &__back-icon {
+    width: 66px; 
+    height: 30px; 
   }
 
   &__content {
@@ -74,18 +74,18 @@
       gap: 47px;
     }
 
-    &-back {
+    &__back {
       margin-bottom: 58px;
-
-      &-link {
-        @include font-size-smallest;
+    }
+  
+    &__back-link {
+      @include font-size-smallest;
         gap: 12px;
-    
-        &-icon {
-          width: 25px; 
-          height: 15px; 
-        }
-      }
+    }
+  
+    &__back-icon {
+      width: 25px; 
+      height: 15px; 
     }
 
     &__title {

@@ -547,6 +547,11 @@
         </div>
       </div>
     </section>
+
+    <button class="button-round--up scroll-to-top" id="scrollToTopButton" aria-label="Scroll to top">
+      <img src="./assets/img/buttons.svg/up-white.svg" alt="">
+      Наверх
+    </button>
     
     <!-- контейнер для размытия элементов за попапом -->
     <div class="popup-overlay" id="overlay"></div>
@@ -684,6 +689,30 @@
         document.getElementById(popupId).style.display = "none";
         document.getElementById('overlay').style.display = "none";
       }
+  </script>
+  <!-- скрипт для кнопки вверх -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const scrollToTopButton = document.getElementById("scrollToTopButton");
+
+  // Показываем кнопку при прокрутке вниз
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollToTopButton.classList.add("visible");
+    } else {
+      scrollToTopButton.classList.remove("visible");
+    }
+  });
+
+  // Перемещение наверх при нажатии
+  scrollToTopButton.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+});
+
   </script>
 </body>
 </html>
