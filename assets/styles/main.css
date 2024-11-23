@@ -20,6 +20,16 @@ ul li {
   list-style: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin: 0;
+}
+
 input:focus,
 textarea:focus {
   outline: none;
@@ -806,6 +816,283 @@ textarea:focus {
   }
   .garden-guide__button {
     width: 100%;
+  }
+}
+
+.hero {
+  position: relative;
+  background: url("../img/hero-bg.jpg") no-repeat center center/cover;
+  color: #ffffff;
+  margin-bottom: 211px;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 483px;
+  height: 363px;
+  background-image: url("../img/hero-decoration-bg.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1;
+  pointer-events: none;
+}
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 950px;
+  margin: 0 290px;
+}
+.hero__content {
+  max-width: 980px;
+  margin-top: 282px;
+}
+.hero__subtitle {
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+.hero__title {
+  font-family: "Noah", sans-serif;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: normal;
+  font-style: normal;
+  margin-bottom: 12px;
+}
+.hero__description {
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  font-size: 48px;
+}
+.hero__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero__footer > .hero__project-link {
+  margin-right: 325px;
+}
+.hero__footer > .hero__arrows {
+  margin-right: 228px;
+}
+.hero__project-link {
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  background: rgba(99, 83, 62, 0.52);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  color: #ffffff;
+  transition: transform 0.3s, background 0.3s;
+}
+.hero__project-link:hover {
+  transform: scale(1.05);
+}
+.hero__arrow {
+  margin-left: 21px;
+  height: 12px;
+  transition: transform 0.3s;
+}
+.hero__arrow img {
+  height: 12px;
+  width: 33px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.hero__project-image {
+  margin-left: 64px;
+  width: 109px;
+  height: 87px;
+  overflow: hidden;
+}
+.hero__project-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.hero__arrows {
+  display: flex;
+  gap: 149px;
+}
+.hero__arrow-btn {
+  width: 33px;
+  height: 15px;
+  border: none;
+  background: url("../icons/hero_arrow-next.svg") no-repeat center;
+  background-size: contain;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.hero__arrow-btn:hover {
+  transform: translateX(5px);
+}
+.hero__arrow-btn--prev {
+  width: 33px;
+  height: 15px;
+  border: none;
+  background: url("../icons/hero_arrow-prev.svg") no-repeat center;
+  background-size: contain;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.hero__arrow-btn--prev:hover {
+  transform: translateX(-5px);
+}
+.hero__pagination {
+  display: flex;
+  align-items: center;
+  font-family: "Geometria", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: normal;
+  font-style: normal;
+}
+.hero__current-slide {
+  font-weight: 700;
+}
+.hero__divider {
+  display: inline-flex;
+  align-items: center;
+}
+.hero__divider img {
+  margin: 0 5px;
+}
+.hero__total-slides {
+  font-weight: 300;
+}
+@media screen and (max-width: 768px) {
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 75%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 281px;
+    height: 231px;
+    background-image: url("../img/hero-decoration-bg.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1;
+    pointer-events: none;
+  }
+  .hero__container {
+    margin: 0 20px;
+    margin-bottom: 108px;
+  }
+  .hero__arrows {
+    display: none;
+  }
+  .hero__pagination {
+    display: none;
+  }
+}
+@media screen and (max-width: 440px) {
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 60%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 181px;
+    height: 131px;
+    background-image: url("../img/hero-decoration-bg.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1;
+    pointer-events: none;
+  }
+  .hero__container {
+    margin: 0 16px;
+    margin-bottom: 47px;
+    height: 566px;
+  }
+  .hero__content {
+    margin-top: 153px;
+  }
+  .hero__subtitle {
+    font-family: "Noah", sans-serif;
+    font-weight: 400;
+    font-size: 58px;
+    line-height: normal;
+    font-style: normal;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .hero__title {
+    font-family: "Noah", sans-serif;
+    font-weight: 400;
+    font-size: 58px;
+    line-height: normal;
+    font-style: normal;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  .hero__description {
+    font-family: "Noah", sans-serif;
+    font-weight: 400;
+    font-size: 58px;
+    line-height: normal;
+    font-style: normal;
+    font-size: 18px;
+  }
+  .hero__project-link {
+    font-family: "Noah", sans-serif;
+    font-weight: 400;
+    font-size: 58px;
+    line-height: normal;
+    font-style: normal;
+    font-size: 16px;
+    padding: 17px 7px;
+    background: rgba(99, 83, 62, 0.52);
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+    color: #ffffff;
+    transition: transform 0.3s, background 0.3s;
+  }
+  .hero__project-link:hover {
+    transform: scale(1.05);
+  }
+  .hero__arrow {
+    margin-left: 11px;
+    transition: transform 0.3s;
+  }
+  .hero__arrow img {
+    height: 8px;
+    width: 14px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .hero__project-image {
+    margin-left: 11px;
+    width: 46px;
+    height: 47px;
+    overflow: hidden;
+  }
+  .hero__project-image img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 
@@ -1826,9 +2113,10 @@ textarea:focus {
   background: url("../icons/reviews_arrow-next.svg") no-repeat center;
   background-size: contain;
   cursor: pointer;
+  transition: transform 0.3s;
 }
 .reviews__arrow:hover {
-  transform: translateX(10px);
+  transform: translateX(5px);
 }
 .reviews__arrow--prev {
   width: 33px;
@@ -1837,9 +2125,10 @@ textarea:focus {
   background: url("../icons/reviews_arrow-prev.svg") no-repeat center;
   background-size: contain;
   cursor: pointer;
+  transition: transform 0.3s;
 }
 .reviews__arrow--prev:hover {
-  transform: translateX(-10px);
+  transform: translateX(-5px);
 }
 .reviews__pagination {
   display: flex;

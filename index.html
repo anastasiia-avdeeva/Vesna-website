@@ -10,6 +10,38 @@
 
   <main>
 
+    <section class="hero">
+      <div class="hero__container">
+        <div class="hero__content">
+          <p class="hero__subtitle">Ландшафтная студия VESNA</p>
+          <h1 class="hero__title">Создаем авторские ландшафты с вашим характером</h1>
+          <p class="hero__description">От идеи до полной реализации</p>
+        </div>
+        <div class="hero__footer">
+          <a href="#" class="hero__project-link">
+            <span class="hero__project-text">Последний <br>проект</span>
+            <span class="hero__arrow">
+              <img src="./assets/icons/hero_arrow-next.svg" alt="Стрелка вправо">
+            </span>
+            <div class="hero__project-image">
+              <img src="./assets/img/last-project.jpg" alt="Последний проект">
+            </div>
+          </a>
+          <div class="hero__arrows">
+            <button class="hero__arrow-btn hero__arrow-btn--prev" aria-label="Предыдущий слайд"></button>
+            <button class="hero__arrow-btn hero__arrow-btn--next" aria-label="Следующий слайд"></button>
+          </div>
+          <div class="hero__pagination">
+            <span class="hero__current-slide">01</span>
+            <span class="hero__divider">
+              <img src="./assets/icons/hero_progress-line.svg" alt="Разделитель">
+            </span>
+            <span class="hero__total-slides">03</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    
     <section class="garden">
       <div class="garden__content">
         <h2 class="garden__title">
@@ -32,7 +64,6 @@
       </div>
     </section>
     
-
     <section class="landscape">
         <h2 class="landscape__title">
           <span class="bold">Доверьте свой участок профессионалам —</span>
@@ -115,7 +146,6 @@
       </button>
     </section>
     
-
     <section class="garden-guide">
       <div class="garden-guide__book">
         <img
@@ -369,7 +399,6 @@
       </div>
     </section>
     
-    
     <section class="reviews">
       <h2 class="reviews__title">Отзывы о нас</h2>
       <div class="reviews__content">
@@ -518,7 +547,6 @@
         </div>
       </div>
     </section>
-
     
     <!-- контейнер для размытия элементов за попапом -->
     <div class="overlay" id="overlay"></div>
@@ -591,11 +619,9 @@
           </form>
       </div>
     </div>
-    
   </main>
-
+  <!-- аккордеон в faq  -->
   <script>
-    //аккордеон в faq 
         document.addEventListener('DOMContentLoaded', () => {
       const faqQuestions = document.querySelectorAll('.faq__question');
 
@@ -630,9 +656,8 @@
       });
       });
   </script>
-
+  <!-- скрипт для popup -->
   <script>
-  // скрипт для popup
     document
       .getElementById("userPhone")
       .addEventListener("input", function (e) {
@@ -665,7 +690,5 @@
         document.getElementById('overlay').style.display = "none";
       }
   </script>
-
-
 </body>
 </html>
