@@ -3,7 +3,7 @@
 
   &__back {
     margin-bottom: 100px;
-    
+
     &-link {
       text-decoration: none;
       color: $black;
@@ -62,6 +62,39 @@
       flex-direction: column-reverse;
       gap: 83px;
       align-items: center;
+    }
+  }
+
+  @include phones {
+
+    margin: 0 16px; 
+    margin-bottom: 99px;
+
+    &__content {
+      gap: 47px;
+    }
+
+    &-back {
+      margin-bottom: 58px;
+
+      &-link {
+        @include font-size-smallest;
+        gap: 12px;
+    
+        &-icon {
+          width: 25px; 
+          height: 15px; 
+        }
+      }
+    }
+
+    &__title {
+      @include h5;
+      margin-bottom: 26px;
+    }
+  
+    &__text {
+      @include font-size-smallest;
     }
   }
 }
