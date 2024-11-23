@@ -316,53 +316,55 @@ textarea:focus {
 .button-round--arrow:hover .button-round__icon--white {
   display: block;
 }
+
 @media screen and (max-width: 768px) {
-  .button-round--arrow .button-round--arrow {
+  .button-round--arrow {
     width: 110px;
     height: 110px;
   }
-  .button-round--arrow .button-round--arrow .button-round__link {
+  .button-round--arrow .button-round__link {
     display: none;
   }
 }
 @media screen and (max-width: 440px) {
-  .button-round--arrow .button-round--arrow {
+  .button-round--arrow {
     width: 76px;
     height: 76px;
     background-color: rgba(255, 255, 255, 0.7);
   }
-  .button-round--arrow .button-round--arrow .button-round__icon--black {
+  .button-round--arrow .button-round__icon--black {
     display: none;
   }
-  .button-round--arrow .button-round--arrow .button-round__icon--white {
+  .button-round--arrow .button-round__icon--white {
     display: block;
   }
 }
-.button-round--arrow .button-round--up {
+.button-round--up {
   width: 124px;
   height: 124px;
   background-color: #99a18e;
   color: #ffffff;
 }
-.button-round--arrow .button-round--up:hover {
+.button-round--up:hover {
   cursor: pointer;
   background-color: #545a2f;
 }
+
 @media screen and (max-width: 768px) {
-  .button-round--arrow .button-round--up {
+  .button-round--up {
     width: 105px;
     height: 105px;
     font-size: 20px;
   }
 }
 @media screen and (max-width: 440px) {
-  .button-round--arrow .button-round--up {
+  .button-round--up {
     width: 95px;
     height: 95px;
     font-size: 14px;
   }
 }
-.button-round--arrow .close-btn {
+.close-btn {
   grid-area: close;
   position: relative;
   width: 40px;
@@ -376,11 +378,11 @@ textarea:focus {
   align-items: center;
   justify-content: center;
 }
-.button-round--arrow .close-btn span {
+.close-btn span {
   width: 100%;
   height: 100%;
 }
-.button-round--arrow .close-btn span::before, .button-round--arrow .close-btn span::after {
+.close-btn span::before, .close-btn span::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -392,22 +394,22 @@ textarea:focus {
   border-radius: 2em;
   transition: background-color 0.3s ease;
 }
-.button-round--arrow .close-btn span::before {
+.close-btn span::before {
   transform: rotate(45deg);
 }
-.button-round--arrow .close-btn span::after {
+.close-btn span::after {
   transform: rotate(-45deg);
 }
-.button-round--arrow .close-btn:hover span::before, .button-round--arrow .close-btn:hover span::after {
+.close-btn:hover span::before, .close-btn:hover span::after {
   height: 4.24px;
 }
+
 @media screen and (max-width: 440px) {
-  .button-round--arrow .close-btn {
+  .close-btn {
     width: 24px;
     height: 24px;
   }
 }
-
 .header {
   background-color: black;
 }
