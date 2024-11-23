@@ -530,6 +530,23 @@ textarea:focus {
     padding-top: 7px;
   }
 }
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+.scroll-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
 input:focus,
 textarea:focus {
   outline: none;
@@ -849,23 +866,6 @@ textarea:focus {
   .garden-guide__button {
     width: 100%;
   }
-}
-
-.scroll-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s, visibility 0.3s;
-}
-.scroll-to-top.visible {
-  opacity: 1;
-  visibility: visible;
 }
 
 .hero {
