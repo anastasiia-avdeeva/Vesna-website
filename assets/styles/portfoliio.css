@@ -1,3 +1,30 @@
+/* хедер */
+.header{
+    background-image: url("../img/portfolio-header.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.portfolio-container{
+    display: grid;
+    justify-content: center;
+    color: #FFFFFF;
+    gap: 20px;
+    padding: 85px 0;
+}
+/* заголовок */
+.portfolio-title{
+    font-family: "Noah";
+    font-size: 70px;
+    font-weight: 700;
+    display: grid;
+    justify-content: center;
+}
+.portfolio-subtitle{
+    font-family: "Noah";
+    font-size: 38px;
+    font-weight: 400;
+}
+
 .project-portfolio{
     padding: 8% 15.2%;
 }
@@ -86,46 +113,99 @@
     .project-card__gallery-3 {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
+    .portfolio-title{
+        font-size: 54px;
+    }
+    .portfolio-subtitle{
+        font-size: 32px;
+    }
     .project-portfolio{
         padding: 8% 10%;
     }
 }
 @media screen and (max-width: 768px){
+    .portfolio-title{
+        font-size: 46px;
+    }
+    .portfolio-subtitle{
+        font-size: 26px;
+    }
     .project-portfolio{
         padding: 5% 30px;
     }
+    .project-card__title{
+        font-size: 38px;
+    }
 }
+/* мобилка */
 @media screen and (max-width: 440px){
+    .portfolio-title{
+        font-size: 24px;
+    }
+    .portfolio-subtitle{
+        font-size: 18px;
+    }
     .project-portfolio{
         padding: 10% 0;
     }
     .project-card__title{
         padding: 0 20px;
+        font-size: 24px;
     }
+    .project-card__detail-label{
+        font-size: 16px;
+    }
+    .project-card__detail-value{
+        font-size: 18px;
+    }
+    /* для всех карточек */
     .project-card__details{
         padding: 0 20px;
+        margin-right: 20px;
         grid-template-columns: max-content max-content;
         justify-content: space-between;
         gap: 30px;
     }
+    /* карусель */
     .project-card__gallery {
         width: 100%;
         display: flex; /* Меняем с grid на flex */
-        gap: 3px;
+        gap: 6px;
         scroll-behavior: smooth;
         overflow-x: auto; /* Включаем горизонтальный скроллинг */
         scroll-snap-type: x mandatory; /* Включаем snapping для карусели */
     }
-    .project-card__gallery-item-1, 
+    .project-card__gallery-item-1,
+    .project-card__gallery-2-item--1, /* для второй карточки */
+    .project-card__gallery-3-item--1,/* для третьей карточки */
     .project-card__gallery-item-2,
+    .project-card__gallery-3-item--2,/* для третьей */
     .project-card__gallery-item-3,
     .project-card__gallery-item {
         flex: 0 0 auto; /* Элементы не сжимаются и отображаются в одну линию */
-        width: 100%; /* Например, ширина 80% экрана */
+        width: 100%; 
         scroll-snap-align: start; /* Элемент центрируется при скролле */
         overflow: hidden; /* плавная */
-}
-.project-card__quote {
-    width: 100%; /* Цитата занимает 100% ширины */
-}
+    }
+    .project-card__quote {
+        width: 100%; /* Цитата занимает 100% ширины */
+    }
+    /* карусель 2 */
+    .project-card__gallery-2 {
+        width: 100%;
+        display: flex; 
+        gap: 6px;
+        scroll-behavior: smooth;
+        overflow-x: auto; 
+        scroll-snap-type: x mandatory; 
+    }
+    /* карусель 3 */
+    .project-card__gallery-3 {
+        width: 100%;
+        display: flex; 
+        gap: 6px;
+        scroll-behavior: smooth;
+        overflow-x: auto; 
+        scroll-snap-type: x mandatory; 
+    }
 }
