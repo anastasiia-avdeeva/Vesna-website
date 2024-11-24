@@ -516,32 +516,6 @@
       gap: 22px;
     }
   }
-
-  .projects-nav {
-    gap: 10px;
-    &__prev-container {
-      padding-right: 10px;
-      padding-left: 20px;
-      grid-template-columns: min-content 1fr;
-      grid-template-areas: "link text";
-    }
-
-    &__next-container {
-      padding-left: 10px;
-      padding-right: 20px;
-      grid-template-columns: 1fr min-content;
-      grid-template-areas: "text link";
-    }
-
-    &__next-container &__text {
-      text-align: left;
-    }
-
-    &__text {
-      padding-left: 0px;
-      text-align: right;
-    }
-  }
 }
 
 @include phones {
@@ -683,48 +657,6 @@
       .button {
         width: 256px;
       }
-    }
-  }
-
-  .projects-nav {
-    gap: 10px;
-
-    &__container {
-      padding-left: 15px;
-      padding-right: 15px;
-      height: 133px;
-      grid-template-columns: 1fr;
-      grid-template-rows: min-content auto;
-      grid-template-areas:
-        "link"
-        "text";
-      gap: 13px;
-      justify-items: end;
-      background-image: url("../img/project-nav-phone.png");
-    }
-
-    &__next-container {
-      justify-items: start;
-    }
-    &__text {
-      display: flex;
-      flex-direction: column;
-      gap: 7px;
-      font-size: $font-size-label-consent-phone;
-    }
-
-    &__title {
-      font-size: $font-size-smallest;
-    }
-
-    &__link {
-      width: 39px;
-      height: 17.71px;
-    }
-
-    &__link:hover::after {
-      width: 39px;
-      height: 17.71px;
     }
   }
 }
