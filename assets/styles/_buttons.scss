@@ -1,5 +1,8 @@
 // номер телефона белая кнопка
 .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 240px;
   height: 60px;
   border: none;
