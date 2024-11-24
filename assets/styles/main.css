@@ -815,7 +815,7 @@ textarea:focus {
 
 .project-card {
   width: 100%;
-  margin-bottom: 130px;
+  margin-bottom: 100px;
 }
 .project-card__title {
   font-family: "Noah", sans-serif;
@@ -882,12 +882,6 @@ textarea:focus {
   font-style: italic;
   align-items: center;
   justify-items: center;
-}
-.project-card .gallery-pic {
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .landscape {
@@ -1771,4 +1765,4 @@ textarea:focus {
   .guide {
     display: none;
   }
-}
+}/*# sourceMappingURL=main.css.map */

@@ -5,7 +5,7 @@
 // первая карточка
 .project-card{
     width: 100%;
-    margin-bottom: 130px; // примерно
+    margin-bottom: 100px; // примерно
     &__title{
         @include h2;
         color: $black;
