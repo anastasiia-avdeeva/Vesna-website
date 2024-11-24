@@ -1,20 +1,19 @@
 .header-contacts {
   margin-bottom: 200px;
-  height: 501px;
+  min-height: 501px;
   background-image: url("../img/contacts-header-bg.png");
   background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .header {
-  &__hero {
-    height: 350px;
+  &-contacts__hero {
+    min-height: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  &__title {
+  &-contacts__title {
     margin: 0;
     @include h1;
     color: $white;
@@ -68,17 +67,18 @@
 
 @include tablets {
   .header-contacts {
-    // height: 324px;
     margin-bottom: 13px;
+    min-height: 528.55px;
     background-image: url("../img/contacts-header-bg-tablets.png");
+    background-size: cover;
   }
   .header {
-    &__hero {
-      height: 317px;
+    &-contacts__hero {
+      min-height: 317px;
     }
   }
   .back-to--hidden {
-    display: flex;
+    display: block;
   }
 
   .contact-us {
@@ -89,5 +89,26 @@
       "contacts"
       "title"
       "form";
+    justify-items: center;
+    gap: 53px;
+
+    &__title {
+      text-align: center;
+    }
+
+    &__form {
+      justify-items: center;
+    }
+
+    &__contacts {
+      margin-bottom: 57px;
+      gap: 28px;
+    }
+  }
+}
+
+@include phones {
+  .header-contacts {
+    height: 324px;
   }
 }
