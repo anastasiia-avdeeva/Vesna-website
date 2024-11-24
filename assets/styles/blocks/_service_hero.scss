@@ -2,11 +2,15 @@
   position: relative;
   height: 501px; // Задаем высоту первого экрана
   background: url('../img/serviceHeroBg.jpg') no-repeat center center / cover; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-bottom: 60px;
 
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
   &__title {
     @include h1; 
     color: $white;

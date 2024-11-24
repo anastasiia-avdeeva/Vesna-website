@@ -777,7 +777,6 @@ textarea:focus {
 }
 
 .btw-pages {
-  height: 234px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3.125%;
@@ -3911,10 +3910,12 @@ textarea:focus {
   position: relative;
   height: 501px;
   background: url("../img/serviceHeroBg.jpg") no-repeat center center/cover;
+  margin-bottom: 60px;
+}
+.service__container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 60px;
 }
 .service__title {
   font-family: "Noah", sans-serif;
