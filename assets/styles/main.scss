@@ -1,10 +1,7 @@
 // import files with mixins and variables // base and media
 @import "./vars";
 @import "./mixins";
-@import "./base";
 @import "./media";
-@import "./media";
-
 @import "./base";
 
 // import fonts
@@ -25,6 +22,8 @@
 @import "./blocks/main_garden-guide";
 @import "./blocks/header_first-line";
 @import "./blocks/back-to";
+@import "./blocks/scroll-to-top";
+
 
 // link blocks main page
 @import "./blocks/main_hero";
