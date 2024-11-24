@@ -74,9 +74,10 @@
     background: url('../icons/reviews_arrow-next.svg') no-repeat center;
     background-size: contain;
     cursor: pointer;
+    transition: transform 0.3s;
 
     &:hover {
-      transform: translateX(10px); 
+      transform: translateX(5px);
     }
 
     &--prev {
@@ -86,9 +87,10 @@
       background: url('../icons/reviews_arrow-prev.svg') no-repeat center;
       background-size: contain;
       cursor: pointer;
+      transition: transform 0.3s;
 
       &:hover {
-        transform: translateX(-10px); 
+        transform: translateX(-5px);
       }
     }
   }
