@@ -106,3 +106,12 @@
   line-height: $line-height;
   font-style: normal;
 }
+
+// миксин для шрифта выпадающего списка меню в хэдер
+@mixin header-burger-menu-font {
+  font-family: $font-family-geometria;
+  font-weight: $font-weight-500;
+  font-size: $font-size-button-transparent;
+  line-height: $line-height;
+  font-style: normal
+}
