@@ -228,6 +228,8 @@ textarea:focus {
   line-height: normal;
   font-style: normal;
   font-size: 24px;
+  justify-content: center;
+  align-items: center;
 }
 .button:hover {
   cursor: pointer;
@@ -1788,7 +1790,7 @@ textarea:focus {
     display: none;
   }
   .projects__button {
-    display: block;
+    display: flex;
     margin-top: 60px;
   }
 }

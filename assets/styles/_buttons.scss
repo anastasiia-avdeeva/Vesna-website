@@ -6,6 +6,8 @@
   background-color: $white;
   color: $black;
   @include h5;
+  justify-content: center;
+  align-items: center;
   &:hover {
     cursor: pointer;
     background-color: $olive-dark;
