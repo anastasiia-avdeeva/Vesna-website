@@ -7,7 +7,6 @@
     <title>Vesna | project</title>
   </head>
   <body>
-    <main>
       <header class="header">
         <section class="header__first-line">
           <div class="header__logo">
@@ -36,11 +35,8 @@
             </ul>
           </nav>
           <div class="header__buttons">
-            <button class="button">
-              <a href="tel:+79218888888" class="header__tel-link"
-                >+7 (921) 888 88 88</a>
-            </button>
-            <!-- Кнопка для открытия формы -->
+            <a href="tel:+79218888888" class="button header__tel-link">+7 (921) 888 88 88</a>
+              <!-- Кнопка для открытия формы -->
             <div class="popup-open__button-container">
                 <button class="button button--transparent" onclick="openWindow('consult__popupWindow')">
                   Бесплатная консультация
@@ -113,7 +109,6 @@
             </div>
         </div>
       </div>
-      <div class="header__gallery"></div>
         <!-- контейнер для скрытого бургер-меню -->
           <div class="hamburger-menu">
             <input
@@ -137,11 +132,7 @@
                 <a href="#" class="menu__item-link">Контакты</a>
               </li>
               <li class="menu__item">
-                <button class="button">
-                  <a href="tel:+79218888888" class="button menu__item-tel-link"
-                    >+7 (921) 888 88 88</a
-                  >
-                </button>
+                <a href="tel:+79218888888" class="button menu__item-tel-link">+7 (921) 888 88 88</a>
               </li>
               <li class="menu__item">
                 <div class="popup-open__button-container">
@@ -154,7 +145,7 @@
           </div>
         </section>
       </header>
-    </main>
+    <main class="main"></main>
     <footer class="footer"></footer>
 
     <script>
