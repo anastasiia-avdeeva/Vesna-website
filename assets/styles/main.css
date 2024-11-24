@@ -864,6 +864,9 @@ textarea:focus {
   }
 }
 @media screen and (max-width: 440px) {
+  .btw-pages {
+    height: 133px;
+  }
   .btw-pages__container {
     padding-left: 15px;
     padding-right: 15px;
