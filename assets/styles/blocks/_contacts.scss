@@ -1,0 +1,70 @@
+.header {
+  margin-bottom: 200px;
+  height: 501px;
+  background-image: url("../img/header-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__fitst-line {
+    height: 151px;
+  }
+
+  &__hero {
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    margin: 0;
+    @include h1;
+    color: $white;
+  }
+}
+
+.back-to-main {
+  display: none;
+}
+
+.contact-us {
+  margin-left: 12.5%;
+  margin-right: 12.5%;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "title contacts"
+    "form contacts";
+  align-items: center;
+  gap: 47px 20px;
+
+  &__title {
+    grid-area: title;
+    @include h3;
+    color: $black;
+  }
+
+  &__form {
+    grid-area: form;
+  }
+
+  &__contacts {
+    grid-area: contacts;
+    display: flex;
+    flex-direction: column;
+    gap: 77px;
+  }
+
+  &__contact-link {
+    display: flex;
+    gap: 41px;
+    @include h4;
+    color: $black;
+  }
+
+  &__contact-icon {
+    width: 83px;
+    height: 83px;
+  }
+}
