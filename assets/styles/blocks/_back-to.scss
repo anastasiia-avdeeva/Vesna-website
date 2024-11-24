@@ -1,0 +1,45 @@
+.back-to {
+  margin-left: 15.2%;
+  margin-right: 15.2%;
+  margin-bottom: 100px;
+  @include h5;
+  color: $black;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    cursor: pointer;
+  }
+
+  &__icon {
+    width: 66px;
+    height: 30px;
+  }
+}
+
+@include tablets {
+  .back-to {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 53px;
+  }
+}
+
+@include phones {
+  .back-to {
+    &__link {
+      gap: 13px;
+      font-size: $font-size-label-consent-phone; //14px
+    }
+
+    &__title--hidden {
+      display: none;
+    }
+
+    &__icon {
+      width: 25px;
+      height: 15px;
+    }
+  }
+}

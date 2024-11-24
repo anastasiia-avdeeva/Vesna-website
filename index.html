@@ -7,9 +7,197 @@
   <title>Vesna | Главная</title>
 </head>
 <body>
+  <header class="header hero">
+    <section class="header__first-line">
+      <div class="header__logo">
+        <a href="#" class="header__logo-link" target="_blank">
+          <img
+            src="./assets/icons/header-logo.svg"
+            alt="логотип компании Весна"
+            class="header__img"
+          />
+        </a>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-list-item">
+            <a href="./index.html" class="header__nav-list-item-link">Главная</a>
+          </li>
+          <li class="header__nav-list-item">
+            <a href="./portfolio.html" class="header__nav-list-item-link">Портфолио</a>
+          </li>
+          <li class="header__nav-list-item">
+            <a href="#" class="header__nav-list-item-link">Услуги</a>
+          </li>
+          <li class="header__nav-list-item">
+            <a href="#" class="header__nav-list-item-link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__buttons">
+        <a href="tel:+79218888888" class="button header__tel-link">+7 (921) 888 88 88</a>
+          <!-- Кнопка для открытия формы -->
+        <div class="popup-open__button-container">
+            <button class="button button--transparent" onclick="openWindow('consult__popupWindow')">
+              Бесплатная консультация
+            </button>
+        </div>
+      </div>
+      <!-- контейнер для размытия элементов за попапом -->
+      <div class="popup-overlay" id="overlay"></div>
+      <!-- сам попап -->
+      <div class="popup" id="consult__popupWindow">
+        <div class="popup__wrapper">
+            <button class="close-btn" onclick="closewindow('consult__popupWindow')">
+                <span></span>
+            </button>
+            <h2 class="popup__title">Закажите консультацию</h2>
+            <p class="popup__description">Менеджер перезвонит Вам в&nbsp;ближайшее время</p>
+            <form action="submit" class="form">
+              <div class="form__input-group">
+                <div class="form__input-container">
+                  <input
+                    type="text"
+                    name="name"
+                    id="userName"
+                    placeholder=" "
+                    class="form__input-field form__input-field--name"
+                    required
+                  />
+                  <label for="userName" class="form__input-label">Имя</label>
+                </div>
+                <div class="form__input-container">
+                  <input
+                    type="tel"
+                    id="userPhone"
+                    name="phone"
+                    placeholder=" "
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                    class="form__input-field form__input-field--tel"
+                    required
+                  />
+                  <label for="userPhone" class="form__input-label--default"
+                    >+7 (___) ___ __ __</label
+                  >
+                  <label for="userPhone" class="form__input-label--focus"
+                    >Телефон</label
+                  >
+                </div>
+                <div class="form__consent-container">
+                  <input
+                    type="checkbox"
+                    name="popup-order-consult__userConsent"
+                    id="popup-order-consult__userConsent"
+                    class="form__consent-checkbox"
+                    checked
+                    required
+                  />
+                  <label for="popup-order-consult__userConsent" class="form__consent-label"
+                    >Я даю согласие на обработку своих
+                    <a href="#" class="form__consent-link"
+                      >персональных данных</a
+                    ></label
+                  >
+                </div>
+              </div>
+              <div class="popup__button-container">
+                <button type="submit"
+                class="button button--olive-large">
+                  Перезвоните мне
+                </button>
+            </form>
+        </div>
+    </div>
+  </div>
+    <!-- контейнер для скрытого бургер-меню -->
+      <div class="hamburger-menu">
+        <input
+          id="menu__toggle"
+          type="checkbox"
+          class="hamburger-menu__toggle"/>
+        <label class="hamburger-menu__btn" for="menu__toggle">
+          <span class="hamburger-menu__icon"></span>
+        </label>
+        <ul class="menu__box">
+          <li class="menu__item">
+            <a href="./index.html" class="menu__item-link">Главная</a>
+          </li>
+          <li class="menu__item">
+            <a href="./portfolio.html" class="menu__item-link">Портфолио</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__item-link">Услуги</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__item-link">Контакты</a>
+          </li>
+          <li class="menu__item">
+            <a href="tel:+79218888888" class="button menu__item-tel-link">+7 (921) 888 88 88</a>
+          </li>
+          <li class="menu__item">
+            <div class="popup-open__button-container">
+                <button class="button button--transparent" onclick="openWindow('consult__popupWindow')">
+                  Бесплатная консультация
+                </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <div class="hero__container">
+      <div class="hero__content">
+        <p class="hero__subtitle">Ландшафтная студия VESNA</p>
+        <h1 class="hero__title">Создаем авторские ландшафты с вашим характером</h1>
+        <p class="hero__description">От идеи до полной реализации</p>
+      </div>
+      <div class="hero__footer">
+        <a href="#" class="hero__project-link">
+          <span class="hero__project-text">Последний <br>проект</span>
+          <span class="hero__arrow">
+            <img src="./assets/icons/hero_arrow-next.svg" alt="Стрелка вправо">
+          </span>
+          <div class="hero__project-image">
+            <img src="./assets/img/last-project.jpg" alt="Последний проект">
+          </div>
+        </a>
+        <div class="hero__arrows">
+          <button class="hero__arrow-btn hero__arrow-btn--prev" aria-label="Предыдущий слайд"></button>
+          <button class="hero__arrow-btn hero__arrow-btn--next" aria-label="Следующий слайд"></button>
+        </div>
+        <div class="hero__pagination">
+          <span class="hero__current-slide">01</span>
+          <span class="hero__divider">
+            <img src="./assets/icons/hero_progress-line.svg" alt="Разделитель">
+          </span>
+          <span class="hero__total-slides">03</span>
+        </div>
+      </div>
+    </div>
+  </header>
 
   <main>
-
+    <section class="garden">
+      <div class="garden__content">
+        <h2 class="garden__title">
+          Создаем не просто красивый сад с картинки, <br>
+          <span class="bold">а место, куда захочется возвращаться</span>
+        </h2>
+        <p class="garden__description">
+          От проекта до ухода за садом — один подрядчик. <br>
+          Мы несем ответственность за все этапы работ. Ваш сад будет ограничен и выполнен в одном стиле. Мы делаем участок
+          практичным, безопасным и комфортным для всех членов семьи. <br>
+          В работе мы используем современные и качественные материалы, как залог долговечности производимых работ.
+          Благодаря нашему подходу исключаются возможные ошибки до начала строительных работ и предотвращаются
+          непредвиденные расходы.
+        </p>
+      </div>
+      <div class="garden__images">
+        <img src="./assets/img/garden1.jpg" alt="Сад 1" class="garden__image" />
+        <img src="./assets/img/garden2.jpg" alt="Сад 2" class="garden__image" />
+        <img src="./assets/img/garden3.jpg" alt="Сад 3" class="garden__image" />
+      </div>
+    </section>
+    
     <section class="landscape">
         <h2 class="landscape__title">
           <span class="bold">Доверьте свой участок профессионалам —</span>
@@ -41,8 +229,57 @@
         </div>
     </section>
 
-
-
+    <section class="services">
+      <h2 class="services__title">Что мы делаем</h2>
+      <div class="services__grid">
+        <div class="services__item">
+          <div class="services__icon services__icon--design">
+            <img src="./assets/icons/pencil.svg" alt="Иконка проектирования">
+          </div>
+          <h3 class="services__subtitle">Проектирование</h3>
+          <ul class="services__list">
+            <li class="services__list-item">Новый качественный подход к проектированию</li>
+            <li class="services__list-item">Детальная разработка всех инженерных разделов проекта</li>
+            <li class="services__list-item">Расчет освещенности участка</li>
+            <li class="services__list-item">Реализация идей любой сложности</li>
+            <li class="services__list-item">Европейский подход</li>
+            <li class="services__list-item">Применение нестандартных современных идей и технологий</li>
+            <li class="services__list-item">Точный расчет бюджетов строительства</li>
+          </ul>
+        </div>
+        <div class="services__item">
+          <div class="services__icon services__icon--greening">
+            <img src="./assets/icons/tree.svg" alt="Иконка озеленения">
+          </div>
+          <h3 class="services__subtitle">Озеленение</h3>
+          <ul class="services__list">
+            <li class="services__list-item">Прямые поставки посадочного материала из лучших европейских питомников</li>
+            <li class="services__list-item">Использование новейших технологий при посадке</li>
+            <li class="services__list-item">Новый качественный подход к созданию пространства</li>
+            <li class="services__list-item">Европейские решения</li>
+            <li class="services__list-item">Длительная гарантия на все работы и посадочный материал</li>
+            <li class="services__list-item">Сервисное обслуживание</li>
+          </ul>
+        </div>
+        <div class="services__item">
+          <div class="services__icon services__icon--landscaping">
+            <img src="./assets/icons/fence.svg" alt="Иконка благоустройства">
+          </div>
+          <h3 class="services__subtitle">Благоустройство</h3>
+          <ul class="services__list">
+            <li class="services__list-item">Все виды строительно-монтажных работ по благоустройству</li>
+            <li class="services__list-item">Инновационные решения</li>
+            <li class="services__list-item">Длительная гарантия на все работы</li>
+            <li class="services__list-item">Строительство водоемов любой сложности</li>
+            <li class="services__list-item">Разработка индивидуальных малых архитектурных объектов</li>
+          </ul>
+        </div>
+      </div>
+      <button class="button button--olive-large services__button" type="submit">
+        Выбрать услугу
+      </button>
+    </section>
+    
     <section class="garden-guide">
       <div class="garden-guide__book">
         <img
@@ -112,10 +349,10 @@
               </div>
             </div>
           </div>
-          <button class="projects__item-button button-round button-round--arrow">
+          <a href="#" class="projects__item-button button-round button-round--arrow">
             <img class="button-round__icon--black" src="./assets/img/buttons.svg/black-arrow.svg" alt="Arrow">
             <img class="button-round__icon--white" src="./assets/img/buttons.svg/white-arrow.svg" alt="Arrow">
-          </button>
+          </a>
         </div>
         <div class="projects__item">
           <img class="projects__image" src="./assets/img/projects_img2.jpg" alt="Проект 2">
@@ -142,10 +379,10 @@
               </div>
             </div>
           </div>
-          <button class="projects__item-button button-round button-round--arrow">
+          <a href="#" class="projects__item-button button-round button-round--arrow">
             <img class="button-round__icon--black" src="./assets/img/buttons.svg/black-arrow.svg" alt="Arrow">
             <img class="button-round__icon--white" src="./assets/img/buttons.svg/white-arrow.svg" alt="Arrow">
-          </button>
+          </a>
         </div>
         <div class="projects__item">
           <img class="projects__image" src="./assets/img/projects_img3.jpg" alt="Проект 3">
@@ -172,10 +409,10 @@
               </div>
             </div>
           </div>
-          <button class="projects__item-button button-round button-round--arrow">
+          <a href="#" class="projects__item-button button-round button-round--arrow">
             <img class="button-round__icon--black" src="./assets/img/buttons.svg/black-arrow.svg" alt="Arrow">
             <img class="button-round__icon--white" src="./assets/img/buttons.svg/white-arrow.svg" alt="Arrow">
-          </button>
+          </a>
         </div>
         <div class="projects__item">
           <img class="projects__image" src="./assets/img/projects_img4.jpg" alt="Проект 4">
@@ -202,21 +439,98 @@
               </div>
             </div>
           </div>
-          <button class="projects__item-button button-round button-round--arrow">
+          <a href="#" class="projects__item-button button-round button-round--arrow">
             <img class="button-round__icon--black" src="./assets/img/buttons.svg/black-arrow.svg" alt="Arrow">
             <img class="button-round__icon--white" src="./assets/img/buttons.svg/white-arrow.svg" alt="Arrow">
-          </button>
+          </a>
         </div>
       </div>
       <div class="projects__all-button">
-        <button class="button-round button-round--arrow">Все проекты
-          <img class="button-round__icon--black" src="./assets/img/buttons.svg/black-arrow.svg" alt="">
+        <a href="#" class="button-round button-round--arrow">Все проекты
+          <img class="button-round__icon--black button-round--arrow" src="./assets/img/buttons.svg/black-arrow.svg" alt="">
           <img class="button-round__icon--white" src="./assets/img/buttons.svg/white-arrow.svg" alt="">
-        </button>
+        </a>
       </div>
-      <button class="button button--olive-large projects__button" type="submit">
+      <a href="#" class="button button--olive-large projects__button" type="submit">
         Все проекты
-      </button>
+      </a>
+    </section>
+
+    <section class="steps">
+      <h2 class="steps__title">
+        4 шага до реализации проекта<br />
+        <span class="bold">вашей мечты</span>
+      </h2>
+      <div class="steps__list">
+        <div class="steps__item">
+          <span class="steps__number">01</span>
+          <div class="steps__content">
+            <h3 class="steps__item-title">Расскажите нам, что вы хотите увидеть на своем участке</h3>
+            <p class="steps__description">Побеседуйте с нашим специалистом. Он приедет к вам в любое удобное время.</p>
+          </div>
+        </div>
+        <div class="steps__item">
+          <span class="steps__number">02</span>
+          <div class="steps__content">
+            <h3 class="steps__item-title">Оцените проект, который разработают наши специалисты, и внесите изменения</h3>
+            <p class="steps__description">Архитектор разработает проект ландшафтного дизайна и сделает 3D-визуализацию.</p>
+          </div>
+        </div>
+        <div class="steps__item">
+          <span class="steps__number">03</span>
+          <div class="steps__content">
+            <h3 class="steps__item-title">Дождитесь окончания ландшафтных работ</h3>
+            <p class="steps__description">Вы получите идеальный участок с хорошим дренажом, мощеными дорожками и площадками, высаженными растениями — деревьями, кустарниками, цветами и газоном.</p>
+          </div>
+        </div>
+        <div class="steps__item">
+          <span class="steps__number">04</span>
+          <div class="steps__content">
+            <h3 class="steps__item-title">Делегируйте уход за участком профессионалам</h3>
+            <p class="steps__description">При необходимости мы будем приезжать регулярно и следить за состоянием участка.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="advantages">
+      <h2 class="advantages__title">Почему нас выбирают</h2>
+      <div class="advantages__list">
+        <div class="advantages__row">
+          <div class="advantages__item">
+            <div class="advantages__icon">
+              <img src="./assets/icons/advantages1.svg" alt="Иконка проекта">
+            </div>
+            <p class="advantages__text">Создаем проекты, которые точно можно реализовать</p>
+          </div>
+          <div class="advantages__item">
+            <div class="advantages__icon">
+              <img src="./assets/icons/advantages2.svg" alt="Иконка эксплуатации">
+            </div>
+            <p class="advantages__text">Наши объекты легко эксплуатировать</p>
+          </div>
+          <div class="advantages__item">
+            <div class="advantages__icon">
+              <img src="./assets/icons/advantages3.svg" alt="Иконка бюджета">
+            </div>
+            <p class="advantages__text">Делаем с умом под любой бюджет</p>
+          </div>
+        </div>
+        <div class="advantages__row advantages__row--center">
+          <div class="advantages__item">
+            <div class="advantages__icon">
+              <img src="./assets/icons/advantages4.svg" alt="Иконка качества">
+            </div>
+            <p class="advantages__text">У нас высокое качество <br>посадочного материала</p>
+          </div>
+          <div class="advantages__item">
+            <div class="advantages__icon">
+              <img src="./assets/icons/advantages5.svg" alt="Иконка гарантии">
+            </div>
+            <p class="advantages__text">Даем гарантию на все <br>виды работ</p>
+          </div>
+        </div>
+      </div>
     </section>
     
     <section class="reviews">
@@ -353,14 +667,133 @@
         </form>
       </div>
     </section>
-    
-    
-    
 
+    <section class="questions">
+      <div class="questions__content">
+        <h2 class="questions__title">Остались вопросы?</h2>
+        <p class="questions__subtitle">Пригласите ландшафтного <br>дизайнера на участок!</p>
+      </div>
+      <div class="questions__cta">
+        <div class="popup-open__button-container">
+          <button class="button button--olive-large" onclick="openWindow('call-back__popupWindow')">
+              Перезвоните мне
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- кнопка прокрутки наверх -->
+    <button class="button-round button-round--up scroll-to-top" id="scrollToTopButton" aria-label="Scroll to top">
+      <img src="./assets/img/buttons.svg/up-white.svg" alt="стрелка вверх">
+      Наверх
+    </button>
+    
+    <!-- контейнер для размытия элементов за попапом -->
+    <div class="popup-overlay" id="overlay"></div>
+    <!-- сам попап -->
+    <div class="popup" id="call-back__popupWindow">
+      <div class="popup__backdrop"></div>
+      <div class="popup__wrapper">
+          <button class="close-btn" onclick="closewindow('call-back__popupWindow')">
+              <span></span>
+          </button>
+          <h2 class="popup__title">Обратный звонок</h2>
+          <p class="popup__description">Менеджер перезвонит Вам в&nbsp;ближайшее время</p>
+          <form action="submit" class="form">
+            <div class="form__input-group">
+              <div class="form__input-container">
+                <input
+                  type="text"
+                  name="name"
+                  id="order-call__userName"
+                  placeholder=" "
+                  class="form__input-field form__input-field--name"
+                  required
+                />
+                <label for="order-call__userName" class="form__input-label">Имя</label>
+              </div>
+              <div class="form__input-container">
+                <input
+                  type="tel"
+                  id="order-call__userPhone"
+                  name="phone"
+                  placeholder=" "
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                  class="form__input-field form__input-field--tel"
+                  required
+                />
+                <label for="order-call__userPhone" class="form__input-label--default"
+                  >+7 (___) ___ __ __</label
+                >
+                <label for="order-call__userPhone" class="form__input-label--focus"
+                  >Телефон</label
+                >
+              </div>
+              <div class="form__consent-container">
+                <input
+                  type="checkbox"
+                  name="popup-order-call__userConsent"
+                  id="popup-order-call__userConsent"
+                  class="form__consent-checkbox"
+                  checked
+                  required
+                />
+                <label for="popup-order-call__userConsent" class="form__consent-label"
+                  >Я даю согласие на обработку своих
+                  <a href="#" class="form__consent-link"
+                    >персональных данных</a
+                  ></label
+                >
+              </div>
+            </div>
+            <div class="popup__button-container">
+              <button type="submit"
+              class="button button--olive-large">
+                Перезвоните мне
+              </button>
+          </form>
+      </div>
+    </div>
   </main>
-
+  <footer class="footer">
+    <div class="footer__container">
+        <div class="footer__contacts">
+            <div>
+                <a class="footer__contact-item"
+                    href="tel:+79218888888">+7(921) 888 88 88
+                </a>
+            </div>
+            <div>
+                <a class="footer__contact-item"
+                    href="info@vesna.ru">info@vesna.ru
+                </a>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <a class="footer__copyright-link"
+                href="#">© 2021 VESNA
+            </a>
+        </div>
+        <div class="footer__logo">
+            <a class="footer__logo-link"
+                href=""><img src="./assets/icons/footer.svg" alt="Logo">
+            </a>
+        </div>
+        <div class="footer__icon">
+            <a class="footer__icon-link" 
+                href="#"><img src="./assets/icons/instagram.svg" alt="instagram">
+            </a>
+        </div>
+        <div class="footer__privacy-policy">
+            <a class="footer__privacy-policy-link "
+                href="#">Политика конфиденциальности
+            </a>
+        </div>
+    </div>
+  </footer> 
+  
+  <!-- аккордеон в faq  -->
   <script>
-    //аккордеон в faq 
         document.addEventListener('DOMContentLoaded', () => {
       const faqQuestions = document.querySelectorAll('.faq__question');
 
@@ -394,9 +827,103 @@
         });
       });
       });
-
   </script>
+  <!-- скрипт для popup в хедере -->
+  <script>
+    document
+      .getElementById("userPhone")
+      .addEventListener("input", function (e) {
+        const input = e.target;
+        let value = input.value.replace(/\D/g, "");
 
+        // Проверяем, если пользователь удалил цифры, чтобы не перезаписывать ввод
+        if (e.inputType === "deleteContentBackward") {
+          input.value = input.value;
+          return;
+        }
 
+        // Добавляем "+7" в начало, если пользователь его еще не ввел
+        if (value.startsWith("7")) {
+          value = value.substring(1);
+        }
+
+        let formattedValue = "+7 (";
+
+        if (value.length > 0) formattedValue += value.substring(0, 3);
+        if (value.length >= 4) formattedValue += ") " + value.substring(3, 6);
+        if (value.length >= 7) formattedValue += " " + value.substring(6, 8);
+        if (value.length >= 9) formattedValue += " " + value.substring(8, 10);
+
+        input.value = formattedValue;
+      });
+  </script>
+  <script>
+      function openWindow(popupId) {
+        document.getElementById(popupId).style.display = "block";
+        document.getElementById('overlay').style.display = 'block';
+      }
+
+      function closewindow(popupId) {
+        document.getElementById(popupId).style.display = "none";
+        document.getElementById('overlay').style.display = "none";
+      }
+  </script>
+  <!-- скрипт для popup по кнопке -->
+  <script>
+    document
+      .getElementById("userPhone")
+      .addEventListener("input", function (e) {
+        const input = e.target;
+        let value = input.value.replace(/\D/g, "");
+        // Проверяем, если пользователь удалил цифры, чтобы не перезаписывать ввод
+        if (e.inputType === "deleteContentBackward") {
+          input.value = input.value;
+          return;
+        }
+        // Добавляем "+7" в начало, если пользователь его еще не ввел
+        if (value.startsWith("7")) {
+          value = value.substring(1);
+        }
+        let formattedValue = "+7 (";
+        if (value.length > 0) formattedValue += value.substring(0, 3);
+        if (value.length >= 4) formattedValue += ") " + value.substring(3, 6);
+        if (value.length >= 7) formattedValue += " " + value.substring(6, 8);
+        if (value.length >= 9) formattedValue += " " + value.substring(8, 10);
+        input.value = formattedValue;
+      });
+  </script>
+  <script>
+      function openWindow(popupId) {
+        document.getElementById(popupId).style.display = "block";
+        document.getElementById('overlay').style.display = 'block';
+      }
+      function closewindow(popupId) {
+        document.getElementById(popupId).style.display = "none";
+        document.getElementById('overlay').style.display = "none";
+      }
+  </script>
+  <!-- скрипт для кнопки вверх -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const scrollToTopButton = document.getElementById("scrollToTopButton");
+
+  // Показываем кнопку при прокрутке вниз
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollToTopButton.classList.add("visible");
+    } else {
+      scrollToTopButton.classList.remove("visible");
+    }
+  });
+
+  // Перемещение наверх при нажатии
+  scrollToTopButton.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+});
+  </script>
 </body>
 </html>

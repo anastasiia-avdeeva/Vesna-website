@@ -1,17 +1,21 @@
+.header-popup {
+  background-color: black; // чтобы было видно кнопку Бесплатная консультация при тестах
+}
+
 .popup-open__button-container {
   text-align: center;
 }
 
 // создаю слой, который будет покрывать всю страницу под попапом и размываться
-.overlay {
+.popup-overlay {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   backdrop-filter: blur(20px); /* размытие */
-  z-index: 10;
+  z-index: 11;
 }
 
 // стили для самого поапа
@@ -43,19 +47,8 @@
     z-index: 20;
   }
 
-  &__close-btn {
-    grid-area: close;
-    width: 40px;
-    height: 40px;
-    justify-self: end;
-    border: none;
-    background-color: $white;
-  }
-
   &__title {
     grid-area: title;
-    // margin-left: 150px;
-    // margin-right: 150px;
     width: 344px;
     margin-bottom: 19px;
     text-align: center;
@@ -86,6 +79,29 @@
       min-width: 288px;
     }
   }
+
+  // стили для попапа с картинкой (страница Проект)
+  &__wrapper-pic {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 20;
+  }
+
+  &__wrapper-pic-content {
+    position: relative;
+    top: 100px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 }
 
 @include phones {
@@ -95,17 +111,6 @@
       width: 100%;
       padding-bottom: 90px;
       top: 0px;
-    }
-
-    &__close-btn {
-      width: 24px;
-      height: 24px;
-    }
-
-    &__close-icon {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
     }
 
     &__title {
