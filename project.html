@@ -8,7 +8,142 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__fitst-line"></div>
+      <section class="header__first-line header__first-line--bg">
+        <div class="header__logo">
+          <a href="#" class="header__logo-link" target="_blank">
+            <img
+              src="./assets/icons/header-logo.svg"
+              alt="логотип компании Весна"
+              class="header__img"
+            />
+          </a>
+        </div>
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-list-item">
+              <a href="#" class="header__nav-list-item-link">Главная</a>
+            </li>
+            <li class="header__nav-list-item">
+              <a href="#" class="header__nav-list-item-link">Портфолио</a>
+            </li>
+            <li class="header__nav-list-item">
+              <a href="#" class="header__nav-list-item-link">Услуги</a>
+            </li>
+            <li class="header__nav-list-item">
+              <a href="#" class="header__nav-list-item-link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__buttons">
+          <a href="tel:+79218888888" class="button header__tel-link">+7 (921) 888 88 88</a>
+            <!-- Кнопка для открытия формы -->
+          <div class="popup-open__button-container">
+              <button class="button button--transparent" onclick="openWindow('consult__popupWindow')">
+                Бесплатная консультация
+              </button>
+          </div>
+        </div>
+        <!-- контейнер для размытия элементов за попапом -->
+        <div class="popup-overlay" id="overlay"></div>
+        <!-- сам попап -->
+        <div class="popup" id="consult__popupWindow">
+          <div class="popup__wrapper">
+              <button class="close-btn" onclick="closewindow('consult__popupWindow')">
+                  <span></span>
+              </button>
+              <h2 class="popup__title">Закажите консультацию</h2>
+              <p class="popup__description">Менеджер перезвонит Вам в&nbsp;ближайшее время</p>
+              <form action="submit" class="form">
+                <div class="form__input-group">
+                  <div class="form__input-container">
+                    <input
+                      type="text"
+                      name="name"
+                      id="userName"
+                      placeholder=" "
+                      class="form__input-field form__input-field--name"
+                      required
+                    />
+                    <label for="userName" class="form__input-label">Имя</label>
+                  </div>
+                  <div class="form__input-container">
+                    <input
+                      type="tel"
+                      id="userPhone"
+                      name="phone"
+                      placeholder=" "
+                      pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                      class="form__input-field form__input-field--tel"
+                      required
+                    />
+                    <label for="userPhone" class="form__input-label--default"
+                      >+7 (___) ___ __ __</label
+                    >
+                    <label for="userPhone" class="form__input-label--focus"
+                      >Телефон</label
+                    >
+                  </div>
+                  <div class="form__consent-container">
+                    <input
+                      type="checkbox"
+                      name="popup-order-consult__userConsent"
+                      id="popup-order-consult__userConsent"
+                      class="form__consent-checkbox"
+                      checked
+                      required
+                    />
+                    <label for="popup-order-consult__userConsent" class="form__consent-label"
+                      >Я даю согласие на обработку своих
+                      <a href="#" class="form__consent-link"
+                        >персональных данных</a
+                      ></label
+                    >
+                  </div>
+                </div>
+                <div class="popup__button-container">
+                  <button type="submit"
+                  class="button button--olive-large">
+                    Перезвоните мне
+                  </button>
+              </form>
+          </div>
+      </div>
+    </div>
+      <!-- контейнер для скрытого бургер-меню -->
+        <div class="hamburger-menu">
+          <input
+            id="menu__toggle"
+            type="checkbox"
+            class="hamburger-menu__toggle"/>
+          <label class="hamburger-menu__btn" for="menu__toggle">
+            <span class="hamburger-menu__icon"></span>
+          </label>
+          <ul class="menu__box">
+            <li class="menu__item">
+              <a href="#" class="menu__item-link">Главная</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__item-link">Портфолио</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__item-link">Услуги</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__item-link">Контакты</a>
+            </li>
+            <li class="menu__item">
+              <a href="tel:+79218888888" class="button menu__item-tel-link">+7 (921) 888 88 88</a>
+            </li>
+            <li class="menu__item">
+              <div class="popup-open__button-container">
+                  <button class="button button--transparent" onclick="openWindow('consult__popupWindow')">
+                    Бесплатная консультация
+                  </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
       <section class="slider">
         <div class="slider__track">
           <!-- картинки видные при разрешении от 1920 до 440 -->
@@ -194,18 +329,15 @@
       </section>
     </header>
     <main class="main">
-      <section class="back-to-portfolio">
-        <a href="#" class="back-to-portfolio__link"
+      <section class="back-to">
+        <a href="#" class="back-to__link"
           ><img
             src="./assets/icons/back-arrow.svg"
             alt="стрелка влево"
-            class="back-to-portfolio__icon"
+            class="back-to__icon"
           />
-          <span class="back-to-portfolio__title--whole"
-            >Назад
-            <span class="back-to-portfolio__title--hidden"
-              >к портфолио</span
-            ></span
+          <span class="back-to__title--whole"
+            >Назад <span class="back-to__title--hidden">к портфолио</span></span
           ></a
         >
       </section>
@@ -376,17 +508,21 @@
                 <div class="form__input-container">
                   <input
                     type="tel"
-                    id="userPhone"
+                    id="order-project__userPhone"
                     name="phone"
                     placeholder=" "
                     pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
                     class="form__input-field form__input-field--tel"
                     required
                   />
-                  <label for="userPhone" class="form__input-label--default"
+                  <label
+                    for="order-project__userPhone"
+                    class="form__input-label--default"
                     >+7 (___) ___ __ __</label
                   >
-                  <label for="userPhone" class="form__input-label--focus"
+                  <label
+                    for="order-project__userPhone"
+                    class="form__input-label--focus"
                     >Телефон</label
                   >
                 </div>
@@ -447,7 +583,42 @@
         </div>
       </section>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <div class="footer__container">
+          <div class="footer__contacts">
+              <div>
+                  <a class="footer__contact-item"
+                      href="tel:+79218888888">+7(921) 888 88 88
+                  </a>
+              </div>
+              <div>
+                  <a class="footer__contact-item"
+                      href="info@vesna.ru">info@vesna.ru
+                  </a>
+              </div>
+          </div>
+          <div class="footer__copyright">
+              <a class="footer__copyright-link"
+                  href="#">© 2021 VESNA
+              </a>
+          </div>
+          <div class="footer__logo">
+              <a class="footer__logo-link"
+                  href=""><img src="./assets/icons/footer.svg" alt="Logo">
+              </a>
+          </div>
+          <div class="footer__icon">
+              <a class="footer__icon-link" 
+                  href="#"><img src="./assets/icons/instagram.svg" alt="instagram">
+              </a>
+          </div>
+          <div class="footer__privacy-policy">
+              <a class="footer__privacy-policy-link "
+                  href="#">Политика конфиденциальности
+              </a>
+          </div>
+      </div>
+  </footer>
     <!-- скрипт для ввода номера телефона в форму -->
     <script>
       document
