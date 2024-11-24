@@ -1,4 +1,4 @@
-.header {
+.header-popup {
   background-color: black; // чтобы было видно кнопку Бесплатная консультация при тестах
 }
 
@@ -78,6 +78,29 @@
       max-width: 481px;
       min-width: 288px;
     }
+  }
+
+  // стили для попапа с картинкой (страница Проект)
+  &__wrapper-pic {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 20;
+  }
+
+  &__wrapper-pic-content {
+    position: relative;
+    top: 100px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 }
 
