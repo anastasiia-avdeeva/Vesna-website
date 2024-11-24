@@ -3,6 +3,9 @@
 @import "./mixins";
 @import "./base";
 @import "./media";
+@import "./media";
+
+@import "./base";
 
 // import fonts
 @import "../fonts/fonts";
@@ -14,6 +17,8 @@
 @import "./blocks/forms";
 @import "./buttons";
 @import "./blocks/popup-windows";
+@import "./footer";
+
 @import "./blocks/btw-pages";
 @import "./blocks/services_order-service.scss";
 @import "./blocks/main_garden-guide";
