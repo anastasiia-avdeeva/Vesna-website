@@ -1,6 +1,54 @@
 .service-gallery {
   margin: 0 292px 125px;
 
+  &__img-container {
+    width: 100%;
+    max-height: 387px;
+    max-width: 430px;
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__banner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    // grid-template-rows: auto auto;
+    gap: 23px;
+    grid-template-areas: "form imgs";
+  }
+
+  &__imgs {
+    // grid-area: imgs;
+    // display: grid;
+    // grid-template-columns: auto auto;
+    // grid-template-rows: auto auto;
+    // grid-template-areas:
+    //   "pic1 pic1"
+    //   "pic2 pic3";
+    // gap: 23px;
+    display: none;
+  }
+  &__img-container4 {
+    grid-area: pic1;
+    max-width: 883px;
+  }
+
+  &__img-container2 {
+    grid-area: pic2;
+  }
+
+  &__img-container3 {
+    grid-area: pic3;
+  }
+
+  &__img-container1 {
+    display: none;
+  }
+
   &__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); // Три колонки
@@ -56,6 +104,31 @@
 
     margin: 0 20px 78px;
 
+    &__banner {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+      grid-template-areas:
+        "imgs"
+        "form";
+      gap: 50px;
+    }
+    &__imgs {
+      @include horizontal-carousel;
+    }
+
+    &__img-container1 {
+      display: block;
+    }
+
+    &__img-container {
+      @include horizontal-carousel__container;
+    }
+
+    &__img-container4 {
+      width: 768px;
+    }
+
+
     &__grid {
       display: grid;
       grid-template-columns: repeat(1, 1fr); // Три колонки
@@ -84,12 +157,37 @@
     }
   }
 
-  @include tablets {
+  @include phones {
 
     margin: 0 16px 78px;
 
+    &__banner {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+      grid-template-areas:
+        "imgs"
+        "form";
+      gap: 50px;
+    }
+    &__imgs {
+      @include horizontal-carousel;
+    }
+
+    &__img-container1 {
+      display: block;
+    }
+
+    &__img-container {
+      @include horizontal-carousel__container;
+    }
+
+    &__img-container4 {
+      width: 440px;
+    }
+
     &__item--title {
       @include h5;
+      margin-bottom: 42px;
     }
   }
 }

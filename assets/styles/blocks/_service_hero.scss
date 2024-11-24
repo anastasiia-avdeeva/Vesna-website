@@ -16,6 +16,12 @@
     color: $white;
   }
 
+  @include tablets {
+    &__title {
+      margin-top: 50px;
+    }
+  }
+
   @include phones {
 
     height: 324px; // Задаем высоту первого экрана

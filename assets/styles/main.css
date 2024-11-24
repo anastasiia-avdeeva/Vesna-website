@@ -759,24 +759,8 @@ textarea:focus {
   }
 }
 
-.scroll-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s, visibility 0.3s;
-}
-.scroll-to-top.visible {
-  opacity: 1;
-  visibility: visible;
-}
-
 .btw-pages {
+  height: 234px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3.125%;
@@ -1289,7 +1273,6 @@ textarea:focus {
   display: flex;
   align-items: center;
   position: absolute;
-  top: 41px;
   right: 5%;
   width: 24px;
   height: 18px;
@@ -1366,6 +1349,10 @@ textarea:focus {
   .header__first-line {
     padding-left: 4%;
     padding-right: 4%;
+  }
+  .header .header__img {
+    width: 140px;
+    height: 73.7px;
   }
   .header .hamburger-menu {
     visibility: visible;
@@ -3925,6 +3912,11 @@ textarea:focus {
   font-style: normal;
   color: #ffffff;
 }
+@media screen and (max-width: 768px) {
+  .service__title {
+    margin-top: 50px;
+  }
+}
 @media screen and (max-width: 440px) {
   .service {
     height: 324px;
@@ -4061,6 +4053,39 @@ textarea:focus {
 .service-gallery {
   margin: 0 292px 125px;
 }
+.service-gallery__img-container {
+  width: 100%;
+  max-height: 387px;
+  max-width: 430px;
+}
+.service-gallery__img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.service-gallery__banner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 23px;
+  grid-template-areas: "form imgs";
+}
+.service-gallery__imgs {
+  display: none;
+}
+.service-gallery__img-container4 {
+  grid-area: pic1;
+  max-width: 883px;
+}
+.service-gallery__img-container2 {
+  grid-area: pic2;
+}
+.service-gallery__img-container3 {
+  grid-area: pic3;
+}
+.service-gallery__img-container1 {
+  display: none;
+}
 .service-gallery__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -4123,6 +4148,39 @@ textarea:focus {
   .service-gallery {
     margin: 0 20px 78px;
   }
+  .service-gallery__banner {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "imgs" "form";
+    gap: 50px;
+  }
+  .service-gallery__imgs {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+  .service-gallery__imgs::-webkit-scrollbar {
+    display: none;
+  }
+  .service-gallery__imgs {
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+  }
+  .service-gallery__img-container1 {
+    display: block;
+  }
+  .service-gallery__img-container {
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+    width: 300px;
+    height: 270px;
+    overflow: hidden;
+  }
+  .service-gallery__img-container4 {
+    width: 768px;
+  }
   .service-gallery__grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -4145,9 +4203,42 @@ textarea:focus {
     display: none;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 440px) {
   .service-gallery {
     margin: 0 16px 78px;
+  }
+  .service-gallery__banner {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "imgs" "form";
+    gap: 50px;
+  }
+  .service-gallery__imgs {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+  .service-gallery__imgs::-webkit-scrollbar {
+    display: none;
+  }
+  .service-gallery__imgs {
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+  }
+  .service-gallery__img-container1 {
+    display: block;
+  }
+  .service-gallery__img-container {
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+    width: 300px;
+    height: 270px;
+    overflow: hidden;
+  }
+  .service-gallery__img-container4 {
+    width: 440px;
   }
   .service-gallery__item--title {
     font-family: "Noah", sans-serif;
@@ -4156,6 +4247,7 @@ textarea:focus {
     line-height: normal;
     font-style: normal;
     font-size: 24px;
+    margin-bottom: 42px;
   }
 }
 
