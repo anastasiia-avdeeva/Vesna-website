@@ -170,5 +170,45 @@
         </ul>
         </div>
     </section>
+    <section class="garden-guide">
+        <div class="garden-guide__book">
+          <img
+            class="garden-guide__book-image"
+            src="./assets/img/garden-guide.png"
+            alt="Book about garden plants"
+          />
+        </div>
+        <h2 class="garden-guide__title">Как выбрать растения <br class="br">для сада?</h2>
+        <p class="garden-guide__subtitle">Пришлем инструкцию!</p>
+        <div class="garden-guide__content">
+          <form class="garden-guide__form">
+            <input
+              class="garden-guide__input"
+              type="email"
+              placeholder="Ваш Email"
+              required
+            />
+            <div class="garden-guide__consent-container">
+              <input
+                type="checkbox"
+                name="garden-guide-consent"
+                id="guide__userConsent"
+                class="garden-guide__consent-checkbox"
+                checked
+                required
+              />
+              <label for="guide__userConsent" class="garden-guide__consent-label"
+                >Я даю согласие на обработку своих
+                <a href="#" class="garden-guide__consent-link"
+                  >персональных данных</a
+                ></label
+              >
+            </div>
+            <button class="button button--olive-large garden-guide__button" type="submit">
+              Хочу инструкцию
+            </button>
+          </form>
+        </div>
+      </section>
 </body>
 </html>

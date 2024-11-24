@@ -1,3 +1,9 @@
+.project-portfolio{
+    padding: 8% 15.2%;
+}
+.project-card__title{
+    margin-bottom: 20px;
+}
 .project-card__quote{
     padding: 0 30px;
 }
@@ -14,7 +20,6 @@
 }
 /* вторая карточка */
 .project-card__gallery-2 {
-    width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-template-rows: 1fr 1fr;
@@ -46,7 +51,6 @@
 }
 /* третья карточка */
 .project-card__gallery-3 {
-    width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-template-rows: 1fr 1fr;
@@ -75,4 +79,53 @@
 }
 .project-card__gallery-3-item--2 {
     grid-column: 1/2;
+}
+@media screen and (max-width: 1024px){
+    .project-card__gallery,
+    .project-card__gallery-2,
+    .project-card__gallery-3 {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .project-portfolio{
+        padding: 8% 10%;
+    }
+}
+@media screen and (max-width: 768px){
+    .project-portfolio{
+        padding: 5% 30px;
+    }
+}
+@media screen and (max-width: 440px){
+    .project-portfolio{
+        padding: 10% 0;
+    }
+    .project-card__title{
+        padding: 0 20px;
+    }
+    .project-card__details{
+        padding: 0 20px;
+        grid-template-columns: max-content max-content;
+        justify-content: space-between;
+        gap: 30px;
+    }
+    .project-card__gallery {
+        width: 100%;
+        display: flex; /* Меняем с grid на flex */
+        gap: 3px;
+        scroll-behavior: smooth;
+        overflow-x: auto; /* Включаем горизонтальный скроллинг */
+        scroll-snap-type: x mandatory; /* Включаем snapping для карусели */
+    }
+    .project-card__gallery-item-1, 
+    .project-card__gallery-item-2,
+    .project-card__gallery-item-3,
+    .project-card__gallery-item {
+        flex: 0 0 auto; /* Элементы не сжимаются и отображаются в одну линию */
+        width: 100%; /* Например, ширина 80% экрана */
+        scroll-snap-align: start; /* Элемент центрируется при скролле */
+        overflow: hidden; /* плавная */
+}
+.project-card__quote {
+    width: 100%; /* Цитата занимает 100% ширины */
+}
 }
