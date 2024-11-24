@@ -1,0 +1,36 @@
+.service-section {
+  margin: 0 537px 57px; // Отступы для секции
+  background-color: #fff; // Цвет фона
+
+  &__title {
+    @include h2;
+    color: $black;
+    margin-bottom: 47px;
+    text-align: center;
+  }
+
+  &__text {
+    @include h5;
+    color: $black;
+    text-align: center;
+  }
+
+  @include tablets {
+    margin: 0 20px 57px; // Отступы для секции
+  }
+
+  @include phones {
+    margin: 0 16px 99px; // Отступы для секции
+
+    &__title {
+      @include h5;
+      color: $black;
+      margin-bottom: 37px;
+    }
+  
+    &__text {
+      @include font-size-smallest;
+      text-align: left;
+    }
+  }
+}

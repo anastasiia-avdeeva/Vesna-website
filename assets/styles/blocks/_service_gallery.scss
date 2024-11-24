@@ -1,0 +1,195 @@
+.service-gallery {
+  margin: 0 292px 125px;
+
+  &__img-container {
+    width: 100%;
+    max-height: 387px;
+    max-width: 430px;
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__banner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    // grid-template-rows: auto auto;
+    gap: 23px;
+    grid-template-areas: "form imgs";
+  }
+
+  &__imgs {
+    // grid-area: imgs;
+    // display: grid;
+    // grid-template-columns: auto auto;
+    // grid-template-rows: auto auto;
+    // grid-template-areas:
+    //   "pic1 pic1"
+    //   "pic2 pic3";
+    // gap: 23px;
+    display: none;
+  }
+  &__img-container4 {
+    grid-area: pic1;
+    max-width: 883px;
+  }
+
+  &__img-container2 {
+    grid-area: pic2;
+  }
+
+  &__img-container3 {
+    grid-area: pic3;
+  }
+
+  &__img-container1 {
+    display: none;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); // Три колонки
+    grid-template-rows: auto auto auto; // Три строки
+    gap: 23px;
+  }
+
+  &__item--title {
+    grid-column: 2 / 4; // Занимает 2 3 колонки
+    grid-row: 1 / 2; // Первая строка
+    @include h4;
+    color: $black;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 85px;
+  }
+
+  &__item--image {
+    grid-column: 1 / 2; // Первая колонка
+    grid-row: 2 / 3; // Вторая строка
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__item--wide {
+    grid-column: 2 / 4; // Растянуто на 2 и 3 колонку
+    grid-row: 2 / 3; // Вторая строка
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__item--text {
+    grid-row: 3 / 4; // Третья строка
+    grid-column: 1 / 2; // Первая колонка
+    background-color: rgba($light-green, 0.75); // Цвет немного светлее
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 118px 65px;
+    @include h5;
+    font-style: italic;
+    color: $black;
+  }
+
+  &__item--small {
+    grid-row: 3 / 4; // Третья строка
+    grid-column: auto; // Каждое изображение занимает свою колонку
+    width: 100%;
+    object-fit: cover;
+  }
+
+  @include tablets {
+
+    margin: 0 20px 78px;
+
+    &__banner {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+      grid-template-areas:
+        "imgs"
+        "form";
+      gap: 50px;
+    }
+    &__imgs {
+      @include horizontal-carousel;
+    }
+
+    &__img-container1 {
+      display: block;
+    }
+
+    &__img-container {
+      @include horizontal-carousel__container;
+    }
+
+    &__img-container4 {
+      width: 768px;
+    }
+
+
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr); // Три колонки
+      grid-template-rows: auto; // Три строки
+      gap: 23px;
+    }
+
+    &__item--title {
+      grid-column: 1 / 2; // Занимает 2 3 колонки
+    }
+
+    &__item--image {
+      display: none;
+    }
+  
+    &__item--wide {
+      display: none;
+    }
+  
+    &__item--text {
+      display: none;
+    }
+  
+    &__item--small {
+      display: none;
+    }
+  }
+
+  @include phones {
+
+    margin: 0 16px 78px;
+
+    &__banner {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+      grid-template-areas:
+        "imgs"
+        "form";
+      gap: 50px;
+    }
+    &__imgs {
+      @include horizontal-carousel;
+    }
+
+    &__img-container1 {
+      display: block;
+    }
+
+    &__img-container {
+      @include horizontal-carousel__container;
+    }
+
+    &__img-container4 {
+      width: 440px;
+    }
+
+    &__item--title {
+      @include h5;
+      margin-bottom: 42px;
+    }
+  }
+}
+
+
