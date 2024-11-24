@@ -14,9 +14,10 @@
 @import "./blocks/forms";
 @import "./buttons";
 @import "./blocks/popup-windows";
-
+@import "./blocks/btw-pages";
 @import "./blocks/services_order-service.scss";
 @import "./blocks/main_garden-guide";
+@import "./blocks/header_first-line";
 @import "./blocks/back-to";
 // link blocks main page
 @import "./blocks/main_garden";
@@ -32,6 +33,7 @@
 // link blocks portfolio page
 
 // link blocks project page
+@import "./blocks/project-page";
 
 // link blocks services page
 

@@ -1,0 +1,149 @@
+.btw-pages {
+  margin-bottom: 100px; //temporary, while there is no footer
+  height: 234px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.125%;
+  color: $white;
+
+  &__prev-container {
+    padding-right: 55px;
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-template-areas: "text link";
+    background-image: url("../img/projects-nav-prev.png");
+  }
+
+  &__next-container {
+    padding-left: 55px;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-areas: "link text";
+    background-image: url("../img/projects-nav-next.png");
+  }
+
+  &__container {
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    background-color: $light-grey;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__text {
+    grid-area: text;
+    padding-left: 10px;
+    @include h4;
+  }
+
+  &__title {
+    @include h2;
+  }
+
+  &__link {
+    grid-area: link;
+    position: relative;
+    display: block;
+    width: 84.14px;
+    height: 37.38px;
+    cursor: pointer;
+  }
+
+  &__icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  //make hover effect through pseudoelements, so the arrows will be thicker when cursor in on links
+  &__link:hover::after {
+    content: "";
+    position: absolute;
+    width: 84.14px;
+    height: 37.38px;
+    top: 0;
+    left: 0;
+    display: block;
+    z-index: 2;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &__prev-link:hover::after {
+    background-image: url("../icons/project-prev-hover.svg");
+  }
+
+  &__next-link:hover::after {
+    background-image: url("../icons/project-next-hover.svg");
+  }
+}
+
+@include tablets {
+  .btw-pages {
+    gap: 10px;
+    &__prev-container {
+      padding-right: 10px;
+      padding-left: 20px;
+      grid-template-columns: min-content 1fr;
+      grid-template-areas: "link text";
+    }
+
+    &__next-container {
+      padding-left: 10px;
+      padding-right: 20px;
+      grid-template-columns: 1fr min-content;
+      grid-template-areas: "text link";
+    }
+
+    &__next-container &__text {
+      text-align: left;
+    }
+
+    &__text {
+      padding-left: 0px;
+      text-align: right;
+    }
+  }
+}
+
+@include phones {
+  .btw-pages {
+    &__container {
+      padding-left: 15px;
+      padding-right: 15px;
+      height: 133px;
+      grid-template-columns: 1fr;
+      grid-template-rows: min-content auto;
+      grid-template-areas:
+        "link"
+        "text";
+      gap: 13px;
+      justify-items: end;
+      background-image: url("../img/project-nav-phone.png");
+    }
+
+    &__next-container {
+      justify-items: start;
+    }
+    &__text {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      font-size: $font-size-label-consent-phone;
+    }
+
+    &__title {
+      font-size: $font-size-smallest;
+    }
+
+    &__link {
+      width: 39px;
+      height: 17.71px;
+    }
+
+    &__link:hover::after {
+      width: 39px;
+      height: 17.71px;
+    }
+  }
+}
