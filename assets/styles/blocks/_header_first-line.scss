@@ -1,9 +1,10 @@
 .header {
   position: relative;
-  // тестовый фон, чтобы бфло видно лого и навигацию
+  // тестовый фон, чтобы было видно лого и навигацию
   background-color: rgb(33, 112, 64);
+}
 
-  &__first-line {
+  .header__first-line {
     padding-top: 28px;
     @include padding-header-footer-1920;
     display: grid;
@@ -12,56 +13,29 @@
     gap: 6.86%;
   }
 
-  &__logo {
+  .header__logo {
     display: flex;
     margin-top: 21px;
     margin-bottom: 21px;
   }
 
-  &__nav-list {
+  .header__nav-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
     gap: 76px;
   }
 
-  &__buttons {
+  .header__buttons {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-end;
   }
 
-  &__nav-list-item-link {
+  .header__nav-list-item-link {
     @include header-nav-font;
     color: $white;
-  }
-
-  .button {
-    width: 240px;
-    height: 60px;
-    border: none;
-    background-color: $white;
-    color: $black;
-    @include h5;
-
-    &:hover {
-      cursor: pointer;
-      background-color: $olive-dark;
-      color: $white;
-    }
-  }
-
-  .button--transparent {
-    height: 38px;
-    background-color: transparent;
-    color: $white;
-    @include button-transparent;
-
-    &:hover {
-      background-color: transparent;
-      border-bottom: 1px solid $white;
-    }
   }
 
   .hamburger-menu {
@@ -128,24 +102,11 @@
   }
 
   .menu__item {
-    display: block;
-    width: 100%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
   }
 
-  .menu__item:first-child {
-    border-bottom: 0.5px solid $olive-light;
-    width: 230px;
-    padding-bottom: 22px;
-  }
-
-  .menu__item:nth-child(2) {
-    border-bottom: 0.5px solid $olive-light;
-    width: 230px;
-    padding: 22px;
-  }
-
-  .menu__item:nth-child(3) {
+  .menu__item:nth-child(-n+3) {
     border-bottom: 0.5px solid $olive-light;
     width: 230px;
     padding: 22px;
@@ -155,7 +116,6 @@
     padding-top: 22px;
     padding-bottom: 59px;
   }
-}
 
 // адаптив для экранов с разрешением не более 768px
 
