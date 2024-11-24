@@ -1,13 +1,14 @@
 // номер телефона белая кнопка
 .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 240px;
   height: 60px;
   border: none;
   background-color: $white;
   color: $black;
   @include h5;
-  justify-content: center;
-  align-items: center;
   &:hover {
     cursor: pointer;
     background-color: $olive-dark;
@@ -207,5 +208,114 @@
   .close-btn {
     width: 24px;
     height: 24px;
+  }
+}
+
+// кнопка для закрытия картинки в большем размере в слайдере на странице проект
+.close-btn--white {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  background-color: transparent;
+
+  & span::before,
+  & span::after {
+    height: 6px;
+    background-color: $white;
+  }
+
+  &:hover span::before,
+  &:hover span::after {
+    height: 8px;
+  }
+}
+
+@include tablets {
+  .close-btn--white {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+// кнопка для открытия картинки в большем размере в слайдере на странице проект
+.expand-pic-btn {
+  width: 54px;
+  height: 54px;
+  position: absolute;
+  bottom: 10px;
+  right: 15.2%;
+  border: none;
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+@include tablets {
+  .expand-pic-btn {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@include phones {
+  .expand-pic-btn {
+    display: none;
+  }
+}
+
+// белые кнопки-стрелки
+.arrow-btn {
+  position: relative;
+  width: 128.58px;
+  height: 58.38px;
+  border: none;
+  background-color: transparent;
+
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  &:hover::after {
+    content: "";
+    position: absolute;
+    // display: block;
+    width: 128.58px;
+    height: 58.38px;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &-prev:hover::after {
+    background-image: url("../icons/project-prev-hover.svg");
+  }
+
+  &-next:hover::after {
+    background-image: url("../icons/project-next-hover.svg");
+  }
+}
+
+@include tablets {
+  .arrow-btn {
+    width: 42.86px;
+    height: 19.46px;
+
+    &:hover::after {
+      width: 42.86px;
+      height: 19.46px;
+    }
   }
 }

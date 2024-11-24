@@ -9,121 +9,450 @@
   <body>
     <header class="header">
       <div class="header__fitst-line"></div>
-      <div class="header__gallery"></div>
-    </header>
-    <main class="main">
-      <section class="order-service">
-        <h2 class="order-service__title">
-          Свяжитесь с&nbsp;нами, чтобы заказать услугу
-        </h2>
-        <div class="order-service__contacts">
-          <p class="order-service__contacts-city">Санкт-Петербург</p>
-          <p class="order-service__contacts-tel">
-            <a href="tel:+79218888888" class="order-service__contacts-tel-link"
-              >+7(921) 888 88 88</a
-            >
-          </p>
-          <p class="order-service__contacts-email">
-            <a
-              href="mailto:info@vesna.ru"
-              class="order-service__contacts-email-link"
-              >info@vesna.ru</a
-            >
-          </p>
-          <p class="order-service__contacts-insta">
-            <a href="#" class="order-service__contacts-insta-link">
-              <img
-                src="./assets/icons/insta.svg"
-                alt="иконка сайта Инстаграм"
-                class="order-service__contacts-insta-icon"
-              />
-            </a>
-          </p>
-        </div>
-        <form action="submit" class="form">
-          <div class="form__input-group">
-            <div class="form__input-container">
-              <input
-                type="text"
-                name="name"
-                id="userName"
-                placeholder=" "
-                class="form__input-field form__input-field--name"
-                required
-              />
-              <label for="userName" class="form__input-label">Имя</label>
-            </div>
-            <div class="form__input-container">
-              <input
-                type="email"
-                name="email"
-                id="userEmail"
-                placeholder=" "
-                class="form__input-field form__input-field--email"
-                required
-              />
-              <label for="userEmail" class="form__input-label">Email</label>
-            </div>
-            <div class="form__input-container">
-              <input
-                type="tel"
-                id="userPhone"
-                name="phone"
-                placeholder=" "
-                pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
-                class="form__input-field form__input-field--tel"
-                required
-              />
-              <label for="userPhone" class="form__input-label--default"
-                >+7 (___) ___ __ __</label
-              >
-              <label for="userPhone" class="form__input-label--focus"
-                >Телефон</label
-              >
-            </div>
-            <div class="form__input-container form__comments-container">
-              <textarea
-                name="comments"
-                id="userComments"
-                placeholder=" "
-                class="form__input-field form__comments-field"
-              ></textarea>
-              <label
-                for="userComments"
-                class="form__input-label form__comments-label"
-                >Комментарий</label
-              >
-            </div>
-            <div class="form__consent-container">
-              <input
-                type="checkbox"
-                name="order-service__form-consent"
-                id="order-service__userConsent"
-                class="form__consent-checkbox"
-                checked
-                required
-              />
-              <label
-                for="order-service__userConsent"
-                class="form__consent-label"
-                >Я даю согласие на обработку своих
-                <a href="#" class="form__consent-link"
-                  >персональных данных</a
-                ></label
-              >
-            </div>
+      <section class="slider">
+        <div class="slider__track">
+          <!-- картинки видные при разрешении от 1920 до 440 -->
+          <div class="slider__slide--cropped slider__slide1--cropped">
+            <img
+              src="./assets/img/project-slide1-crop.png"
+              alt="сад"
+              class="slider__slide-img"
+            />
           </div>
-
-          <div class="order-service__button-container">
-            <button type="submit" class="button button--olive-large">
-              Отправить
+          <div class="slider__slide--cropped slider__slide2--cropped">
+            <img
+              src="./assets/img/project-slide2-crop.png"
+              alt="сад"
+              class="slider__slide-img"
+            />
+          </div>
+          <div class="slider__slide--cropped slider__slide3">
+            <img
+              src="./assets/img/project-slide3-crop.png"
+              alt="сад"
+              class="slider__slide-img"
+            />
+          </div>
+          <!-- картинки видные при разрешении 440px и меньше -->
+          <div class="slider__slide--uncropped slider__slide1--uncropped">
+            <img
+              src="./assets/img/project-slide2-full.png"
+              alt="дорога в цветочном саду"
+              class="slider__slide-img"
+            />
+          </div>
+          <div class="slider__slide--uncropped slider__slide2--uncropped">
+            <img
+              src="./assets/img/project-slide1-full.png"
+              alt="дорога в цветочном саду"
+              class="slider__slide-img"
+            />
+          </div>
+          <div class="slider__slide--uncropped slider__slide1--uncropped">
+            <img
+              src="./assets/img/project-slide3-full.png"
+              alt="дорога в цветочном саду"
+              class="slider__slide-img"
+            />
+          </div>
+          <div class="slider__btns">
+            <button class="arrow-btn arrow-btn-prev">
+              <img
+                src="./assets/icons/project-prev.svg"
+                alt="стрелка влево"
+                class="arrow-btn__img"
+              />
+            </button>
+            <button class="arrow-btn arrow-btn-next">
+              <img
+                src="./assets/icons/project-next.svg"
+                alt="стрелка вправо"
+                class="arrow-btn__img"
+              />
             </button>
           </div>
-        </form>
+          <div class="slider__progress">
+            <span class="slider__progress-current">01</span>
+            <img
+              src="./assets/icons/project-nav-progress.svg"
+              alt="линия прогресса"
+              class="slider__progress-track-img"
+            />
+            <span class="slider__progress-total">11</span>
+          </div>
+          <!-- Кнопка для вывода картинки поверх контента -->
+          <button
+            class="expand-pic-btn"
+            onclick="openWindow('pic__popupWindow')"
+          >
+            <img
+              src="./assets/icons/project-btn-expand.svg"
+              alt="кнопка для увеличения картинки"
+              class="expand-pic-btn__img"
+            />
+          </button>
+          <!-- контейнер для размытия элементов за картинкой -->
+          <div class="popup-overlay" id="overlay"></div>
+          <!-- сам попап для картинки-->
+          <div class="popup" id="pic__popupWindow">
+            <div class="popup__wrapper-pic">
+              <div class="popup__wrapper-pic-content">
+                <button
+                  class="close-btn close-btn--white"
+                  onclick="closewindow('pic__popupWindow')"
+                >
+                  <span></span>
+                </button>
+                <img
+                  src="./assets/img/project-slide2-crop.png"
+                  alt="дорога в цветочном саду"
+                  class="popup__img"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider__thumbnails">
+          <div class="slider__thumbnail-container">
+            <img
+              src="./assets/img/project-thumbnail-cloudy.png"
+              alt="скамейка в саду"
+              class="slider__thumbnail-img"
+            />
+          </div>
+          <div class="slider__thumbnail-container">
+            <img
+              src="./assets/img/project-thumbnail-cloudy.png"
+              alt="скамейка в саду"
+              class="slider__thumbnail-img"
+            />
+          </div>
+          <div class="slider__thumbnail-container">
+            <img
+              src="./assets/img/project-thumbnail-cloudy.png"
+              alt="скамейка в саду"
+              class="slider__thumbnail-img"
+            />
+          </div>
+          <div class="slider__thumbnail-container">
+            <img
+              src="./assets/img/project-thumbnail-cloudy.png"
+              alt="скамейка в саду"
+              class="slider__thumbnail-img"
+            />
+          </div>
+          <div class="slider__thumbnail-container">
+            <img
+              src="./assets/img/project-thumbnail-cloudy.png"
+              alt="скамейка в саду"
+              class="slider__thumbnail-img"
+            />
+          </div>
+          <div class="slider__thumbnail-container">
+            <img
+              src="./assets/img/project-thumbnail-bright.png"
+              alt="скамейка в саду"
+              class="slider__thumbnail-img"
+            />
+          </div>
+          <div class="slider__thumbnail-container">
+            <img
+              src="./assets/img/project-thumbnail-cloudy.png"
+              alt="скамейка в саду"
+              class="slider__thumbnail-img"
+            />
+          </div>
+          <div class="slider__thumbnail-container">
+            <img
+              src="./assets/img/project-thumbnail-cloudy.png"
+              alt="скамейка в саду"
+              class="slider__thumbnail-img"
+            />
+          </div>
+          <div class="slider__thumbnail-container">
+            <img
+              src="./assets/img/project-thumbnail-cloudy.png"
+              alt="скамейка в саду"
+              class="slider__thumbnail-img"
+            />
+          </div>
+          <div class="slider__thumbnail-container">
+            <img
+              src="./assets/img/project-thumbnail-cloudy.png"
+              alt="скамейка в саду"
+              class="slider__thumbnail-img"
+            />
+          </div>
+          <div class="slider__thumbnail-container">
+            <img
+              src="./assets/img/project-thumbnail-cloudy.png"
+              alt="скамейка в саду"
+              class="slider__thumbnail-img"
+            />
+          </div>
+        </div>
+      </section>
+    </header>
+    <main class="main">
+      <section class="back-to-portfolio">
+        <a href="#" class="back-to-portfolio__link"
+          ><img
+            src="./assets/icons/back-arrow.svg"
+            alt="стрелка влево"
+            class="back-to-portfolio__icon"
+          />
+          <span class="back-to-portfolio__title--whole"
+            >Назад
+            <span class="back-to-portfolio__title--hidden"
+              >к портфолио</span
+            ></span
+          ></a
+        >
+      </section>
+      <section class="project">
+        <div class="project__details project__details--img-left">
+          <div
+            class="project__details-description project__details-description--long"
+          >
+            <div class="project__title-subtitle">
+              <h1 class="project__title">Lorem ipsum</h1>
+              <p class="project__subtitle">Lorem ipsum dolor sit amet,</p>
+            </div>
+            <div class="project__features">
+              <div class="project__feature project__feature-year">
+                <p class="project__feature-name">Реализация</p>
+                <p class="project__feature-text">2018-2019</p>
+              </div>
+              <div class="project__feature project__feature-square">
+                <p class="project__feature-name">Площать</p>
+                <p class="project__feature-text">35 соток</p>
+              </div>
+              <div class="project__feature project__feature-location">
+                <p class="project__feature-name">Местоположение</p>
+                <p class="project__feature-text">Ленинградская область</p>
+              </div>
+            </div>
+            <p class="project__text project__text--grey">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu
+            </p>
+          </div>
+          <div
+            class="project__details-img-container project__details-img-container--big-padd-bot"
+          >
+            <img
+              src="./assets/img/project-img1.png"
+              alt="скамейка в саду"
+              class="project__details-img"
+            />
+          </div>
+        </div>
+        <div
+          class="project__details project__details--narrow project__details--img-right"
+        >
+          <div class="project__details-description">
+            <p class="project__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing...
+            </p>
+          </div>
+          <div class="project__details-img-container">
+            <img
+              src="./assets/img/project-img2.png"
+              alt="план сада черно-белый"
+              class="project__details-img"
+            />
+          </div>
+        </div>
+        <div
+          class="project__details project__details--img-right project__details--big-gap"
+        >
+          <div class="project__details-description">
+            <p class="project__text--grey">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu Lorem ipsum
+              dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+              ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+              voluptate velit esse cillum dolore eu
+            </p>
+          </div>
+          <div class="project__details-img-container">
+            <img
+              src="./assets/img/project-img3.png"
+              alt="план сада цветной"
+              class="project__details-img"
+            />
+          </div>
+        </div>
+        <div
+          class="project__details project__details--img-left project__details--big-gap-phone"
+        >
+          <div class="project__details-description">
+            <p class="project__text--grey">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu Lorem ipsum
+              dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+              ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+              voluptate velit esse cillum dolore eu Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+              labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+              nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate
+              velit esse cillum dolore eu
+            </p>
+          </div>
+          <div class="project__details-img-container">
+            <img
+              src="./assets/img/project-img1.png"
+              alt="скамейка в саду"
+              class="project__details-img"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="order-project">
+        <p class="order-project__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing...
+        </p>
+        <div class="order-project__banner">
+          <div class="order-project__imgs">
+            <div
+              class="order-project__img-container order-project__img-container1"
+            >
+              <img
+                src="./assets/img/order-project4.png"
+                alt="картинка деревянного мостика"
+                class="order-project__img"
+              />
+            </div>
+            <div
+              class="order-project__img-container order-project__img-container2"
+            >
+              <img
+                src="./assets/img/order-project2.png"
+                alt="картинка с лейкой, поливающей цветы"
+                class="order-project__img"
+              />
+            </div>
+            <div
+              class="order-project__img-container order-project__img-container3"
+            >
+              <img
+                src="./assets/img/order-project3.png"
+                alt="картинка дорожки в саду"
+                class="order-project__img"
+              />
+            </div>
+            <div
+              class="order-project__img-container order-project__img-container4"
+            >
+              <img
+                src="./assets/img/order-project1.png"
+                alt="картинка арки из цветов"
+                class="order-project__img"
+              />
+            </div>
+          </div>
+          <div class="order-project__title-form">
+            <h2 class="order-project__title">Хотите так же?</h2>
+            <p class="order-project__subtitle">
+              Укажите номер телефона, и мы свяжемся с&nbsp;Вами, чтобы обсудить
+              все пожелания
+            </p>
+            <form action="submit" class="form order-project__form">
+              <div class="form__input-group">
+                <div class="form__input-container">
+                  <input
+                    type="tel"
+                    id="order-project__userPhone"
+                    name="phone"
+                    placeholder=" "
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                    class="form__input-field form__input-field--tel"
+                    required
+                  />
+                  <label
+                    for="order-project__userPhone"
+                    class="form__input-label--default"
+                    >+7 (___) ___ __ __</label
+                  >
+                  <label
+                    for="order-project__userPhone"
+                    class="form__input-label--focus"
+                    >Телефон</label
+                  >
+                </div>
+                <div class="form__consent-container">
+                  <input
+                    type="checkbox"
+                    name="order-project__form-consent"
+                    id="order-project__userConsent"
+                    class="form__consent-checkbox"
+                    checked
+                    required
+                  />
+                  <label
+                    for="order-project__userConsent"
+                    class="form__consent-label"
+                    >Я даю согласие на обработку своих
+                    <a href="#" class="form__consent-link"
+                      >персональных данных</a
+                    ></label
+                  >
+                </div>
+              </div>
+              <div class="order-project__button-container">
+                <button type="submit" class="button button--outline-white">
+                  Перезвоните мне
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="btw-pages">
+        <div class="btw-pages__prev-container btw-pages__container">
+          <a href="" class="btw-pages__link btw-pages__prev-link">
+            <img
+              src="./assets/icons/project-prev.svg"
+              alt="стрелка, указывающая влево"
+              class="btw-pages__icon"
+            />
+          </a>
+          <div class="btw-pages__text">
+            <p class="btw-pages__subtitle">Предыдущий проект</p>
+            <h2 class="btw-pages__title">Lorem ipsum</h2>
+          </div>
+        </div>
+        <div class="btw-pages__next-container btw-pages__container">
+          <a href="" class="btw-pages__link btw-pages__next-link">
+            <img
+              src="./assets/icons/project-next.svg"
+              alt="стрелка, указывающая вправо"
+              class="btw-pages__icon"
+            />
+          </a>
+          <div class="btw-pages__text">
+            <p class="btw-pages__subtitle">Следующий проект</p>
+            <h2 class="btw-pages__title">Lorem ipsum</h2>
+          </div>
+        </div>
       </section>
     </main>
     <footer class="footer"></footer>
-
+    <!-- скрипт для ввода номера телефона в форму -->
     <script>
       document
         .getElementById("userPhone")
@@ -152,6 +481,7 @@
           input.value = formattedValue;
         });
     </script>
+    <!-- скрипт для закрытия и открытия всплывающих окон -->
     <script>
       function openWindow() {
         document.getElementById("popupWindow").style.display = "block";
@@ -160,6 +490,17 @@
 
       function closewindow() {
         document.getElementById("popupWindow").style.display = "none";
+        document.getElementById("overlay").style.display = "none";
+      }
+    </script>
+    <script>
+      function openWindow(popupId) {
+        document.getElementById(popupId).style.display = "block";
+        document.getElementById("overlay").style.display = "block";
+      }
+
+      function closewindow(popupId) {
+        document.getElementById(popupId).style.display = "none";
         document.getElementById("overlay").style.display = "none";
       }
     </script>

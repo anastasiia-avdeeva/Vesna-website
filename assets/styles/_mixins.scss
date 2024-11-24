@@ -88,10 +88,58 @@
 }
 
 // миксин для шрифта Геометрия в пагинации
-@mixin geometria-font {
+@mixin geometria-400-font {
   font-family: $font-family-geometria;
   font-weight: $font-weight-400;
   font-size: $font-size-pagination;
   line-height: $line-height;
   font-style: normal;
 }
+
+//  миксин для скрытия скроллбара
+@mixin hide-scrollbar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  & {
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+// миксин для горизонтальной карусели
+@mixin horizontal-carousel {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  @include hide-scrollbar;
+}
+
+// миксин для контейнеров с картинками внутри карусели
+@mixin horizontal-carousel__container {
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+  width: 300px;
+  height: 270px;
+  overflow: hidden;
+}
+
+// миксин для картинки внутри контейнера карусели
+@mixin horizontal-carousel__img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+// миксин для шрифта выпадающего списка меню в хэдер
+@mixin header-burger-menu-font {
+  font-family: $font-family-geometria;
+  font-weight: $font-weight-500;
+  font-size: $font-size-button-transparent;
+  line-height: $line-height;
+  font-style: normal
+}
+

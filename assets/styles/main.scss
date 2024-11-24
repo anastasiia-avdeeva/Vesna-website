@@ -3,6 +3,9 @@
 @import "./mixins";
 @import "./base";
 @import "./media";
+@import "./media";
+
+@import "./base";
 
 // import fonts
 @import "../fonts/fonts";
@@ -14,10 +17,14 @@
 @import "./blocks/forms";
 @import "./buttons";
 @import "./blocks/popup-windows";
+@import "./footer";
 @import "./blocks/scroll-to-top";
 
+@import "./blocks/btw-pages";
 @import "./blocks/services_order-service.scss";
 @import "./blocks/main_garden-guide";
+@import "./blocks/header_first-line";
+@import "./blocks/back-to";
 
 // link blocks main page
 @import "./blocks/main_hero";
@@ -34,6 +41,7 @@
 // link blocks portfolio page
 
 // link blocks project page
+@import "./blocks/project-page";
 
 // link blocks services page
 

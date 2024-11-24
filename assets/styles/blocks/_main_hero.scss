@@ -137,7 +137,7 @@
   &__pagination {
     display: flex;
     align-items: center;
-    @include geometria-font;
+    @include geometria-400-font;
   }
   &__current-slide {
     font-weight: 700;
@@ -188,6 +188,10 @@
 
   @include phones{
 
+    background: url('../img/hero-bg-phones.jpg') no-repeat center center / cover;
+    margin-bottom: 47px;
+    height: 566px;
+
     &::before { 
       content: ''; 
       position: absolute; 
@@ -206,7 +210,7 @@
     &__container{
       margin: 0 16px; // Уменьшение отступов для планшетов
       margin-bottom: 47px;
-      height: 566px;
+      height: 487px;
     }
 
     &__content {

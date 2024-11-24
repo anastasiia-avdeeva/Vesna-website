@@ -1,253 +1,246 @@
-.landscape { 
-  margin: 0 87px; 
-  margin-bottom: 380px; 
+.landscape {
+  margin: 0 87px;
+  margin-bottom: 380px;
   position: relative;
 
-  &::before { 
-    content: ''; 
-    position: absolute; 
-    top: 57%; 
-    left: 26%; 
-    transform: translateY(-50%); 
-    width: 883px;
-    height: 930px; 
-    background-image: url('../img/landscape-bg.svg'); 
-    background-size: contain; 
-    background-repeat: no-repeat; 
-    z-index: -1;
-    pointer-events: none; 
-  }
-
-&__title {
-  text-align: center; 
-  margin-bottom: 86px; 
-  @include h3;
-  color: $black; 
-
-  .bold {
-    font-weight: bold; 
-  }
-}
-
-&__content {
-  display: flex; 
-  gap: 75px; 
-  justify-content: space-between; 
-}
-
-&__image {
-  position: relative; 
-  max-width: 700px; 
-  margin: 0 auto; 
-  display: flex; 
-  flex-direction: column; 
-  align-items: center; 
-
-  ::after { 
-    content: ''; 
-    position: absolute; 
-    top: 472px; 
-    left: 258px; 
-    width: 536px;
-    height: 402px;
-    z-index: 2;
-    background: url('../img/landscape2.jpg') no-repeat center center;
-    background-size: cover; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-}
-
-&__caption {
-  @include h5; 
-  margin-bottom: 14px; 
-}
-
-&__list {
-  max-width: 45%; 
-  display: flex; 
-  flex-direction: column; 
-  gap: 0px; 
-  justify-content: center; 
-  margin-top: 124px;
-  z-index: 3;
-}
-
-&__item {
-  display: flex; 
-  align-items: flex-start;
-  gap: 35px;
-  padding-left: 28px;
-  margin-bottom: 156px; 
-  width: 65%;
-
-  &:nth-child(2) {
-    padding-left: 72px; 
-    margin-bottom: 161px;
-    width: 81%; 
-  }
-
-  &:nth-child(3) {
-    padding-left: 124px; 
-    margin-bottom: 0; 
-    width: 84%;
-  }
-
-  &::before { 
-    content: ""; 
-    flex-shrink: 0;
-    width: 50px; 
-    height: 50px;
-    background-image: url("../icons/circle-checked.svg"); 
-    background-size: cover;
-    background-repeat: no-repeat; 
-    display: inline-block;
-  }
-}
-
-&__text {
-  @include h5; 
-  color: $black; 
-}
-
- // Медиа-запрос для экрана 768px
-@include tablets {
-
-  margin: 0 20px;
-  margin-bottom: 437px; 
-
   &::before {
-    content: none;
+    content: "";
+    position: absolute;
+    top: 57%;
+    left: 26%;
+    transform: translateY(-50%);
+    width: 883px;
+    height: 930px;
+    background-image: url("../img/landscape-bg.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+    pointer-events: none;
   }
 
   &__title {
-    margin-bottom: 66px;
+    text-align: center;
+    margin-bottom: 86px;
+    @include h3;
+    color: $black;
+
+    .bold {
+      font-weight: bold;
+    }
   }
 
   &__content {
-    flex-direction: column-reverse; 
-    gap: 66px; 
+    display: flex;
+    gap: 75px;
+    justify-content: space-between;
+  }
+
+  &__image {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    ::after {
+      content: "";
+      position: absolute;
+      top: 472px;
+      left: 258px;
+      width: 536px;
+      height: 402px;
+      z-index: 2;
+      background: url("../img/landscape2.jpg") no-repeat center center;
+      background-size: cover;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &__caption {
+    @include h5;
+    margin-bottom: 14px;
   }
 
   &__list {
-    max-width: 100%; 
-    margin-top: 0px; 
+    max-width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    justify-content: center;
+    margin-top: 124px;
+    z-index: 3;
   }
 
   &__item {
-    width: 100%; 
-    padding: 0px;
-    margin-bottom: 50px; 
+    display: flex;
+    align-items: flex-start;
+    gap: 35px;
+    padding-left: 28px;
+    margin-bottom: 156px;
+    width: 65%;
 
     &:nth-child(2) {
-      padding: 0px; 
-      margin-bottom: 50px; 
-      width: 100%;
+      padding-left: 72px;
+      margin-bottom: 161px;
+      width: 81%;
     }
 
     &:nth-child(3) {
-      padding: 0px; 
-      width: 100%; 
+      padding-left: 124px;
+      margin-bottom: 0;
+      width: 84%;
     }
-  }
 
-  &__image {
-    ::after {
-      left: 165px; 
+    &::before {
+      content: "";
+      flex-shrink: 0;
+      width: 50px;
+      height: 50px;
+      background-image: url("../icons/circle-checked.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: inline-block;
     }
-  }
-  
-}
-
-// Адаптивные стили для экрана 440px
-@include phones {
-
-  margin: 0 16px; 
-  margin-bottom: 287px; 
-
-  &::before {
-      content: ''; 
-      position: absolute; 
-      top: 30%; 
-      left: 8%; 
-      width: 367px; 
-      height: 383px; 
-      background-image: url('../img/landscape-bg.svg'); 
-      background-size: contain; 
-      background-repeat: no-repeat; 
-      z-index: -1; 
-      pointer-events: none; 
-  }
-
-  &__title {
-      @include h5; 
-
-      br {
-        display: none; 
-      }
-  }
-
-  &__content {
-      gap: 56px; 
-  }
-
-  &__image {
-
-      ::before {
-          content: ''; 
-          position: absolute;
-          top: 330px; 
-          left: 18px; 
-          width: 15px;
-          height: 177px; 
-          z-index: 3; 
-          background: url('../img/3d.svg') no-repeat center center; 
-          background-size: cover; 
-      }
-
-      ::after {
-          content: ''; 
-          position: absolute; 
-          top: 306px; 
-          left: 56px; 
-          width: 352px; 
-          height: 204px; 
-          z-index: 2; 
-          background: url('../img/landscape2.jpg') no-repeat center center; 
-          background-size: cover;
-          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
-      }
-  }
-
-
-&__img {
-  position: relative; 
-  width: 100%; 
-}
-
-  &__caption {
-      width: 0; 
-      height: 0; 
-      overflow: hidden; 
-  }
-
-  &__item {
-      gap: 19px; 
-      margin-bottom: 36px; 
-     
-
-      &:nth-child(2) {
-        margin-bottom: 36px; 
-      }
-
-
-      &::before {
-          width: 35px; 
-          height: 35px; 
-      }
   }
 
   &__text {
-      @include font-size-smallest; 
+    @include h5;
+    color: $black;
   }
-}
+
+  // Медиа-запрос для экрана 768px
+  @include tablets {
+    margin: 0 20px;
+    margin-bottom: 437px;
+
+    &::before {
+      content: none;
+    }
+
+    &__title {
+      margin-bottom: 66px;
+    }
+
+    &__content {
+      flex-direction: column-reverse;
+      gap: 66px;
+    }
+
+    &__list {
+      max-width: 100%;
+      margin-top: 0px;
+    }
+
+    &__item {
+      width: 100%;
+      padding: 0px;
+      margin-bottom: 50px;
+
+      &:nth-child(2) {
+        padding: 0px;
+        margin-bottom: 50px;
+        width: 100%;
+      }
+
+      &:nth-child(3) {
+        padding: 0px;
+        width: 100%;
+      }
+    }
+
+    &__image {
+      ::after {
+        left: 165px;
+      }
+    }
+  }
+
+  // Адаптивные стили для экрана 440px
+  @include phones {
+    margin: 0 16px;
+    margin-bottom: 287px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 30%;
+      left: 8%;
+      width: 367px;
+      height: 383px;
+      background-image: url("../img/landscape-bg.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    &__title {
+      @include h5;
+
+      br {
+        display: none;
+      }
+    }
+
+    &__content {
+      gap: 56px;
+    }
+
+    &__image {
+      ::before {
+        content: "";
+        position: absolute;
+        top: 330px;
+        left: 18px;
+        width: 15px;
+        height: 177px;
+        z-index: 3;
+        background: url("../img/3d.svg") no-repeat center center;
+        background-size: cover;
+      }
+
+      ::after {
+        content: "";
+        position: absolute;
+        top: 306px;
+        left: 56px;
+        width: 352px;
+        height: 204px;
+        z-index: 2;
+        background: url("../img/landscape2.jpg") no-repeat center center;
+        background-size: cover;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    &__img {
+      position: relative;
+      width: 100%;
+    }
+
+    &__caption {
+      width: 0;
+      height: 0;
+      overflow: hidden;
+    }
+
+    &__item {
+      gap: 19px;
+      margin-bottom: 36px;
+
+      &:nth-child(2) {
+        margin-bottom: 36px;
+      }
+
+      &::before {
+        width: 35px;
+        height: 35px;
+      }
+    }
+
+    &__text {
+      @include font-size-smallest;
+    }
+  }
 }
