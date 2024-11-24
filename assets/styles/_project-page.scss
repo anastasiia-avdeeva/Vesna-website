@@ -2,27 +2,32 @@
   margin-bottom: 100px;
 
   &__track {
-    // height: 578px;
+    margin-bottom: 4px;
+    height: 575px;
     position: relative;
     display: flex;
     overflow: hidden;
+    align-items: stretch;
   }
 
-  &__slide2 {
-    // flex: 1 0 75%;
-    flex-basis: 75%;
+  &__slide--uncropped {
+    display: none;
   }
 
-  &__slide1,
-  &__slide3 {
-    // flex: 1 0 12.5%;
-    flex-basis: 12.5%;
+  &__slide--cropped {
+    flex: 0 0 12.5%;
+    height: 100%;
+  }
+
+  &__slide2--cropped {
+    flex: 0 0 75%;
+    height: 100%;
   }
 
   &__slide-img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
   }
 
   &__btns {
@@ -36,41 +41,6 @@
     justify-content: space-between;
   }
 
-  &__btn {
-    position: relative;
-    width: 128.58px;
-    height: 58.38px;
-    border: none;
-    background-color: transparent;
-  }
-
-  &__btn-img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
-
-  &__btn:hover::after {
-    content: "";
-    position: absolute;
-    width: 128.58px;
-    height: 58.38px;
-    top: 0;
-    left: 0;
-    display: block;
-    z-index: 2;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-
-  &__btn-prev:hover::after {
-    background-image: url("../icons/project-prev-hover.svg");
-  }
-
-  &__btn-next:hover::after {
-    background-image: url("../icons/project-next-hover.svg");
-  }
-
   &__progress {
     position: absolute;
     bottom: 31px;
@@ -81,6 +51,31 @@
     gap: 20px;
     @include geometria-400-font;
     color: $white;
+  }
+
+  &__thumbnails {
+    display: flex;
+    gap: 4px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+
+  &__thumbnails::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__thumbnail-container {
+    flex: 0 0 auto;
+    height: 144px;
+    width: 191px;
+    overflow: hidden;
+  }
+
+  &__thumbnail-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 }
 
@@ -423,6 +418,29 @@
 }
 
 @include tablets {
+  .slider {
+    margin-bottom: 50px;
+    &__track {
+      height: 430px;
+      // align-items: stretch;
+    }
+
+    &__slide-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &__progress {
+      bottom: 15px;
+      font-size: $font-size-label-focus;
+    }
+
+    &__thumbnail-container {
+      height: 69px;
+      width: auto;
+    }
+  }
   .project__details-description,
   .back-to-portfolio,
   .order-project {
@@ -542,6 +560,43 @@
 }
 
 @include phones {
+  .slider {
+    margin-bottom: 26px;
+
+    &__track {
+      display: flex;
+      gap: 2px;
+      // overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      overflow: scroll;
+    }
+
+    &__imgs::-webkit-scrollbar {
+      display: none;
+    }
+
+    &__slide--cropped,
+    &__btns,
+    &__progress {
+      display: none;
+    }
+
+    &__slide--uncropped {
+      display: block;
+      flex: 0 0 auto;
+      width: 300px;
+      height: 430px;
+      overflow: hidden;
+    }
+
+    &__slide-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
   .project__details-description,
   .back-to-portfolio {
     margin-left: 16px;
