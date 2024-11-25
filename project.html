@@ -10,7 +10,7 @@
     <header class="header">
       <section class="header__first-line header__first-line--bg">
         <div class="header__logo">
-          <a href="#" class="header__logo-link" target="_blank">
+          <a href="./index.html" class="header__logo-link" target="_blank">
             <img
               src="./assets/icons/header-logo.svg"
               alt="логотип компании Весна"
@@ -27,10 +27,10 @@
               <a href="./portfolio.html" class="header__nav-list-item-link">Портфолио</a>
             </li>
             <li class="header__nav-list-item">
-              <a href="#" class="header__nav-list-item-link">Услуги</a>
+              <a href="./services.html" class="header__nav-list-item-link">Услуги</a>
             </li>
             <li class="header__nav-list-item">
-              <a href="#" class="header__nav-list-item-link">Контакты</a>
+              <a href="./contacts.html" class="header__nav-list-item-link">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -126,10 +126,10 @@
               <a href="./portfolio.html" class="menu__item-link">Портфолио</a>
             </li>
             <li class="menu__item">
-              <a href="#" class="menu__item-link">Услуги</a>
+              <a href="./services.html" class="menu__item-link">Услуги</a>
             </li>
             <li class="menu__item">
-              <a href="#" class="menu__item-link">Контакты</a>
+              <a href="./contacts.html" class="menu__item-link">Контакты</a>
             </li>
             <li class="menu__item">
               <a href="tel:+79218888888" class="button menu__item-tel-link">+7 (921) 888 88 88</a>
@@ -331,7 +331,7 @@
 
     <main class="main">
       <section class="back-to">
-        <a href="#" class="back-to__link"
+        <a href="./portfolio.html" class="back-to__link"
           ><img
             src="./assets/icons/back-arrow.svg"
             alt="стрелка влево"
@@ -557,7 +557,7 @@
       </section>
       <section class="btw-pages">
         <div class="btw-pages__prev-container btw-pages__container">
-          <a href="" class="btw-pages__link btw-pages__prev-link">
+          <a href="./project.html" class="btw-pages__link btw-pages__prev-link">
             <img
               src="./assets/icons/project-prev.svg"
               alt="стрелка, указывающая влево"
@@ -570,7 +570,7 @@
           </div>
         </div>
         <div class="btw-pages__next-container btw-pages__container">
-          <a href="" class="btw-pages__link btw-pages__next-link">
+          <a href="./project.html" class="btw-pages__link btw-pages__next-link">
             <img
               src="./assets/icons/project-next.svg"
               alt="стрелка, указывающая вправо"
@@ -583,6 +583,11 @@
           </div>
         </div>
       </section>
+      <!-- кнопка прокрутки наверх -->
+    <button class="button-round button-round--up scroll-to-top" id="scrollToTopButton" aria-label="Scroll to top">
+      <img src="./assets/img/buttons.svg/up-white.svg" alt="стрелка вверх">
+      Наверх
+    </button> 
     </main>
     <footer class="footer">
       <div class="footer__container">
@@ -605,7 +610,7 @@
           </div>
           <div class="footer__logo">
               <a class="footer__logo-link"
-                  href=""><img src="./assets/icons/footer.svg" alt="Logo">
+                  href="./index.html"><img src="./assets/icons/footer.svg" alt="Logo">
               </a>
           </div>
           <div class="footer__icon">
@@ -672,5 +677,28 @@
         document.getElementById("overlay").style.display = "none";
       }
     </script>
+    <!-- скрипт для кнопки вверх -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const scrollToTopButton = document.getElementById("scrollToTopButton");
+
+  // Показываем кнопку при прокрутке вниз
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollToTopButton.classList.add("visible");
+    } else {
+      scrollToTopButton.classList.remove("visible");
+    }
+  });
+
+  // Перемещение наверх при нажатии
+  scrollToTopButton.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+});
+  </script>
   </body>
 </html>
