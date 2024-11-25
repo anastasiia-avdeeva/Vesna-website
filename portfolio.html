@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header header--common">
       <section class="header__first-line">
         <div class="header__logo">
           <a href="./index.html" class="header__logo-link" target="_blank">
@@ -147,11 +147,12 @@
           </ul>
         </div>
       </section>
-        <div class="portfolio-container">
-            <h1 class="portfolio-title">Портфолио</h1>
-            <p class="portfolio-subtitle">Наши избранные проекты</p>
-        </div>
+      <div class="header--common__container">
+        <h1 class="header--common__title">Портфолио</h1>
+        <p class="header--common__subtitle">Наши избранные проекты</p>
+      </div>
       </header>
+      <main>
     <section class="project-portfolio"> <!-- контейнер для всех 3х карточек -->
         <ul> <!-- в нем находится 3 карточки -->
             <li class="project-card"> <!-- ПЕРВАЯ карточка -->
@@ -190,8 +191,8 @@
                         <p>
                             “Lorem ipsum dolor sit amet,
                             consectetur adipiscing elit,
-                            sed do eiusmod tempor 
-                            incididunt ut labore et dolore 
+                            sed do eiusmod tempor
+                            incididunt ut labore et dolore
                             magna aliqua.”
                         </p>
                     </div>
@@ -216,8 +217,7 @@
                         <div class="project-card__detail-label">Площадь:</div>
                         <div class="project-card__detail-value">35 соток</div>
                     </li>
-
-                    
+    
                     <li class="project-card__detail">
                         <div class="project-card__detail-label">Месторасположение:</div>
                         <div class="project-card__detail-value">Ленинградская область</div>
@@ -238,8 +238,8 @@
                         <p>
                             “Lorem ipsum dolor sit amet,
                             consectetur adipiscing elit,
-                            sed do eiusmod tempor 
-                            incididunt ut labore et dolore 
+                            sed do eiusmod tempor
+                            incididunt ut labore et dolore
                             magna aliqua.”
                         </p>
                     </div>
@@ -279,8 +279,8 @@
                         <p>
                             “Lorem ipsum dolor sit amet,
                             consectetur adipiscing elit,
-                            sed do eiusmod tempor 
-                            incididunt ut labore et dolore 
+                            sed do eiusmod tempor
+                            incididunt ut labore et dolore
                             magna aliqua.”
                         </p>
                     </div>
@@ -352,6 +352,7 @@
           </form>
         </div>
       </section>
+    </main>
     <footer class="footer">
         <div class="footer__container">
             <div class="footer__contacts">
@@ -427,5 +428,20 @@
         document.getElementById(popupId2).style.display = "none";
       }
   </script>
+<!-- круглые кнопки -->
+    <!-- Кнопка вправо "Все проекты" -->
+    <!-- <div class="button-round button-round--arrow">
+        <a class="button-round__link" href="button__link">Все проекты</a>
+        <a class="button-round__icon button-round__icon--black" href="#"><img src="./assets/img/buttons.svg/black-arrow.svg"
+                alt="arrow"></a>
+        <a class="button-round__icon button-round__icon--white" href="#"><img src="./assets/img/buttons.svg/white-arrow.svg"
+                alt="arrow"></a>
+    </div> -->
+    <!-- Кнопка наверх -->
+    <!-- <div class="button-round button-round--up">
+        <a class="button-round__icon button-round__icon--white" href=""><img src="./assets/img/buttons.svg/up-white.svg"
+                alt="arrow"></a>
+        <a class="button-round__link" href="#">Наверх</a>
+    </div> -->
 </body>
 </html>

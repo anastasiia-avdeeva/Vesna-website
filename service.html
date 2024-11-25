@@ -7,7 +7,7 @@
   <title>Vesna | Услуга</title>
 </head>
 <body>
-  <header class="header service">
+  <header class="header header--common">
     <section class="header__first-line">
       <div class="header__logo">
         <a href="./index.html" class="header__logo-link" target="_blank">
@@ -144,9 +144,9 @@
         </ul>
       </div>
     </section>
-    <section class="service__container">
-      <h1 class="service__title">Определенная услуга</h1>
-    </section>
+    <div class="header--common__container">
+      <h1 class="header--common__title">Определенная услуга</h1>
+    </div>
   </header>
 
   <main>
@@ -155,16 +155,10 @@
         ><img
           src="./assets/icons/back-arrow.svg"
           alt="стрелка влево"
-          class="back-to-portfolio__icon"
-        />
-        <span class="back-to-portfolio__title--whole"
-          >Назад
-          <span class="back-to-portfolio__title--hidden"
-            >к услугам</span
-          ></span
-        ></a
-      >
-    </section>
+          class="back-to-portfolio__icon"/>
+        <span class="back-to-portfolio__title--whole">Назад
+        <span class="back-to-portfolio__title--hidden">к услугам</span></span></a>
+      </section>
 
     <section class="service-detail">
       <div class="service-detail__content">
@@ -208,6 +202,7 @@
           <img src="./assets/img/service-galery-4.jpg" alt="Изображение 4" class="service-gallery__image">
         </div>
       </div>
+      <!-- изображения для слайдера -->
       <div class="service-gallery__imgs">
         <div
           class="service-gallery__img-container service-gallery__img-container1"
@@ -474,7 +469,6 @@
     });
   });
 </script>
-<!-- скрипт для открытия и закрытия всплывающих окон -->
   <!-- скрипт для открытия и закрытия всплывающих окон -->
   <script>
     function openWindow(popupId1, popupId2) {
