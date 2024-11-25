@@ -1301,7 +1301,6 @@ textarea:focus {
   align-items: center;
 }
 .header--common__container--col {
-  flex-direction: column;
   gap: 44px;
 }
 .header--common__title {
@@ -1332,8 +1331,14 @@ textarea:focus {
     margin-bottom: 13px;
     background: url("../img/serviceHeroBgPhones.jpg") no-repeat center center/cover;
   }
+  .header--common--services {
+    margin-bottom: 60px;
+  }
   .header--common__container {
     gap: 12px;
+  }
+  .header--common__container--col {
+    gap: 77px;
   }
   .header--common__title {
     font-family: "Noah", sans-serif;
@@ -4102,52 +4107,45 @@ textarea:focus {
 }
 
 @media screen and (max-width: 768px) {
-  .header__nav, .header__buttons {
-    display: none;
-  }
-  .header__first-line {
-    padding-left: 4%;
-    padding-right: 4%;
-  }
-  .header .header__img {
-    width: 140px;
-    height: 73.7px;
-  }
-  .header .hamburger-menu {
-    visibility: visible;
-    background-color: #545a2f;
-  }
-  .header .hamburger-menu .hamburger-menu__toggle:checked ~ .hamburger-menu__btn > .hamburger-menu__icon {
-    transform: rotate(45deg);
-  }
-  .header .hamburger-menu .hamburger-menu__toggle:checked ~ .hamburger-menu__btn > .hamburger-menu__icon::before {
-    top: 0;
-    transform: rotate(0);
-  }
-  .header .hamburger-menu .hamburger-menu__toggle:checked ~ .hamburger-menu__btn > .hamburger-menu__icon::after {
-    top: 0;
-    transform: rotate(90deg);
-  }
-  .header .hamburger-menu .hamburger-menu__toggle:checked ~ .menu__box {
-    visibility: visible;
+  .services-content {
+    margin: 0 20px 78px;
   }
 }
 @media screen and (max-width: 440px) {
-  .header__first-line {
-    padding-top: 16px;
-    padding-left: 16px;
-    padding-right: 16px;
+  .services-content {
+    margin: 0 16px 99px;
   }
-  .header__logo {
-    margin: 0px;
-    z-index: 3;
+  .services-content__card:nth-child(2n), .services-content__card:nth-child(2n+1) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "title" "text" "img" "button";
+    gap: 0px;
+    margin-bottom: 99px;
   }
-  .header__img {
-    width: 107px;
-    height: 56px;
+  .services-content__button-container {
+    justify-content: center;
   }
-  .header .menu__box {
-    width: 100%;
+  .services-content__title {
+    font-family: "Noah", sans-serif;
+    font-weight: 400;
+    font-size: 58px;
+    line-height: normal;
+    font-style: normal;
+    font-size: 24px;
+    margin-bottom: 26px;
+  }
+  .services-content__text {
+    margin-bottom: 36px;
+    font-family: "Noah", sans-serif;
+    font-weight: 400;
+    font-size: 58px;
+    line-height: normal;
+    font-style: normal;
+    font-size: 16px;
+  }
+  .services-content__img-container {
+    margin-bottom: 26px;
   }
 }
 .service-detail {

@@ -3,6 +3,7 @@
   height: 501px; // Задаем высоту первого экрана
   background: url("../img/serviceHeroBg.jpg") no-repeat center center / cover;
   margin-bottom: 60px;
+
   // контейнер с заголовком
   &__container {
     display: flex;
@@ -11,9 +12,7 @@
     justify-content: center;
     align-items: center;
   }
-
   &__container--col {
-    flex-direction: column;
     gap: 44px;
   }
   // сам заголовок
@@ -38,8 +37,16 @@
     background: url("../img/serviceHeroBgPhones.jpg") no-repeat center center /
       cover;
 
+      &--services {
+        margin-bottom: 60px;
+      }
+
       &__container {
         gap: 12px;
+      }
+
+      &__container--col {
+        gap: 77px;
       }
 
     &__title {

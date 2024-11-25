@@ -77,69 +77,47 @@
 // адаптив для экранов с разрешением не более 768px
 
 @include tablets {
-  .header {
-    &__nav,
-    &__buttons {
-      display: none;
-    }
-
-    &__first-line {
-      @include padding-header-footer-768;
-    }
-
-    .header__img {
-      width: 140px;
-      height: 73.7px;
-    }
-
-    .hamburger-menu {
-      visibility: visible;
-      background-color: $olive-dark;
-
-      .hamburger-menu__toggle:checked {
-        ~ .hamburger-menu__btn > .hamburger-menu__icon {
-          transform: rotate(45deg);
-
-          &::before {
-            top: 0;
-            transform: rotate(0);
-          }
-
-          &::after {
-            top: 0;
-            transform: rotate(90deg);
-          }
-        }
-
-        ~ .menu__box {
-          visibility: visible;
-        }
-      }
-    }
+  .services-content {
+    margin: 0 20px 78px;
   }
 }
 
 // адаптив для экранов с разрешением не более 440px
 
 @include phones {
-  .header {
-    &__first-line {
-      padding-top: 16px;
-      @include padding-header-footer-440;
+  .services-content {
+    margin: 0 16px 99px;
+
+    &__card:nth-child(2n),
+    &__card:nth-child(2n + 1) {
+      display: grid; // Повышаем приоритет
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-template-areas:
+        "title"
+        "text"
+        "img"
+        "button";
+      gap: 0px;
+      margin-bottom: 99px;
     }
 
-    &__logo {
-      margin: 0px;
-      z-index: 3;
+    &__button-container {
+      justify-content: center;
     }
 
-    &__img {
-      width: 107px;
-      height: 56px;
+    &__title {
+      @include h5;
+      margin-bottom: 26px;
+    }
+  
+    &__text {
+      margin-bottom: 36px;
+      @include font-size-smallest;
     }
 
-    .menu__box {
-      width: 100%;
+    &__img-container {
+      margin-bottom: 26px;
     }
   }
 }
