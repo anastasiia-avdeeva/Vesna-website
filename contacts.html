@@ -7,7 +7,7 @@
     <title>Vesna | contacts</title>
   </head>
   <body>
-    <header class="header header-contacts">
+    <header class="header header--common">
       <section class="header__first-line">
         <div class="header__logo">
           <a href="#" class="header__logo-link" target="_blank">
@@ -144,8 +144,8 @@
           </ul>
         </div>
       </section>
-      <div class="header-contacts__hero">
-        <h1 class="header-contacts__title">Контакты</h1>
+      <div class="header--common__container">
+        <h1 class="header--common__title">Контакты</h1>
       </div>
     </header>
     <main class="main">
@@ -281,6 +281,10 @@
           </div>
         </div>
       </section>
+      <button class="button-round button-round--up scroll-to-top" id="scrollToTopButton" aria-label="Scroll to top">
+        <img src="./assets/img/buttons.svg/up-white.svg" alt="стрелка вверх">
+        Наверх
+      </button>
     </main>
     <footer class="footer">
       <div class="footer__container">
@@ -319,44 +323,80 @@
       </div>
   </footer>
 
-    <script>
-      document
-        .getElementById("userPhone")
-        .addEventListener("input", function (e) {
-          const input = e.target;
-          let value = input.value.replace(/\D/g, "");
-
-          // Проверяем, если пользователь удалил цифры, чтобы не перезаписывать ввод
-          if (e.inputType === "deleteContentBackward") {
-            input.value = input.value;
-            return;
+        <!-- скрипт для ввода номера телефона в форму -->
+        <script>
+          document
+            .getElementById("userPhone")
+            .addEventListener("input", function (e) {
+              const input = e.target;
+              let value = input.value.replace(/\D/g, "");
+    
+              // Проверяем, если пользователь удалил цифры, чтобы не перезаписывать ввод
+              if (e.inputType === "deleteContentBackward") {
+                input.value = input.value;
+                return;
+              }
+    
+              // Добавляем "+7" в начало, если пользователь его еще не ввел
+              if (value.startsWith("7")) {
+                value = value.substring(1);
+              }
+    
+              let formattedValue = "+7 (";
+    
+              if (value.length > 0) formattedValue += value.substring(0, 3);
+              if (value.length >= 4) formattedValue += ") " + value.substring(3, 6);
+              if (value.length >= 7) formattedValue += " " + value.substring(6, 8);
+              if (value.length >= 9) formattedValue += " " + value.substring(8, 10);
+    
+              input.value = formattedValue;
+            });
+        </script>
+        <!-- скрипт для закрытия и открытия всплывающих окон -->
+        <script>
+          function openWindow() {
+            document.getElementById("popupWindow").style.display = "block";
+            document.getElementById("overlay").style.display = "block";
           }
-
-          // Добавляем "+7" в начало, если пользователь его еще не ввел
-          if (value.startsWith("7")) {
-            value = value.substring(1);
+    
+          function closewindow() {
+            document.getElementById("popupWindow").style.display = "none";
+            document.getElementById("overlay").style.display = "none";
           }
-
-          let formattedValue = "+7 (";
-
-          if (value.length > 0) formattedValue += value.substring(0, 3);
-          if (value.length >= 4) formattedValue += ") " + value.substring(3, 6);
-          if (value.length >= 7) formattedValue += " " + value.substring(6, 8);
-          if (value.length >= 9) formattedValue += " " + value.substring(8, 10);
-
-          input.value = formattedValue;
+        </script>
+        <script>
+          function openWindow(popupId) {
+            document.getElementById(popupId).style.display = "block";
+            document.getElementById("overlay").style.display = "block";
+          }
+    
+          function closewindow(popupId) {
+            document.getElementById(popupId).style.display = "none";
+            document.getElementById("overlay").style.display = "none";
+          }
+        </script>
+        <!-- скрипт для кнопки вверх -->
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+      const scrollToTopButton = document.getElementById("scrollToTopButton");
+    
+      // Показываем кнопку при прокрутке вниз
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          scrollToTopButton.classList.add("visible");
+        } else {
+          scrollToTopButton.classList.remove("visible");
+        }
+      });
+    
+      // Перемещение наверх при нажатии
+      scrollToTopButton.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
         });
-    </script>
-    <script>
-      function openWindow() {
-        document.getElementById("popupWindow").style.display = "block";
-        document.getElementById("overlay").style.display = "block";
-      }
-
-      function closewindow() {
-        document.getElementById("popupWindow").style.display = "none";
-        document.getElementById("overlay").style.display = "none";
-      }
-    </script>
+      });
+    });
+      </script>
   </body>
 </html>
