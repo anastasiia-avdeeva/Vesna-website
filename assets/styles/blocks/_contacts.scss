@@ -1,0 +1,94 @@
+.back-to--hidden {
+  display: none;
+}
+
+.contact-us {
+  margin: 0 15.2% 262px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "title contacts"
+    "form contacts";
+  align-items: center;
+  gap: 47px 20px;
+
+  &__title {
+    grid-area: title;
+    @include h3;
+    color: $black;
+  }
+
+  &__form {
+    grid-area: form;
+  }
+
+  &__contacts {
+    grid-area: contacts;
+    display: flex;
+    flex-direction: column;
+    gap: 77px;
+  }
+
+  &__contact-link {
+    display: flex;
+    align-items: center;
+    gap: 41px;
+    @include h4;
+    color: $black;
+  }
+
+  &__contact-icon {
+    width: 83px;
+    height: 83px;
+  }
+}
+
+@include tablets {
+  .back-to--hidden {
+    display: block;
+  }
+
+  .contact-us {
+    margin: 0 20px 134px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "contacts"
+      "title"
+      "form";
+    justify-items: center;
+    gap: 53px;
+
+    &__title {
+      text-align: center;
+    }
+
+    &__form {
+      justify-items: center;
+    }
+
+    &__contacts {
+      margin-bottom: 57px;
+      gap: 29px;
+    }
+  }
+}
+
+@include phones {
+  .contact-us {
+    &__title,
+    &__contact-link {
+      font-size: $font-size-h5;
+    }
+
+    &__contact-link {
+      gap: 31px;
+    }
+
+    &__contact-icon {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
