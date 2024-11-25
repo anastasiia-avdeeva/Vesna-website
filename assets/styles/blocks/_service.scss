@@ -1,3 +1,104 @@
+.service-detail {
+  margin: 0 292px 155px;
+
+  &__back {
+    margin-bottom: 100px;
+  }
+
+  &__back-link {
+    text-decoration: none;
+    color: $black;
+    @include h5;
+    display: inline-flex;
+    align-items: center;
+    gap: 42px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__back-icon {
+    width: 66px; 
+    height: 30px; 
+  }
+
+  &__content {
+    display: flex;
+    gap: 83px;
+    align-items: center;
+  }
+
+  &__image {
+    flex: 1;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__description {
+    flex: 1;
+  }
+
+  &__title {
+    @include h2;
+    margin-bottom: 56px;
+    color: $black;
+  }
+
+  &__text {
+    @include h5;
+    color: $black;
+  }
+
+  @include tablets {
+
+    margin: 0 20px; 
+    margin-bottom: 108px;
+
+    &__content {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 83px;
+      align-items: center;
+    }
+  }
+
+  @include phones {
+
+    margin: 0 16px; 
+    margin-bottom: 99px;
+
+    &__content {
+      gap: 47px;
+    }
+
+    &__back {
+      margin-bottom: 58px;
+    }
+  
+    &__back-link {
+      @include font-size-smallest;
+        gap: 12px;
+    }
+  
+    &__back-icon {
+      width: 25px; 
+      height: 15px; 
+    }
+
+    &__title {
+      @include h5;
+      margin-bottom: 26px;
+    }
+  
+    &__text {
+      @include font-size-smallest;
+    }
+  }
+}
+
 .service-gallery {
   margin: 0 292px 125px;
 
@@ -183,4 +284,39 @@
   }
 }
 
+.service-section {
+  margin: 0 537px 57px; // Отступы для секции
+  background-color: #fff; // Цвет фона
 
+  &__title {
+    @include h2;
+    color: $black;
+    margin-bottom: 47px;
+    text-align: center;
+  }
+
+  &__text {
+    @include h5;
+    color: $black;
+    text-align: center;
+  }
+
+  @include tablets {
+    margin: 0 20px 57px; // Отступы для секции
+  }
+
+  @include phones {
+    margin: 0 16px 99px; // Отступы для секции
+
+    &__title {
+      @include h5;
+      color: $black;
+      margin-bottom: 37px;
+    }
+  
+    &__text {
+      @include font-size-smallest;
+      text-align: left;
+    }
+  }
+}

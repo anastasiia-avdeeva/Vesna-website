@@ -11,18 +11,18 @@
 @import "./normalize.css";
 
 // common blocks
-@import "./blocks/forms";
-@import "./buttons";
-@import "./blocks/popup-windows";
-@import "./footer";
-
-@import "./blocks/btw-pages";
-@import "./blocks/services_order-service.scss";
-@import "./blocks/main_garden-guide";
-@import "./blocks/portfolio";
 @import "./blocks/header";
+@import "./blocks/footer";
+@import "./blocks/buttons";
+
+@import "./blocks/forms";
+@import "./blocks/popup-windows";
+@import "./blocks/btw-pages";
 @import "./blocks/back-to";
 @import "./blocks/scroll-to-top";
+
+@import "./blocks/services_order-service.scss";
+@import "./blocks/main_garden-guide";
 
 // link blocks main page
 @import "./blocks/main_hero";
@@ -37,16 +37,16 @@
 @import "./blocks/main_questions";
 
 // link blocks portfolio page
+@import "./blocks/portfolio";
 
 // link blocks project page
-@import "./blocks/project-page";
+@import "./blocks/project";
 
 // link blocks services page
 @import "./blocks/services";
+
 // link blocks service page
-@import "./blocks/service_detail";
-@import "./blocks/service_gallery";
-@import "./blocks/service_section";
+@import "./blocks/service";
 
 // link blocks contacts page
-@import "./blocks/contacts"; // link blocks
+@import "./blocks/contacts"; 

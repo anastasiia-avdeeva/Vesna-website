@@ -79,6 +79,11 @@
 @include tablets {
   .services-content {
     margin: 0 20px 78px;
+
+    &__card:nth-child(2n),
+    &__card:nth-child(2n + 1) {
+      gap: 27px 40px;
+    }
   }
 }
 

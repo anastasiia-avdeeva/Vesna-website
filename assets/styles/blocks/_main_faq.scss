@@ -125,6 +125,10 @@
     @include font-size-smallest;
     color: $black;
     cursor: pointer;
+
+    br {
+      display: none;
+    }
   }
 
   &__consent-link {
@@ -199,7 +203,12 @@
     margin-bottom: 27px;
     padding-left: 0;
   }
-
+  
+  &__consent-label {
+    br {
+      display: block;
+    }
+  }
 }
 
 }
