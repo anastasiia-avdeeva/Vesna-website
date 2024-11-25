@@ -218,7 +218,7 @@
           <!-- Кнопка для вывода картинки поверх контента -->
           <button
             class="expand-pic-btn"
-            onclick="openWindow('pic__popupWindow')"
+            onclick="openWindow('pic__popupWindow', 'pic-overlay')"
           >
             <img
               src="./assets/icons/project-btn-expand.svg"
@@ -227,14 +227,14 @@
             />
           </button>
           <!-- контейнер для размытия элементов за картинкой -->
-          <div class="popup-overlay" id="overlay"></div>
+          <div class="popup-overlay" id="pic-overlay"></div>
           <!-- сам попап для картинки-->
           <div class="popup" id="pic__popupWindow">
             <div class="popup__wrapper-pic">
               <div class="popup__wrapper-pic-content">
                 <button
                   class="close-btn close-btn--white"
-                  onclick="closewindow('pic__popupWindow')"
+                  onclick="closewindow('pic__popupWindow', 'pic-overlay')"
                 >
                   <span></span>
                 </button>
