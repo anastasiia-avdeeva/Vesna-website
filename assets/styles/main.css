@@ -1295,6 +1295,8 @@ textarea:focus {
 }
 .header--common__container {
   display: flex;
+  flex-direction: column;
+  gap: 20px;
   justify-content: center;
   align-items: center;
 }
@@ -1304,6 +1306,15 @@ textarea:focus {
   font-size: 70px;
   line-height: normal;
   font-style: normal;
+  color: #ffffff;
+}
+.header--common__subtitle {
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  font-size: 38px;
   color: #ffffff;
 }
 @media screen and (max-width: 768px) {
@@ -1317,6 +1328,9 @@ textarea:focus {
     margin-bottom: 13px;
     background: url("../img/serviceHeroBgPhones.jpg") no-repeat center center/cover;
   }
+  .header--common__container {
+    gap: 12px;
+  }
   .header--common__title {
     font-family: "Noah", sans-serif;
     font-weight: 400;
@@ -1326,6 +1340,14 @@ textarea:focus {
     font-size: 24px;
     font-weight: bold;
     margin-top: 50px;
+  }
+  .header--common__subtitle {
+    font-family: "Noah", sans-serif;
+    font-weight: 400;
+    font-size: 58px;
+    line-height: normal;
+    font-style: normal;
+    font-size: 18px;
   }
 }
 
@@ -4006,48 +4028,6 @@ textarea:focus {
     width: 256px;
   }
 }
-.service {
-  position: relative;
-  height: 501px;
-  background: url("../img/serviceHeroBg.jpg") no-repeat center center/cover;
-  margin-bottom: 60px;
-}
-.service__container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.service__title {
-  font-family: "Noah", sans-serif;
-  font-weight: 700;
-  font-size: 70px;
-  line-height: normal;
-  font-style: normal;
-  color: #ffffff;
-}
-@media screen and (max-width: 768px) {
-  .service__title {
-    margin-top: 50px;
-  }
-}
-@media screen and (max-width: 440px) {
-  .service {
-    height: 324px;
-    margin-bottom: 13px;
-    background: url("../img/serviceHeroBgPhones.jpg") no-repeat center center/cover;
-  }
-  .service__title {
-    font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
-    line-height: normal;
-    font-style: normal;
-    font-size: 24px;
-    font-weight: bold;
-    margin-top: 50px;
-  }
-}
-
 .service-detail {
   margin: 0 292px 155px;
 }

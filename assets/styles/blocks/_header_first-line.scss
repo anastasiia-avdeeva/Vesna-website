@@ -6,12 +6,19 @@
   // контейнер с заголовком
   &__container {
     display: flex;
+    flex-direction: column;
+    gap: 20px;
     justify-content: center;
     align-items: center;
   }
   // сам заголовок
   &__title {
     @include h1;
+    color: $white;
+  }
+// подзаголовок для страницы портфолио
+  &__subtitle {
+    @include h4;
     color: $white;
   }
 
@@ -26,10 +33,17 @@
     background: url("../img/serviceHeroBgPhones.jpg") no-repeat center center /
       cover;
 
+      &__container {
+        gap: 12px;
+      }
+
     &__title {
       @include h5;
       font-weight: bold;
       margin-top: 50px;
+    }
+    &__subtitle {
+      @include h6;
     }
   }
 }
