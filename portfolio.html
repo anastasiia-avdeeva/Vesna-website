@@ -352,6 +352,13 @@
           </form>
         </div>
       </section>
+
+      <!-- кнопка прокрутки наверх -->
+    <button class="button-round button-round--up scroll-to-top" id="scrollToTopButton" aria-label="Scroll to top">
+      <img src="./assets/img/buttons.svg/up-white.svg" alt="стрелка вверх">
+      Наверх
+    </button>
+
     </main>
     <footer class="footer">
         <div class="footer__container">
@@ -428,20 +435,28 @@
         document.getElementById(popupId2).style.display = "none";
       }
   </script>
-<!-- круглые кнопки -->
-    <!-- Кнопка вправо "Все проекты" -->
-    <!-- <div class="button-round button-round--arrow">
-        <a class="button-round__link" href="button__link">Все проекты</a>
-        <a class="button-round__icon button-round__icon--black" href="#"><img src="./assets/img/buttons.svg/black-arrow.svg"
-                alt="arrow"></a>
-        <a class="button-round__icon button-round__icon--white" href="#"><img src="./assets/img/buttons.svg/white-arrow.svg"
-                alt="arrow"></a>
-    </div> -->
-    <!-- Кнопка наверх -->
-    <!-- <div class="button-round button-round--up">
-        <a class="button-round__icon button-round__icon--white" href=""><img src="./assets/img/buttons.svg/up-white.svg"
-                alt="arrow"></a>
-        <a class="button-round__link" href="#">Наверх</a>
-    </div> -->
+  <!-- скрипт для кнопки вверх -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const scrollToTopButton = document.getElementById("scrollToTopButton");
+
+  // Показываем кнопку при прокрутке вниз
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollToTopButton.classList.add("visible");
+    } else {
+      scrollToTopButton.classList.remove("visible");
+    }
+  });
+
+  // Перемещение наверх при нажатии
+  scrollToTopButton.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+});
+  </script>
 </body>
 </html>
