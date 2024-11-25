@@ -1300,6 +1300,9 @@ textarea:focus {
   justify-content: center;
   align-items: center;
 }
+.header--common__container--col {
+  gap: 44px;
+}
 .header--common__title {
   font-family: "Noah", sans-serif;
   font-weight: 700;
@@ -1328,8 +1331,14 @@ textarea:focus {
     margin-bottom: 13px;
     background: url("../img/serviceHeroBgPhones.jpg") no-repeat center center/cover;
   }
+  .header--common--services {
+    margin-bottom: 60px;
+  }
   .header--common__container {
     gap: 12px;
+  }
+  .header--common__container--col {
+    gap: 77px;
   }
   .header--common__title {
     font-family: "Noah", sans-serif;
@@ -4026,6 +4035,117 @@ textarea:focus {
   }
   .order-project__form .button {
     width: 256px;
+  }
+}
+.services-content {
+  margin: 130px 292px;
+}
+.services-content__card:nth-child(2n) {
+  margin-bottom: 130px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "img title" "img text" "img button";
+  gap: 50px 83px;
+}
+.services-content__card:nth-child(2n+1) {
+  margin-bottom: 130px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "title img" "text img" "button img";
+  gap: 50px 83px;
+}
+.services-content__img-container {
+  grid-area: img;
+  width: 100%;
+}
+.services-content__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.services-content__title-container {
+  grid-area: title;
+}
+.services-content__title-container:nth-child(2n+1) {
+  margin-top: 43px;
+}
+.services-content__title-container:nth-child(2n) {
+  margin-top: 37px;
+}
+.services-content__title {
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  color: #1a1a18;
+}
+.services-content__text {
+  grid-area: text;
+  margin-bottom: 43px;
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  font-size: 24px;
+  color: #1a1a18;
+}
+.services-content__button-container {
+  grid-area: button;
+  display: grid;
+  align-items: end;
+}
+.services-content__button {
+  width: 311px;
+  border: 1px solid #545a2f;
+}
+
+@media screen and (max-width: 768px) {
+  .services-content {
+    margin: 0 20px 78px;
+  }
+}
+@media screen and (max-width: 440px) {
+  .services-content {
+    margin: 0 16px 99px;
+  }
+  .services-content__card:nth-child(2n), .services-content__card:nth-child(2n+1) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "title" "text" "img" "button";
+    gap: 0px;
+    margin-bottom: 99px;
+  }
+  .services-content__button-container {
+    justify-content: center;
+  }
+  .services-content__title {
+    font-family: "Noah", sans-serif;
+    font-weight: 400;
+    font-size: 58px;
+    line-height: normal;
+    font-style: normal;
+    font-size: 24px;
+    margin-bottom: 26px;
+  }
+  .services-content__text {
+    margin-bottom: 36px;
+    font-family: "Noah", sans-serif;
+    font-weight: 400;
+    font-size: 58px;
+    line-height: normal;
+    font-style: normal;
+    font-size: 16px;
+  }
+  .services-content__img-container {
+    margin-bottom: 26px;
   }
 }
 .service-detail {
