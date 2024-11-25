@@ -16,20 +16,11 @@
   &__banner {
     display: grid;
     grid-template-columns: 1fr auto;
-    // grid-template-rows: auto auto;
     gap: 23px;
     grid-template-areas: "form imgs";
   }
 
   &__imgs {
-    // grid-area: imgs;
-    // display: grid;
-    // grid-template-columns: auto auto;
-    // grid-template-rows: auto auto;
-    // grid-template-areas:
-    //   "pic1 pic1"
-    //   "pic2 pic3";
-    // gap: 23px;
     display: none;
   }
   &__img-container4 {
