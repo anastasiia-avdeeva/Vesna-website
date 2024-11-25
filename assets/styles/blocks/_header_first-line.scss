@@ -6,8 +6,14 @@
   // контейнер с заголовком
   &__container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  &__container--col {
+    flex-direction: column;
+    gap: 44px;
   }
   // сам заголовок
   &__title {
