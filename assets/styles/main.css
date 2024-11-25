@@ -1219,6 +1219,76 @@ textarea:focus {
     width: 100%;
   }
 }
+.project-card {
+  width: 100%;
+  margin-bottom: 100px;
+}
+.project-card__title {
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  color: #1a1a18;
+}
+.project-card__details {
+  display: grid;
+  grid-template-columns: max-content max-content max-content;
+  gap: 83px;
+}
+.project-card__detail-label {
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  font-size: 18px;
+  color: #1a1a18;
+}
+.project-card__detail-value {
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  font-size: 24px;
+  color: #1a1a18;
+  padding-top: 8px;
+}
+.project-card__gallery {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: 1fr 1fr;
+  gap: 24px;
+  padding-top: 20px;
+}
+.project-card__gallery-item-1 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.project-card__gallery-item-2 {
+  grid-column: 2/4;
+}
+.project-card__gallery-item-3 {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.project-card__quote {
+  display: grid;
+  grid-column: 2/3;
+  background-color: #E9ECE0;
+  font-family: "Noah", sans-serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 29.98px;
+  font-style: italic;
+  align-items: center;
+  justify-items: center;
+}
 
 .header {
   position: relative;
@@ -3132,6 +3202,9 @@ textarea:focus {
   .guide {
     display: none;
   }
+<<<<<<< HEAD
+}/*# sourceMappingURL=main.css.map */
+=======
 }
 .questions {
   display: flex;
@@ -4307,3 +4380,4 @@ textarea:focus {
     text-align: left;
   }
 }
+>>>>>>> bbcfb24e175439fe5bade477d9907e5b6f8526e2
