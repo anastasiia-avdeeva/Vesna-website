@@ -1,0 +1,272 @@
+.hero {
+  position: relative;
+  background: url('../img/hero-bg.jpg') no-repeat center center / cover;
+  color: $white;
+  margin-bottom: 211px;
+
+  &::before { 
+    content: ''; 
+    position: absolute; 
+    top: 50%; 
+    right: 0; 
+    transform: translateY(-50%); 
+    width: 483px;
+    height: 363px; 
+    background-image: url('../img/hero-decoration-bg.jpg'); 
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    z-index: 1;
+    pointer-events: none; 
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 950px;
+    margin: 0 290px;
+  }
+
+  &__content {
+    max-width: 980px;
+    margin-top: 282px;
+  }
+
+  &__subtitle {
+    @include h5;
+    margin-bottom: 12px;
+  }
+
+  &__title {
+    @include h1;
+    margin-bottom: 12px;
+  }
+
+  &__description {
+    @include h3;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & > .hero__project-link {
+      margin-right: 325px; // Расстояние до hero__arrows
+    }
+  
+    & > .hero__arrows {
+      margin-right: 228px; // Расстояние до hero__pagination
+    }
+  }
+
+  &__project-link {
+    @include font-size-project-link;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    background: rgba($brown, 0.52); // Цвет с прозрачностью 52%
+    backdrop-filter: blur(4px); // Размытие
+    color: $white;
+    transition: transform 0.3s, background 0.3s;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+  }
+
+  &__arrow {
+    margin-left: 21px;
+    height: 12px;
+    transition: transform 0.3s;
+
+    img {
+      height: 12px;
+      width: 33px;
+      object-fit: cover;
+    }
+  }
+
+  &__project-image {
+    margin-left: 64px;
+    width: 109px;
+    height: 87px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__arrows {
+    display: flex;
+    gap: 149px;
+  }
+
+  &__arrow-btn {
+    width: 33px;
+    height: 15px;
+    border: none;
+    background: url('../icons/hero_arrow-next.svg') no-repeat center;
+    background-size: contain;
+    cursor: pointer;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: translateX(5px);
+    }
+
+    &--prev {
+      width: 33px;
+      height: 15px;
+      border: none;
+      background: url('../icons/hero_arrow-prev.svg') no-repeat center;
+      background-size: contain;
+      cursor: pointer;
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: translateX(-5px);
+      }
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    align-items: center;
+    @include geometria-400-font;
+  }
+  &__current-slide {
+    font-weight: 700;
+  }
+
+  &__divider {
+    display: inline-flex;
+    align-items: center;
+  
+    img {
+      margin: 0 5px; // Отступы слева и справа для визуального баланса
+    }
+  }
+
+  &__total-slides {
+    font-weight: 300;
+  }
+
+  @include tablets{
+
+    &::before { 
+      content: ''; 
+      position: absolute; 
+      top: 75%; 
+      right: 0; 
+      transform: translateY(-50%); 
+      width: 281px;
+      height: 231px; 
+      background-image: url('../img/hero-decoration-bg.jpg'); 
+      background-size: contain; 
+      background-repeat: no-repeat; 
+      z-index: 1;
+      pointer-events: none; 
+    }
+
+    &__container{
+      margin: 0 20px; // Уменьшение отступов для планшетов
+      margin-bottom: 108px;
+    }
+
+    &__arrows{
+      display: none;
+    }
+    &__pagination{
+      display: none;
+    }
+  }
+
+  @include phones{
+
+    background: url('../img/hero-bg-phones.jpg') no-repeat center center / cover;
+    margin-bottom: 47px;
+    height: 566px;
+
+    &::before { 
+      content: ''; 
+      position: absolute; 
+      top: 60%; 
+      right: 0; 
+      transform: translateY(-50%); 
+      width: 181px;
+      height: 131px; 
+      background-image: url('../img/hero-decoration-bg-phones.jpg'); 
+      background-size: contain; 
+      background-repeat: no-repeat; 
+      z-index: 1;
+      pointer-events: none; 
+    }
+
+    &__container{
+      margin: 0 16px; // Уменьшение отступов для планшетов
+      margin-bottom: 47px;
+      height: 470px;
+    }
+
+    &__content {
+      margin-top: 153px;
+    }
+
+    &__subtitle {
+      @include font-size-smallest;
+      margin-bottom: 10px;
+    }
+  
+    &__title {
+      @include h5;
+      font-weight: bold;
+      margin-bottom: 16px;
+    }
+  
+    &__description {
+      @include h6;
+    }
+
+    &__project-link {
+      @include font-size-smallest;
+      padding: 17px 7px;
+      background: rgba($brown, 0.52); // Цвет с прозрачностью 52%
+      backdrop-filter: blur(4px); // Размытие
+      color: $white;
+      transition: transform 0.3s, background 0.3s;
+  
+        &:hover {
+          transform: scale(1.05);
+        }
+    }
+
+  &__arrow {
+    margin-left: 11px;
+    transition: transform 0.3s;
+
+    img {
+      height: 8px;
+      width: 14px;
+      object-fit: cover;
+    }
+  }
+
+  &__project-image {
+    margin-left: 11px;
+    width: 46px;
+    height: 47px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  }
+}

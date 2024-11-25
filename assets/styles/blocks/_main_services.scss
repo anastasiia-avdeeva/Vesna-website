@@ -51,6 +51,10 @@
     }
   }
 
+  &__button {
+    margin: 0 auto;
+  }
+
   @include tablets {
     margin: 0 20px; 
     margin-bottom: 108px;
