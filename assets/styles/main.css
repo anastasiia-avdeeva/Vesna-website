@@ -87,18 +87,17 @@ textarea:focus {
 }
 .header--common__title {
   font-family: "Noah", sans-serif;
-  font-weight: 700;
-  font-size: 70px;
   line-height: normal;
   font-style: normal;
+  font-weight: 700;
+  font-size: 70px;
   color: #ffffff;
 }
 .header--common__subtitle {
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 38px;
   color: #ffffff;
 }
@@ -124,20 +123,18 @@ textarea:focus {
   }
   .header--common__title {
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 24px;
     font-weight: bold;
     margin-top: 50px;
   }
   .header--common__subtitle {
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 18px;
   }
 }
@@ -350,10 +347,9 @@ textarea:focus {
 }
 .footer__copyright-link {
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 18px;
   font-size: 16px;
   color: #ffffff;
@@ -377,10 +373,9 @@ textarea:focus {
   align-items: end;
   color: #ffffff;
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 18px;
   font-size: 16px;
 }
@@ -440,10 +435,9 @@ textarea:focus {
   background-color: #ffffff;
   color: #1a1a18;
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 24px;
 }
 .button:hover {
@@ -475,10 +469,9 @@ textarea:focus {
   background-color: transparent;
   color: #ffffff;
   font-family: "Noah", sans-serif;
-  font-weight: 700;
-  font-size: 70px;
   line-height: normal;
   font-style: normal;
+  font-weight: 700;
   font-size: 20px;
 }
 .button--transparent:hover {
@@ -521,10 +514,9 @@ textarea:focus {
   align-items: center;
   justify-content: center;
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 24px;
   gap: 15px;
 }
@@ -736,10 +728,9 @@ textarea:focus {
   grid-auto-rows: auto;
   gap: 24px;
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 24px;
   color: #63533e;
 }
@@ -921,10 +912,10 @@ textarea:focus {
   margin-bottom: 19px;
   text-align: center;
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
+  font-size: 58px;
   color: #545a2f;
 }
 .popup__description {
@@ -932,10 +923,9 @@ textarea:focus {
   margin-bottom: 32px;
   text-align: center;
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 24px;
   color: #1a1a18;
 }
@@ -1036,18 +1026,17 @@ textarea:focus {
   grid-area: text;
   padding-left: 10px;
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 38px;
 }
 .btw-pages__title {
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
+  font-size: 58px;
 }
 .btw-pages__link {
   grid-area: link;
@@ -1147,10 +1136,9 @@ textarea:focus {
   margin-right: 15.2%;
   margin-bottom: 100px;
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 24px;
   color: #1a1a18;
 }
@@ -1217,20 +1205,18 @@ textarea:focus {
   grid-template-areas: "title form" "contacts form";
   gap: 40px 57px;
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 24px;
   color: #1a1a18;
 }
 .order-service__title {
   grid-area: title;
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 48px;
 }
 .order-service__contacts {
@@ -1271,10 +1257,9 @@ textarea:focus {
     gap: 53px;
     justify-items: center;
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 18px;
   }
   .order-service__title {
@@ -1283,10 +1268,9 @@ textarea:focus {
     max-width: 300px;
     text-align: center;
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 24px;
   }
   .order-service__contacts {
@@ -1350,20 +1334,19 @@ textarea:focus {
   grid-area: title;
   align-self: end;
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
+  font-size: 58px;
   text-align: left;
   margin-bottom: 60px;
 }
 .garden-guide__subtitle {
   grid-area: subtitle;
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 24px;
   color: #1a1a18;
   text-align: left;
@@ -1385,10 +1368,9 @@ textarea:focus {
   border: none;
   margin-bottom: 25px;
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 24px;
 }
 .garden-guide__input::-moz-placeholder {
@@ -1405,10 +1387,9 @@ textarea:focus {
   position: relative;
   display: inline-block;
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 16px;
   color: #1a1a18;
   cursor: pointer;
@@ -1484,19 +1465,17 @@ textarea:focus {
   }
   .garden-guide__title {
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 24px;
     margin-bottom: 38px;
   }
   .garden-guide__subtitle {
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 18px;
     text-align: center;
     margin-bottom: 20px;
@@ -1508,10 +1487,9 @@ textarea:focus {
   .garden-guide__input {
     padding: 14px;
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 18px;
   }
   .garden-guide__form {
@@ -1556,27 +1534,25 @@ textarea:focus {
 }
 .hero__subtitle {
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 24px;
   margin-bottom: 12px;
 }
 .hero__title {
   font-family: "Noah", sans-serif;
-  font-weight: 700;
-  font-size: 70px;
   line-height: normal;
   font-style: normal;
+  font-weight: 700;
+  font-size: 70px;
   margin-bottom: 12px;
 }
 .hero__description {
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 48px;
 }
 .hero__footer {
@@ -1592,10 +1568,9 @@ textarea:focus {
 }
 .hero__project-link {
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 30px;
   display: flex;
   align-items: center;
@@ -1739,37 +1714,33 @@ textarea:focus {
   }
   .hero__subtitle {
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 16px;
     margin-bottom: 10px;
   }
   .hero__title {
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 16px;
   }
   .hero__description {
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 18px;
   }
   .hero__project-link {
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 16px;
     padding: 17px 7px;
     background: rgba(99, 83, 62, 0.52);
@@ -1843,10 +1814,10 @@ textarea:focus {
 }
 .garden__title {
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
+  font-size: 58px;
   margin-bottom: 53px;
   color: #1a1a18;
   text-align: center;
@@ -1856,10 +1827,9 @@ textarea:focus {
 }
 .garden__description {
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 24px;
   color: #1a1a18;
   width: 41%;
@@ -1922,19 +1892,17 @@ textarea:focus {
   }
   .garden__title {
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 24px;
     margin-bottom: 40px;
   }
   .garden__description {
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 16px;
     width: 100%;
   }
@@ -1967,10 +1935,9 @@ textarea:focus {
   text-align: center;
   margin-bottom: 86px;
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 48px;
   color: #1a1a18;
 }
@@ -2004,10 +1971,9 @@ textarea:focus {
 }
 .landscape__caption {
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 24px;
   margin-bottom: 14px;
 }
@@ -2050,10 +2016,9 @@ textarea:focus {
 }
 .landscape__text {
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 24px;
   color: #1a1a18;
 }
@@ -2114,10 +2079,9 @@ textarea:focus {
   }
   .landscape__title {
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 24px;
   }
   .landscape__title br {
@@ -2171,10 +2135,9 @@ textarea:focus {
   }
   .landscape__text {
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 16px;
   }
 }
@@ -2186,10 +2149,10 @@ textarea:focus {
 }
 .services__title {
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
+  font-size: 58px;
   margin-bottom: 40px;
 }
 .services__grid {
@@ -2209,10 +2172,9 @@ textarea:focus {
 }
 .services__subtitle {
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 38px;
   margin-bottom: 56px;
 }
@@ -2221,10 +2183,9 @@ textarea:focus {
   padding-left: 20px;
   margin-bottom: 30px;
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 24px;
 }
 .services__list-item::before {
@@ -2252,10 +2213,9 @@ textarea:focus {
   }
   .services__title {
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 24px;
     margin-bottom: 30px;
   }
@@ -2270,10 +2230,9 @@ textarea:focus {
   }
   .services__subtitle {
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 24px;
     margin-bottom: 22px;
   }
@@ -2281,10 +2240,9 @@ textarea:focus {
     padding-left: 15px;
     margin-bottom: 24px;
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 16px;
   }
   .services__list-item::before {
@@ -2299,10 +2257,10 @@ textarea:focus {
 }
 .projects__title {
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
+  font-size: 58px;
   text-align: center;
   margin-bottom: 68px;
 }
@@ -2363,10 +2321,9 @@ textarea:focus {
 }
 .projects__name {
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 48px;
   margin-bottom: 37px;
 }
@@ -2389,19 +2346,17 @@ textarea:focus {
 }
 .projects__label {
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 18px;
   margin-bottom: 8px;
 }
 .projects__value {
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 24px;
 }
 .projects__all-button {
@@ -2462,10 +2417,9 @@ textarea:focus {
   }
   .projects__title {
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 24px;
     margin-bottom: 27px;
   }
@@ -2505,10 +2459,10 @@ textarea:focus {
 }
 .steps__title {
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
+  font-size: 58px;
   margin-bottom: 122px;
 }
 .steps__title .bold {
@@ -2537,19 +2491,17 @@ textarea:focus {
 }
 .steps__content > .steps__item-title {
   font-family: "Noah", sans-serif;
-  font-weight: 700;
-  font-size: 70px;
   line-height: normal;
   font-style: normal;
+  font-weight: 700;
   font-size: 28px;
   font-weight: bold;
 }
 .steps__content > .steps__description {
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 24px;
 }
 @media screen and (max-width: 768px) {
@@ -2573,10 +2525,9 @@ textarea:focus {
   }
   .steps__title {
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 24px;
     margin-bottom: 22px;
   }
@@ -2605,19 +2556,17 @@ textarea:focus {
   }
   .steps__content > .steps__item-title {
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 16px;
     font-weight: bold;
   }
   .steps__content > .steps__description {
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 16px;
   }
 }
@@ -2630,10 +2579,10 @@ textarea:focus {
 }
 .advantages__title {
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
+  font-size: 58px;
   margin-bottom: 116px;
 }
 .advantages__list {
@@ -2669,10 +2618,9 @@ textarea:focus {
 }
 .advantages__text {
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 24px;
 }
 @media screen and (max-width: 768px) {
@@ -2709,10 +2657,9 @@ textarea:focus {
   }
   .advantages__title {
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 40px;
@@ -2723,10 +2670,9 @@ textarea:focus {
   }
   .advantages__text {
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 16px;
   }
   .advantages__list {
@@ -2748,10 +2694,10 @@ textarea:focus {
 }
 .reviews__title {
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
+  font-size: 58px;
   text-align: center;
   color: #1a1a18;
   margin-bottom: 103px;
@@ -2785,30 +2731,27 @@ textarea:focus {
 }
 .reviews__name {
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 38px;
   color: #545a2f;
   margin-bottom: 8px;
 }
 .reviews__occupation {
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 24px;
   color: #545a2f;
   margin-bottom: 34px;
 }
 .reviews__text {
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 24px;
   color: #1a1a18;
   margin-bottom: 31px;
@@ -2851,20 +2794,18 @@ textarea:focus {
 }
 .reviews__current-slide {
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 16px;
   color: #1a1a18;
   margin-right: 6px;
 }
 .reviews__total-slides {
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 16px;
   color: #979797;
   margin-left: 6px;
@@ -2898,10 +2839,9 @@ textarea:focus {
   }
   .reviews__title {
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 24px;
     margin-bottom: 47px;
   }
@@ -2934,27 +2874,24 @@ textarea:focus {
   }
   .reviews__name {
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 18px;
   }
   .reviews__occupation {
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 16px;
     margin-bottom: 10px;
   }
   .reviews__text {
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 16px;
     width: 100%;
     margin-bottom: 0px;
@@ -2971,10 +2908,10 @@ textarea:focus {
 
 .faq__title {
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
+  font-size: 58px;
   color: #1a1a18;
   margin-bottom: 58px;
 }
@@ -2991,10 +2928,9 @@ textarea:focus {
   cursor: pointer;
   width: 100%;
   font-family: "Noah", sans-serif;
-  font-weight: 700;
-  font-size: 70px;
   line-height: normal;
   font-style: normal;
+  font-weight: 700;
   font-size: 28px;
   text-align: left;
 }
@@ -3020,10 +2956,9 @@ textarea:focus {
   display: none;
   margin-top: 34px;
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 24px;
   color: #1a1a18;
 }
@@ -3037,10 +2972,9 @@ textarea:focus {
 }
 .guide__title {
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 38px;
   color: #1a1a18;
   text-align: center;
@@ -3048,10 +2982,9 @@ textarea:focus {
 }
 .guide__subtitle {
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 24px;
   color: #1a1a18;
   text-align: center;
@@ -3075,10 +3008,9 @@ textarea:focus {
   border: none;
   margin-bottom: 25px;
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 24px;
   align-self: center;
 }
@@ -3097,10 +3029,9 @@ textarea:focus {
   position: relative;
   display: inline-block;
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 16px;
   color: #1a1a18;
   cursor: pointer;
@@ -3172,19 +3103,17 @@ textarea:focus {
   }
   .faq__title {
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 24px;
     text-align: center;
   }
   .faq__question {
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 18px;
     font-weight: bold;
   }
@@ -3195,10 +3124,9 @@ textarea:focus {
   .faq__answer {
     margin-top: 34px;
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 16px;
   }
   .faq__answer--visible {
@@ -3220,14 +3148,14 @@ textarea:focus {
 .questions::before {
   content: "";
   position: absolute;
-  top: 111px;
-  left: 635px;
-  transform: translateY(-50%);
-  width: 236px;
-  height: 27px;
-  background-image: url("../icons/questions-arrow.svg");
+  width: 20%;
+  height: 20%;
+  background-image: url(../icons/questions-arrow.svg);
   background-size: contain;
   background-repeat: no-repeat;
+  top: 66%;
+  left: 52%;
+  transform: translate(-50%, -50%);
   z-index: -1;
   pointer-events: none;
 }
@@ -3238,6 +3166,7 @@ textarea:focus {
   flex: 1;
 }
 .questions__cta {
+  margin-bottom: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3245,19 +3174,18 @@ textarea:focus {
 }
 .questions__title {
   font-family: "Noah", sans-serif;
-  font-weight: 700;
-  font-size: 70px;
   line-height: normal;
   font-style: normal;
+  font-weight: 700;
+  font-size: 70px;
   color: #1a1a18;
   margin-bottom: 12px;
 }
 .questions__subtitle {
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 38px;
   color: #1a1a18;
 }
@@ -3318,10 +3246,9 @@ textarea:focus {
   }
   .questions__subtitle {
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 18px;
   }
   .questions__content {
@@ -3349,10 +3276,10 @@ textarea:focus {
 }
 .project-card__title {
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
+  font-size: 58px;
   color: #1a1a18;
   margin-bottom: 20px;
 }
@@ -3363,19 +3290,17 @@ textarea:focus {
 }
 .project-card__detail-label {
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 18px;
   color: #1a1a18;
 }
 .project-card__detail-value {
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 24px;
   color: #1a1a18;
   padding-top: 8px;
@@ -3410,10 +3335,9 @@ textarea:focus {
   grid-column: 2/3;
   background-color: #e9ece0;
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 24px;
   font-style: italic;
   align-items: center;
@@ -3445,10 +3369,9 @@ textarea:focus {
   grid-column: 1/2;
   background-color: #e9ece0;
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 24px;
   font-style: italic;
   align-items: center;
@@ -3467,10 +3390,9 @@ textarea:focus {
   grid-column: 1/2;
   background-color: #e9ece0;
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 24px;
   font-style: italic;
   align-items: center;
@@ -3505,18 +3427,16 @@ textarea:focus {
   }
   .project-card__title {
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 38px;
   }
   .portfolio-title {
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 48px;
   }
   .portfolio-subtitle {
@@ -3530,43 +3450,38 @@ textarea:focus {
   }
   .portfolio-title {
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 24px;
   }
   .portfolio-subtitle {
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 18px;
   }
   .project-card__title {
     padding: 0 20px;
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 24px;
   }
   .project-card__detail-label {
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 16px;
   }
   .project-card__detail-value {
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 18px;
   }
   .project-card__details {
@@ -3709,10 +3624,9 @@ textarea:focus {
   margin-left: 15.2%;
   margin-right: 15.2%;
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 24px;
   color: #1a1a18;
 }
@@ -3776,10 +3690,10 @@ textarea:focus {
   margin-top: 0;
   margin-bottom: 0;
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
+  font-size: 58px;
 }
 .project__features {
   display: grid;
@@ -3811,10 +3725,9 @@ textarea:focus {
   align-self: center;
   color: #5b6460;
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 38px;
 }
 .project__details--big-gap {
@@ -3833,10 +3746,9 @@ textarea:focus {
   margin: 0 auto 66px;
   text-align: center;
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 38px;
   color: #5b6460;
 }
@@ -3891,20 +3803,19 @@ textarea:focus {
 }
 .order-project__title {
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
+  font-size: 58px;
   text-align: center;
 }
 .order-project__subtitle {
   padding-bottom: 15px;
   max-width: 351px;
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 24px;
   text-align: center;
 }
@@ -3972,18 +3883,17 @@ textarea:focus {
   grid-area: text;
   padding-left: 10px;
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 38px;
 }
 .projects-nav__title {
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
+  font-size: 58px;
 }
 .projects-nav__link {
   grid-area: link;
@@ -4286,20 +4196,19 @@ textarea:focus {
 }
 .services-content__title {
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
+  font-size: 58px;
   color: #1a1a18;
 }
 .services-content__text {
   grid-area: text;
   margin-bottom: 43px;
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 24px;
   color: #1a1a18;
 }
@@ -4338,20 +4247,18 @@ textarea:focus {
   }
   .services-content__title {
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 24px;
     margin-bottom: 26px;
   }
   .services-content__text {
     margin-bottom: 36px;
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 16px;
   }
   .services-content__img-container {
@@ -4368,10 +4275,9 @@ textarea:focus {
   text-decoration: none;
   color: #1a1a18;
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 24px;
   display: inline-flex;
   align-items: center;
@@ -4402,19 +4308,18 @@ textarea:focus {
 }
 .service-detail__title {
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
+  font-size: 58px;
   margin-bottom: 56px;
   color: #1a1a18;
 }
 .service-detail__text {
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 24px;
   color: #1a1a18;
 }
@@ -4443,10 +4348,9 @@ textarea:focus {
   }
   .service-detail__back-link {
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 16px;
     gap: 12px;
   }
@@ -4456,19 +4360,17 @@ textarea:focus {
   }
   .service-detail__title {
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 24px;
     margin-bottom: 26px;
   }
   .service-detail__text {
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 16px;
   }
 }
@@ -4519,10 +4421,9 @@ textarea:focus {
   grid-column: 2/4;
   grid-row: 1/2;
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 38px;
   color: #1a1a18;
   display: flex;
@@ -4552,10 +4453,9 @@ textarea:focus {
   justify-content: center;
   padding: 118px 65px;
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 24px;
   font-style: italic;
   color: #1a1a18;
@@ -4665,10 +4565,9 @@ textarea:focus {
   }
   .service-gallery__item--title {
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 24px;
     margin-bottom: 42px;
   }
@@ -4680,20 +4579,19 @@ textarea:focus {
 }
 .service-section__title {
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
+  font-size: 58px;
   color: #1a1a18;
   margin-bottom: 47px;
   text-align: center;
 }
 .service-section__text {
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 24px;
   color: #1a1a18;
   text-align: center;
@@ -4709,20 +4607,18 @@ textarea:focus {
   }
   .service-section__title {
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 24px;
     color: #1a1a18;
     margin-bottom: 37px;
   }
   .service-section__text {
     font-family: "Noah", sans-serif;
-    font-weight: 400;
-    font-size: 58px;
     line-height: normal;
     font-style: normal;
+    font-weight: 400;
     font-size: 16px;
     text-align: left;
   }
@@ -4744,10 +4640,9 @@ textarea:focus {
 .contact-us__title {
   grid-area: title;
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 48px;
   color: #1a1a18;
 }
@@ -4765,10 +4660,9 @@ textarea:focus {
   align-items: center;
   gap: 41px;
   font-family: "Noah", sans-serif;
-  font-weight: 400;
-  font-size: 58px;
   line-height: normal;
   font-style: normal;
+  font-weight: 400;
   font-size: 38px;
   color: #1a1a18;
 }
