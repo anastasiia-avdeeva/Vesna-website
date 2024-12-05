@@ -2933,6 +2933,7 @@ textarea:focus {
   font-weight: 700;
   font-size: 28px;
   text-align: left;
+  color: #1a1a18;
 }
 .faq__question:hover {
   color: #545a2f;

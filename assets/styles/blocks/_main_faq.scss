@@ -29,6 +29,7 @@
     width: 100%;
     @include faq-question;
     text-align: left;
+    color: $black;
 
     &:hover {
       color: $olive-dark;
@@ -41,14 +42,14 @@
     align-items: center;
     width: 44px;
     height: 44px;
-  
+
     &--plus {
-      background: url('../icons/plus.svg') no-repeat center;
+      background: url("../icons/plus.svg") no-repeat center;
       background-size: contain;
     }
-  
+
     &--minus {
-      background: url('../icons/minus.svg') no-repeat center;
+      background: url("../icons/minus.svg") no-repeat center;
       background-size: contain;
     }
   }
@@ -67,7 +68,6 @@
 }
 
 .guide {
-
   background-color: $green;
 
   &__title {
@@ -87,7 +87,7 @@
   &__image {
     width: 378px;
     height: 350px;
-    background: url('../img/faq-guide.png') center/cover no-repeat;
+    background: url("../img/faq-guide.png") center/cover no-repeat;
     margin: 0 auto;
   }
 
@@ -159,7 +159,6 @@
     width: 20px;
   }
 
-
   &__button {
     align-self: center;
     width: 317px;
@@ -167,58 +166,53 @@
 }
 
 @include tablets {
-
   .faq-guide {
-      grid-template-columns: 1fr; // Вертикальное расположение на узких экранах
+    grid-template-columns: 1fr; // Вертикальное расположение на узких экранах
 
-  padding: 0 20px;
-  margin-bottom: 100px;
+    padding: 0 20px;
+    margin-bottom: 100px;
   }
 
   .faq {
     &__title {
       text-align: center;
     }
-}
-
-.guide {
-
-  &__subtitle {
-    margin-bottom: 40px;
   }
 
-  &__image {
-    display: none;
-  }
+  .guide {
+    &__subtitle {
+      margin-bottom: 40px;
+    }
 
-  &__form {
-    align-items: center;
-  }
+    &__image {
+      display: none;
+    }
 
-  &__input {
-    width: 311px;
-  }
+    &__form {
+      align-items: center;
+    }
 
-  &__consent-container {
-    margin-bottom: 27px;
-    padding-left: 0;
-  }
-  
-  &__consent-label {
-    br {
-      display: block;
+    &__input {
+      width: 311px;
+    }
+
+    &__consent-container {
+      margin-bottom: 27px;
+      padding-left: 0;
+    }
+
+    &__consent-label {
+      br {
+        display: block;
+      }
     }
   }
 }
 
-}
-
 @include phones {
-
   .faq-guide {
-
-  padding: 0 16px;
-  margin-bottom: 116px;
+    padding: 0 16px;
+    margin-bottom: 116px;
   }
 
   .faq {
@@ -236,20 +230,19 @@
       width: 30px;
       height: 30px;
     }
-  
+
     &__answer {
       margin-top: 34px;
       @include font-size-smallest;
     }
-  
+
     &__answer--visible {
       display: block;
       width: 100%;
     }
-}
+  }
 
   .guide {
     display: none;
   }
 }
-
