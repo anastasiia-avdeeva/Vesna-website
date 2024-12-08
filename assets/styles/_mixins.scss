@@ -14,45 +14,54 @@
   padding-right: 16px;
 }
 
-// общие миксины для шрифтов h1-h6
-@mixin h1 {
+@mixin Noah-base {
   font-family: $font-family-noah;
-  font-weight: $font-weight-700;
-  font-size: $font-size-h1;
   line-height: $line-height;
   font-style: normal;
+}
+
+@mixin Noah-700-base {
+  @include Noah-base;
+  font-weight: $font-weight-700;
+}
+
+@mixin Noah-400-base {
+  @include Noah-base;
+  font-weight: $font-weight-400;
+}
+// общие миксины для шрифтов h1-h6
+@mixin h1 {
+  @include Noah-700-base;
+  font-size: $font-size-h1;
 }
 
 @mixin h2 {
-  font-family: $font-family-noah;
-  font-weight: $font-weight-400;
+  @include Noah-400-base;
   font-size: $font-size-h2;
-  line-height: $line-height;
-  font-style: normal;
 }
 
 @mixin h3 {
-  @include h2;
+  @include Noah-400-base;
   font-size: $font-size-h3;
 }
 
 @mixin h4 {
-  @include h2;
+  @include Noah-400-base;
   font-size: $font-size-h4;
 }
 
 @mixin h5 {
-  @include h2;
+  @include Noah-400-base;
   font-size: $font-size-h5;
 }
 
 @mixin h6 {
-  @include h2;
+  @include Noah-400-base;
   font-size: $font-size-h6;
 }
 
 @mixin font-size-smallest {
-  @include h2;
+  @include Noah-400-base;
   font-size: $font-size-smallest;
 }
 
@@ -64,17 +73,17 @@
 }
 
 @mixin button-transparent {
-  @include h1;
+  @include Noah-700-base;
   font-size: $font-size-button-transparent;
 }
 
 @mixin faq-question {
-  @include h1;
+  @include Noah-700-base;
   font-size: $font-size-faq-question;
 }
 
 @mixin font-size-project-link {
-  @include h2;
+  @include Noah-400-base;
   font-size: $font-size-project-link;
 }
 
@@ -140,6 +149,5 @@
   font-weight: $font-weight-500;
   font-size: $font-size-button-transparent;
   line-height: $line-height;
-  font-style: normal
+  font-style: normal;
 }
-
