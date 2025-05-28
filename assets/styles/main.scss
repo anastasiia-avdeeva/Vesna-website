@@ -7,9 +7,6 @@
 // import fonts
 @import "../fonts/fonts";
 
-// link normalize
-@import "./normalize.css";
-
 // common blocks
 @import "./blocks/header";
 @import "./blocks/footer";
@@ -49,4 +46,4 @@
 @import "./blocks/service";
 
 // link blocks contacts page
-@import "./blocks/contacts"; 
+@import "./blocks/contacts";
